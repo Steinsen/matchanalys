@@ -29,6 +29,7 @@ mark{background:var(--warnbg);color:inherit;border-radius:3px}
 <div class="chips" id="chips">
 <button data-f="alla" aria-pressed="true">Alla</button><button data-f="seger" aria-pressed="false">Segrar</button><button data-f="forlust" aria-pressed="false">Förluster</button>
 </div>
+<div class="chips" id="lagchips" aria-label="Filtrera på lag"></div>
 <p class="count" id="count"></p>
 <div id="list"></div>
 <footer>Källa: officiell statistik och play-by-play (Genius Sports).</footer>
@@ -38,13 +39,14 @@ const M=['januari','februari','mars','april','maj','juni','juli','augusti','sept
 const fmt=d=>{const [y,m,dd]=d.split('-');return `${+dd} ${M[+m-1]} ${y}`};
 const norm=s=>(s||'').toString().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
 const esc=s=>(s||'').toString().replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-let all=[],filter='alla';
-try{const f=sessionStorage.getItem('filter');if(f)filter=f;}catch(e){}
+let all=[],filter='alla',lag='alla';
+try{const f=sessionStorage.getItem('filter');if(f)filter=f;const l=sessionStorage.getItem('lag');if(l)lag=l;}catch(e){}
 function render(){
   const q=norm(document.getElementById('q').value).split(/\s+/).filter(Boolean);
   const hits=all.filter(m=>{
     if(filter==='seger'&&!(m.for>m.emot))return false;
     if(filter==='forlust'&&!(m.for<m.emot))return false;
+    if(lag!=='alla'&&m.lag!==lag)return false;
     const hay=norm([m.datum,fmt(m.datum),m.lag,m.motstandare,m.sammanfattning,(m.spelare||[]).join(' '),(m.taggar||[]).join(' ')].join(' '));
     return q.every(w=>hay.includes(w));
   });
@@ -64,6 +66,14 @@ document.querySelectorAll('#chips button').forEach(b=>{
   b.addEventListener('click',()=>{filter=b.dataset.f;try{sessionStorage.setItem('filter',filter)}catch(e){}
     document.querySelectorAll('#chips button').forEach(x=>x.setAttribute('aria-pressed',x===b));render();});
 });
-fetch('matcher.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{all=(d.matcher||[]).sort((a,b)=>b.datum.localeCompare(a.datum));render();})
+function lagChips(){
+  const lag_=[...new Set(all.map(m=>m.lag))].sort((a,b)=>a.localeCompare(b,'sv'));
+  if(lag!=='alla'&&!lag_.includes(lag))lag='alla';
+  const C=document.getElementById('lagchips');
+  C.innerHTML=lag_.length<2?'':['alla',...lag_].map(l=>`<button data-l="${esc(l)}" aria-pressed="${l===lag}">${l==='alla'?'Alla lag':esc(l)}</button>`).join('');
+  C.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{lag=b.dataset.l;try{sessionStorage.setItem('lag',lag)}catch(e){}
+    C.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));render();}));
+}
+fetch('matcher.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{all=(d.matcher||[]).sort((a,b)=>b.datum.localeCompare(a.datum));lagChips();render();})
  .catch(()=>{document.getElementById('list').innerHTML='<p class="empty">Kunde inte läsa matcher.json. Öppna sidan via webbadressen, inte som lokal fil.</p>'});
 </script></body></html>
