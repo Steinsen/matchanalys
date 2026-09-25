@@ -1,0 +1,39 @@
+{
+  "matcher": [
+    {
+      "datum": "2026-09-25",
+      "lag": "BC Luleå",
+      "motstandare": "Köping Stars",
+      "hemma": true,
+      "for": 95,
+      "emot": 91,
+      "url": "matcher/2026-09-25-bc-lulea-koping-stars.html",
+      "sammanfattning": "Luleå vann på bättre trepoängsskytte, 11 steals och 24 poäng på snabba anfall. Köping höll sig kvar via 13 offensiva returer.",
+      "spelare": [
+        "Jalen Leach",
+        "Nicolas Galette",
+        "Jonatan Arvidsson",
+        "Tuburu Naivalurua",
+        "Robert Holmes",
+        "Kembo Nilsson",
+        "Jonathan Ninkingira",
+        "Leo Steinsen",
+        "Daniel Hansson",
+        "Tobias Sjöberg",
+        "Jaylin Henderson",
+        "Felix Broström",
+        "Felix Edwardsson",
+        "Adam Tafra",
+        "Tre-Vaughn Minott Gauthier",
+        "Tim Jonsson",
+        "Simon Tekeste"
+      ],
+      "taggar": [
+        "seger",
+        "trepoängsskytte",
+        "returer",
+        "poängtorka"
+      ]
+    }
+  ]
+}

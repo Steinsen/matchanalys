@@ -1,0 +1,63 @@
+<!doctype html>
+<!-- MALL för en matchsida. Kopiera, ersätt {{…}}, klistra in hela assets/matchanalys.css i <style>.
+     Referensexempel med riktigt innehåll: matcher/2026-09-25-bc-lulea-koping-stars.html -->
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matchanalys: {{Lag}} {{för}}–{{emot}} {{Motståndare}}</title>
+<meta name="matchdatum" content="{{ÅÅÅÅ-MM-DD}}">
+<meta name="description" content="{{en mening}}">
+<style>/* {{hela assets/matchanalys.css här}} */</style></head><body>
+<nav aria-label="Innehåll"><div>
+<a href="#sammanfattning">Sammanfattning</a><a href="#forlopp">Förlopp</a><a href="#lag">Lagstatistik</a><a href="#femmor">Femmor</a><a href="#spelare">Spelare</a><a href="#motstandare">{{Motståndare}}</a><a href="#nasta">Nästa match</a>
+</div></nav>
+<main>
+<a class="back" href="../index.html">← Alla matcher</a>
+<div class="kick">Matchanalys · {{d månad åååå}}</div>
+<h1>{{Rubrik som säger resultatet, t.ex. "BC Luleå vann med fyra poäng mot Köping Stars"}}</h1>
+<div class="score"><div><div class="t">{{Hemmalag}}</div><div class="s">{{hp}}</div></div><div class="mid">slut</div><div class="r"><div class="t">{{Bortalag}}</div><div class="s">{{bp}}</div></div></div>
+<table class="qt"><thead><tr><th></th><th>P1</th><th>P2</th><th>P3</th><th>P4</th></tr></thead>
+<tbody><tr><th>{{Kort hemma}}</th><td>..</td>…</tr><tr><th>{{Kort borta}}</th><td>..</td>…</tr></tbody></table>
+
+<h2 id="sammanfattning">Sammanfattning</h2>
+<p class="lead">{{Var matchen avgjordes + ledning/tid}}</p>
+<div class="kpi"><div><b>{{tal}}</b><span>{{förklaring}}</span></div>×3</div>
+<p>{{Motståndarens väg tillbaka / det som höll matchen jämn}}</p>
+
+<h2 id="forlopp">Matchförlopp</h2>
+<div class="panel">{{SVG från tools/analys.py --svg}}</div>
+<ul class="flow"><li><span class="tag">P1 {{a–b}}</span>{{1–2 meningar}}</li>…</ul>
+
+<h2 id="lag">Lagstatistik</h2>
+<p class="lead">{{Poäng per anfall vi vs de + varför marginalen blev som den blev}}</p>
+<div class="kpi">{{PPA vi · PPA de · skillnad}}</div>
+<table class="team">{{Fyra faktorer: eFG%, bollförlust per anfall, offensiv returandel, FTM/FGA — class="w" vårt bättre, "w2" deras bättre}}</table>
+<p class="caveat">Anfall = skottförsök − offensiva returer + bollförluster + 0,44 × straffförsök (standardformel, uppskattning).</p>
+<h3 class="sub">All statistik</h3>
+<table class="team">{{FG, 3P, FT, returer (off.), assist, bollförluster, steals, snabba anfall, poäng på bollförluster, andrachanspoäng, poäng i 3-sek.-området, bänkpoäng}}</table>
+<div class="two"><div class="panel good"><h3>Det som fungerade</h3><ul>…</ul></div><div class="panel bad"><h3>Problemen</h3><ul>…</ul></div></div>
+
+<h2 id="femmor">Femmor</h2>
+<p class="lead">{{Tydligaste on/off-mönstret}}</p>
+<div class="kpi">…</div>
+<table class="team">{{on/off-tabell för nyckelspelare: för–emot, poäng/anfall för, emot}}</table>
+<h3 class="sub">Bästa femmorna</h3>
+<article class="five"><p class="who">A · B · C · D · E</p>
+<div class="fs"><div><dd>{{m:ss}}</dd><dt>Speltid</dt></div><div><dd>{{för–emot}}</dd><dt>Poäng för–emot</dt></div><div><dd class="pos">{{+x}}</dd><dt>+/-</dt></div></div>
+<div class="ppp"><span>≈ {{n}} anfall</span><span>Poäng/anfall: <b>{{x,xx}}</b> för · <b>{{y,yy}}</b> emot</span></div>
+<p class="note">{{när i matchen + vad som hände}}</p></article>
+<h3 class="sub">Svagaste femmorna</h3>{{samma kort, dd class="neg"}}
+<p>{{mönster}}</p><p class="caveat">{{liten mängd minuter, +/- brusigt, ±1 vid straffar kring byten}}</p>
+
+<h2 id="spelare">Spelare – {{Lag}}</h2>
+<p>{{En mening om vem som bar laget}}</p>
+<article class="card"><header><span class="num">#{{nr}}</span><h3>{{Namn}}</h3><span class="pm pos">{{+x}}</span></header>
+<dl class="stats"><div><dd>..</dd><dt>Poäng</dt></div><div><dd>..</dd><dt>FG</dt></div><div><dd>..</dd><dt>3P</dt></div><div><dd>..</dd><dt>FT</dt></div><div><dd>..</dd><dt>Ret</dt></div><div><dd>..</dd><dt>Ast</dt></div><div><dd>..</dd><dt>TO</dt></div></dl>
+<p>{{2–3 meningar}}</p><p class="min">{{m:ss}} speltid</p></article>
+
+<h2 id="motstandare">{{Motståndare}}</h2>
+<ul class="flow"><li><b>{{Namn}}</b> {{…}}</li>…</ul>
+
+<h2 id="nasta">Till nästa match</h2>
+<ol class="todo"><li><b>{{Rubrik.}}</b> {{konkret siffra + vad}}</li>×3–4</ol>
+<footer>Match spelad {{d månad åååå}}. Källa: officiell statistik och play-by-play (Genius Sports). Publik: {{n}}.</footer>
+</main></body></html>

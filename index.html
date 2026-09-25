@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matchanalyser</title>
+<meta name="description" content="Sökbart arkiv med matchanalyser: lag, spelare, femmor och poäng per anfall.">
+<link rel="stylesheet" href="assets/matchanalys.css">
+<style>
+.search{width:100%;font:inherit;font-size:17px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);margin:6px 0 4px}
+.search:focus{outline:2px solid var(--accent);outline-offset:1px}
+.count{font-size:14px;color:var(--muted);margin:4px 0 12px}
+.match{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.match:active{transform:scale(.995)}
+.mrow{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.mdate{font-size:13px;color:var(--muted)}
+.mres{font-weight:800;font-size:20px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.badge{font-size:12px;font-weight:700;border-radius:999px;padding:2px 9px;margin-left:6px;vertical-align:2px}
+.badge.v{background:var(--pos);color:var(--bg)} .badge.f{background:var(--neg);color:var(--bg)}
+.mtitle{font-weight:700;font-size:18px;margin:4px 0}
+.msum{margin:4px 0 0;color:var(--muted);font-size:15px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 2px}
+.chips button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 11px}
+.chips button[aria-pressed=true]{background:var(--accent);color:var(--accentink);border-color:var(--accent)}
+mark{background:var(--warnbg);color:inherit;border-radius:3px}
+.empty{color:var(--muted);text-align:center;padding:30px 0}
+</style></head><body><main>
+<div class="kick">Arkiv</div>
+<h1>Matchanalyser</h1>
+<input id="q" class="search" type="search" placeholder="Sök lag, spelare, datum…" aria-label="Sök bland matcher" autocomplete="off">
+<div class="chips" id="chips">
+<button data-f="alla" aria-pressed="true">Alla</button><button data-f="seger" aria-pressed="false">Segrar</button><button data-f="forlust" aria-pressed="false">Förluster</button>
+</div>
+<p class="count" id="count"></p>
+<div id="list"></div>
+<footer>Källa: officiell statistik och play-by-play (Genius Sports).</footer>
+</main>
+<script>
+const M=['januari','februari','mars','april','maj','juni','juli','augusti','september','oktober','november','december'];
+const fmt=d=>{const [y,m,dd]=d.split('-');return `${+dd} ${M[+m-1]} ${y}`};
+const norm=s=>(s||'').toString().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+const esc=s=>(s||'').toString().replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let all=[],filter='alla';
+try{const f=sessionStorage.getItem('filter');if(f)filter=f;}catch(e){}
+function render(){
+  const q=norm(document.getElementById('q').value).split(/\s+/).filter(Boolean);
+  const hits=all.filter(m=>{
+    if(filter==='seger'&&!(m.for>m.emot))return false;
+    if(filter==='forlust'&&!(m.for<m.emot))return false;
+    const hay=norm([m.datum,fmt(m.datum),m.lag,m.motstandare,m.sammanfattning,(m.spelare||[]).join(' '),(m.taggar||[]).join(' ')].join(' '));
+    return q.every(w=>hay.includes(w));
+  });
+  document.getElementById('count').textContent=`${hits.length} av ${all.length} matcher`;
+  const L=document.getElementById('list');
+  if(!hits.length){L.innerHTML='<p class="empty">Inga matcher matchar sökningen.</p>';return}
+  L.innerHTML=hits.map(m=>{
+    const win=m.for>m.emot, title=m.hemma?`${esc(m.lag)} – ${esc(m.motstandare)}`:`${esc(m.motstandare)} – ${esc(m.lag)}`;
+    const res=m.hemma?`${m.for}–${m.emot}`:`${m.emot}–${m.for}`;
+    const pl=q.length?(m.spelare||[]).filter(p=>q.some(w=>norm(p).includes(w))):[];
+    return `<a class="match" href="${esc(m.url)}"><div class="mrow"><span class="mdate">${fmt(m.datum)}${m.hemma?' · hemma':' · borta'}</span><span class="mres">${res}<span class="badge ${win?'v':'f'}">${win?'V':'F'}</span></span></div>
+    <div class="mtitle">${title}</div><p class="msum">${esc(m.sammanfattning)}</p>${pl.length?`<p class="msum">Spelare: <mark>${pl.map(esc).join('</mark>, <mark>')}</mark></p>`:''}</a>`}).join('');
+}
+document.getElementById('q').addEventListener('input',render);
+document.querySelectorAll('#chips button').forEach(b=>{
+  b.setAttribute('aria-pressed',b.dataset.f===filter);
+  b.addEventListener('click',()=>{filter=b.dataset.f;try{sessionStorage.setItem('filter',filter)}catch(e){}
+    document.querySelectorAll('#chips button').forEach(x=>x.setAttribute('aria-pressed',x===b));render();});
+});
+fetch('matcher.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{all=(d.matcher||[]).sort((a,b)=>b.datum.localeCompare(a.datum));render();})
+ .catch(()=>{document.getElementById('list').innerHTML='<p class="empty">Kunde inte läsa matcher.json. Öppna sidan via webbadressen, inte som lokal fil.</p>'});
+</script></body></html>
