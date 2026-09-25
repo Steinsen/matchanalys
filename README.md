@@ -1,6 +1,6 @@
 # Matchanalyser
 
-Statisk sajt med matchanalyser, publicerad via Cloudflare Pages (kopplad till detta repo).
+Statisk sajt med matchanalyser, publicerad via Cloudflare Workers (static assets, kopplad till detta repo).
 
 ## Struktur
 - `index.html` – startsida med sök (läser `matcher.json`)
@@ -16,5 +16,7 @@ Statisk sajt med matchanalyser, publicerad via Cloudflare Pages (kopplad till de
 2. Be Claude göra en matchanalys (skillen "matchanalys").
 3. Commit + push → Cloudflare publicerar automatiskt.
 
-## Cloudflare Pages
-Build command: *(tomt)* · Output directory: `/`
+## Cloudflare
+`wrangler.jsonc` publicerar repots filer som statiska assets (Worker `matcher`, `workers.dev`-URL påslagen).
+`.assetsignore` håller `tools/`, `mallar/`, `data/` m.m. utanför sajten.
+Build command: *(tomt)* · Deploy command: `npx wrangler deploy`

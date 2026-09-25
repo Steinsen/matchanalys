@@ -1,0 +1,7 @@
+.git
+.assetsignore
+wrangler.jsonc
+README.md
+tools
+mallar
+data
