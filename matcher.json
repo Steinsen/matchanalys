@@ -1,6 +1,41 @@
 {
   "matcher": [
     {
+      "datum": "2026-09-26",
+      "lag": "BC Luleå Steelers",
+      "motstandare": "Aros BBK",
+      "hemma": false,
+      "for": 71,
+      "emot": 92,
+      "url": "matcher/2026-09-26-bc-lulea-steelers-aros-bbk.html",
+      "sammanfattning": "Aros vann med 60–24 i 3-sekundersområdet och Steelers satte 8 av 33 treor. Mot Aros avbytare slutade matchen 51–52, men Aros startfemma vann sina knappt 14 minuter med 40–20.",
+      "spelare": [
+        "Gustav Palmqvist",
+        "Erik Persson",
+        "Ville Kero",
+        "Erik Forsman",
+        "Leo Erlandsson",
+        "Franck Mugisha",
+        "Elliot Enbom",
+        "Sandro Löwgren Madeira",
+        "James Aitomäki",
+        "Melwin Kjällman",
+        "Alexander Videhult",
+        "Oskar Ekh",
+        "Simon Wahlberg",
+        "Matan Mizrahi",
+        "Noah Teodor Candell",
+        "Michiel Petersen",
+        "Alexander Rowlands"
+      ],
+      "taggar": [
+        "förlust",
+        "3-sekundersområdet",
+        "trepoängsskytte",
+        "femmor"
+      ]
+    },
+    {
       "datum": "2026-09-25",
       "lag": "BC Luleå",
       "motstandare": "Köping Stars",
