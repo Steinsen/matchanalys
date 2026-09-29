@@ -47,7 +47,7 @@ function render(){
     if(filter==='seger'&&!(m.for>m.emot))return false;
     if(filter==='forlust'&&!(m.for<m.emot))return false;
     if(lag!=='alla'&&m.lag!==lag)return false;
-    const hay=norm([m.datum,fmt(m.datum),m.lag,m.motstandare,m.sammanfattning,(m.spelare||[]).join(' '),(m.taggar||[]).join(' ')].join(' '));
+    const hay=norm([m.datum,fmt(m.datum),m.lag,m.motstandare,m.sammanfattning,m.sammanfattning_en||"",(m.spelare||[]).join(' '),(m.taggar||[]).join(' ')].join(' '));
     return q.every(w=>hay.includes(w));
   });
   document.getElementById('count').textContent=`${hits.length} av ${all.length} matcher`;
