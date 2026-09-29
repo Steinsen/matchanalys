@@ -1,6 +1,42 @@
 {
   "matcher": [
     {
+      "datum": "2026-09-29",
+      "lag": "BC Luleå",
+      "motstandare": "Jämtland Basket",
+      "hemma": false,
+      "for": 87,
+      "emot": 96,
+      "url": "matcher/2026-09-29-bc-lulea-jamtland-basket.html",
+      "sammanfattning": "Jämtland vann period 1 med 30–21 och resten slutade 66–66. Jämtland fick 42 straffar mot 30 och satte 8 treor mot 5, medan Luleå vann returerna 43–38.",
+      "spelare": [
+        "Nicolas Galette",
+        "Robert Holmes",
+        "Daniel Hansson",
+        "Jonatan Arvidsson",
+        "Jalen Leach",
+        "Jonathan Ninkingira",
+        "Tuburu Naivalurua",
+        "Kembo Nilsson",
+        "Leo Steinsen",
+        "Gustav Hansson",
+        "Denzel George",
+        "Daniel Johansson",
+        "Brayden Parker",
+        "Zane Nelson",
+        "Nils Botold",
+        "Tj Biel",
+        "Erik Persson",
+        "Filip Gewert"
+      ],
+      "taggar": [
+        "förlust",
+        "straffar",
+        "matchstart",
+        "offensiva returer"
+      ]
+    },
+    {
       "datum": "2026-09-26",
       "lag": "BC Luleå Steelers",
       "motstandare": "Aros BBK",
