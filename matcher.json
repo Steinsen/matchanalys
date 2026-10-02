@@ -1,6 +1,46 @@
 {
   "matcher": [
     {
+      "datum": "2026-10-02",
+      "lag": "BC Luleå",
+      "motstandare": "Sloga Uppsala",
+      "hemma": true,
+      "for": 108,
+      "emot": 77,
+      "url": "matcher/2026-10-02-bc-lulea-sloga-uppsala.html",
+      "sammanfattning": "Luleå vann period 1 med 29–11 och ledde som mest med 44. 12 steals gav 25 poäng på snabba anfall och 1,46 poäng per anfall; Arvidsson gjorde 25 poäng på 12 skott.",
+      "sammanfattning_en": "Luleå won the first quarter 29–11 and led by as many as 44. Twelve steals produced 25 fast-break points and 1.46 points per possession; Arvidsson scored 25 on 12 shots.",
+      "spelare": [
+        "Robert Holmes",
+        "Kembo Nilsson",
+        "Jalen Leach",
+        "Daniel Hansson",
+        "Elliot Enbom",
+        "Leo Steinsen",
+        "Jonathan Ninkingira",
+        "Tuburu Naivalurua",
+        "Jonatan Arvidsson",
+        "John Gonzalez",
+        "Nicolas Galette",
+        "Milos Bajic",
+        "Lukas Friberg",
+        "Alan Zekovic",
+        "Leo Ryott",
+        "Niklas Larsson",
+        "Dalton Gayman",
+        "Marko Dujkovic",
+        "Milutin Vujicic",
+        "Kj Debrick",
+        "Filip Milivojevic"
+      ],
+      "taggar": [
+        "seger",
+        "snabba anfall",
+        "bollförluster",
+        "trepoängsskytte"
+      ]
+    },
+    {
       "datum": "2026-10-01",
       "lag": "Skallagrímur",
       "motstandare": "KV",
