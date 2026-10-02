@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game analysis: KV 84–82 Skallagrímur</title>
+<meta name="matchdatum" content="2026-10-01">
+<meta name="description" content="Skallagrímur led 52–33 at half-time but lost the second half 30–51. KV made 11/22 threes after the break and Skallagrímur had 12 second-half turnovers.">
+<style>:root{--bg:#f6f7fa;--card:#fff;--ink:#1b2130;--muted:#6b7385;--line:#e2e5ec;--accent:#1f5fae;--accentink:#fff;--pos:#1e8a4c;--neg:#c0392b;--grid:#e6e8ee;--axis:#a3a9b6;--warnbg:#f7e6c9;--warn:#9a6a1c;--soft:#eef2f8}
+@media (prefers-color-scheme:dark){:root{--bg:#12151c;--card:#1b2029;--ink:#e8ebf2;--muted:#9aa2b3;--line:#2c3340;--accent:#5b9bef;--accentink:#0d1420;--pos:#4cc585;--neg:#ef6b5d;--grid:#2a303c;--axis:#566072;--warnbg:#3a2f1c;--warn:#e0b060;--soft:#222935}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:680px;margin:0 auto;padding:20px 16px 48px}
+.kick{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-size:28px;line-height:1.15;margin:6px 0 16px}
+h2{font-size:21px;margin:36px 0 10px;scroll-margin-top:64px}
+h3{margin:0;font-size:18px}
+p{margin:8px 0}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+nav div{max-width:680px;margin:0 auto;padding:10px 16px;display:flex;gap:8px}
+nav a{flex:none;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:14px}
+.score{background:var(--accent);color:var(--accentink);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.score .t{font-size:14px;opacity:.9} .score .s{font-size:40px;font-weight:800;line-height:1.1} .score .r{text-align:right} .score .mid{font-size:13px;opacity:.85;text-align:center}
+.qt{width:100%;border-collapse:collapse;margin-top:10px;background:var(--card);border-radius:12px;overflow:hidden;font-variant-numeric:tabular-nums;text-align:center;font-size:15px}
+.qt th,.qt td{padding:7px 4px;border-bottom:1px solid var(--line)} .qt tr:last-child td,.qt tr:last-child th{border-bottom:0}
+.qt thead th{color:var(--muted);font-weight:600;font-size:13px;background:var(--soft)}
+.lead{font-size:18px;font-weight:600}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 8px;text-align:center}
+.kpi b{display:block;font-size:24px;color:var(--accent);font-variant-numeric:tabular-nums} .kpi span{font-size:13px;color:var(--muted);line-height:1.3;display:block}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+svg text{font-family:inherit}
+ul.flow{padding:0;list-style:none} ul.flow li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0}
+.tag{display:inline-block;font-weight:700;color:var(--accent);margin-right:6px}
+table.team{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;font-variant-numeric:tabular-nums;font-size:15px}
+table.team th,table.team td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right}
+table.team th[scope=row]{text-align:left;font-weight:500} table.team thead th{color:var(--muted);font-size:13px;background:var(--soft)}
+table.team tr:last-child>*{border-bottom:0}
+td.w,td.w2{font-weight:700;color:var(--accent)}
+.two{display:grid;gap:10px;margin-top:12px} @media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.good{border-left:4px solid var(--pos)} .bad{border-left:4px solid var(--neg)}
+.two h3{font-size:16px;margin-bottom:4px} .two ul{margin:0;padding-left:18px} .two li{margin:5px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.card header{display:flex;align-items:baseline;gap:8px} .card h3{flex:1} .num{color:var(--muted);font-size:14px}
+.pm{font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums} .pm.pos{color:var(--pos)} .pm.neg{color:var(--neg)}
+.stats{display:grid;grid-template-columns:repeat(7,1fr);margin:10px 0 6px;padding:8px 0;background:var(--soft);border-radius:10px;text-align:center}
+.stats div{min-width:0} .stats dd{margin:0;font-weight:700;font-size:15px;font-variant-numeric:tabular-nums} .stats dt{font-size:11px;color:var(--muted)}
+.min{font-size:13px;color:var(--muted);margin:0}
+ol.todo{counter-reset:n;list-style:none;padding:0}
+ol.todo li{counter-increment:n;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 52px;margin:10px 0;position:relative}
+ol.todo li::before{content:counter(n);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accentink);font-weight:700;display:grid;place-items:center;font-size:14px}
+.ppp{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:8px;font-variant-numeric:tabular-nums} .ppp b{color:var(--ink)}
+.sub{font-size:17px;margin:20px 0 4px}
+.five{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:8px 0}
+.five .who{font-weight:650;margin:0 0 8px;line-height:1.35}
+.fs{display:grid;grid-template-columns:1fr 1.4fr 1fr;background:var(--soft);border-radius:10px;padding:8px 0;text-align:center}
+.fs dd{margin:0;font-weight:700;font-size:16px;font-variant-numeric:tabular-nums} .fs dt{font-size:11px;color:var(--muted)}
+.fs dd.pos{color:var(--pos)} .fs dd.neg{color:var(--neg)}
+.five .note{margin:8px 0 0;font-size:15px;color:var(--muted)}
+.caveat{font-size:14px;color:var(--muted);border-left:3px solid var(--line);padding-left:10px}
+footer{color:var(--muted);font-size:13px;margin-top:36px}
+@media(max-width:380px){body{font-size:16px} h1{font-size:24px} .score .s{font-size:34px} .stats dd{font-size:14px}}
+.back{display:inline-block;margin:0 0 8px;font-size:15px;color:var(--accent);text-decoration:none}
+</style></head><body>
+<nav aria-label="Contents"><div>
+<a href="#summary">Summary</a><a href="#flow">Game flow</a><a href="#team">Team stats</a><a href="#lineups">Lineups</a><a href="#players">Players</a><a href="#opponent">KV</a><a href="#next">Next game</a>
+</div></nav>
+<main>
+<a class="back" href="../index.html">← All games</a>
+<div class="kick">Game analysis · 1 October 2026</div>
+<h1>Skallagrímur lost 84–82 at KV after leading by 21</h1>
+<div class="score"><div><div class="t">KV</div><div class="s">84</div></div><div class="mid">final</div><div class="r"><div class="t">Skallagrímur</div><div class="s">82</div></div></div>
+<table class="qt"><thead><tr><th></th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr></thead>
+<tbody><tr><th>KV</th><td>14</td><td>19</td><td><b>28</b></td><td><b>23</b></td></tr><tr><th>Skallagrímur</th><td><b>26</b></td><td><b>26</b></td><td>13</td><td>17</td></tr></tbody></table>
+
+<h2 id="summary">Summary</h2>
+<p class="lead">Skallagrímur won the first half 52–33 and lost the second 30–51. They led for 34:13 of the 40 minutes and by as much as 21 (59–38 with 6:59 left in Q3). KV took the lead for good with one second left.</p>
+<div class="kpi"><div><b>1.24 → 0.71</b><span>points per possession, first half → second half</span></div><div><b>3 → 12</b><span>turnovers, first half → second half</span></div><div><b>12–42</b><span>points from threes (4/26 vs 14/37)</span></div></div>
+<p>Skallagrímur won the inside game. They outscored KV 56–24 in the paint, out-rebounded them 50–38 and grabbed 19 offensive rebounds to KV's 8. KV made up the difference from the three-point line: 11 of 22 in the second half, after 3 of 15 in the first. Skallagrímur also turned the ball over 12 times after the break, which gave KV extra possessions while their shooting was hot.</p>
+
+<h2 id="flow">Game flow</h2>
+<div class="panel"><svg viewBox="0 0 340 190" width="100%" role="img" aria-label="Skallagrímur's lead during the game" xmlns="http://www.w3.org/2000/svg" font-size="11.5"><defs><clipPath id="up"><rect x="0" y="0" width="340" height="131.9"/></clipPath><clipPath id="dn"><rect x="0" y="131.9" width="340" height="190"/></clipPath></defs><rect x="216.3" y="14" width="27.2" height="150" fill="var(--warnbg)"/><text x="229.9" y="25" text-anchor="middle" fill="var(--warn)" font-size="10">Drought</text><line x1="26" x2="332" y1="131.9" y2="131.9" stroke="var(--axis)" stroke-width="0.8"/><text x="22" y="134.9" text-anchor="end" fill="var(--muted)">0</text><line x1="26" x2="332" y1="89.0" y2="89.0" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="92.0" text-anchor="end" fill="var(--muted)">+8</text><line x1="26" x2="332" y1="46.1" y2="46.1" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="49.1" text-anchor="end" fill="var(--muted)">+16</text><line x1="102.5" x2="102.5" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="179.0" x2="179.0" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="255.5" x2="255.5" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><text x="64.2" y="177" text-anchor="middle" fill="var(--muted)">P1</text><text x="140.8" y="177" text-anchor="middle" fill="var(--muted)">P2</text><text x="217.2" y="177" text-anchor="middle" fill="var(--muted)">P3</text><text x="293.8" y="177" text-anchor="middle" fill="var(--muted)">P4</text><polygon points="26.0,131.9 26.0,131.9 27.7,131.9 27.7,126.5 27.7,126.5 27.7,121.1 32.5,121.1 32.5,131.9 35.8,131.9 35.8,121.1 38.6,121.1 38.6,110.4 41.5,110.4 41.5,121.1 41.5,121.1 41.5,126.5 43.2,126.5 43.2,110.4 51.0,110.4 51.0,99.7 51.0,99.7 51.0,94.4 54.7,94.4 54.7,105.1 58.1,105.1 58.1,115.8 64.5,115.8 64.5,105.1 66.0,105.1 66.0,110.4 66.0,110.4 66.0,115.8 72.4,115.8 72.4,105.1 76.6,105.1 76.6,121.1 79.2,121.1 79.2,110.4 84.3,110.4 84.3,94.4 89.6,94.4 89.6,83.6 94.2,83.6 94.2,67.6 105.2,67.6 105.2,56.9 105.2,56.9 105.2,51.5 110.0,51.5 110.0,62.2 116.1,62.2 116.1,51.5 116.3,51.5 116.3,46.1 118.9,46.1 118.9,35.4 121.2,35.4 121.2,40.8 121.2,40.8 121.2,46.1 123.0,46.1 123.0,40.8 123.0,40.8 123.0,35.4 128.5,35.4 128.5,46.1 135.2,46.1 135.2,35.4 140.0,35.4 140.0,40.8 140.0,40.8 140.0,46.1 147.1,46.1 147.1,56.9 154.4,56.9 154.4,51.5 154.4,51.5 154.4,46.1 156.6,46.1 156.6,35.4 159.3,35.4 159.3,40.8 161.3,40.8 161.3,30.1 162.7,30.1 162.7,46.1 164.7,46.1 164.7,35.4 168.9,35.4 168.9,24.7 170.4,24.7 170.4,40.8 173.4,40.8 173.4,35.4 173.4,35.4 173.4,30.1 175.6,30.1 175.6,35.4 175.6,35.4 175.6,40.8 179.0,40.8 179.0,30.1 187.3,30.1 187.3,19.4 190.1,19.4 190.1,24.7 190.1,24.7 190.1,30.1 195.2,30.1 195.2,19.4 199.8,19.4 199.8,35.4 202.1,35.4 202.1,19.4 208.3,19.4 208.3,35.4 211.5,35.4 211.5,46.1 213.8,46.1 213.8,56.9 216.3,56.9 216.3,51.5 216.3,51.5 216.3,46.1 218.6,46.1 218.6,62.2 222.6,62.2 222.6,78.3 228.2,78.3 228.2,83.6 228.2,83.6 228.2,89.0 235.1,89.0 235.1,99.7 241.3,99.7 241.3,110.4 243.5,110.4 243.5,99.7 245.7,99.7 245.7,115.8 249.8,115.8 249.8,121.1 253.2,121.1 253.2,110.4 262.9,110.4 262.9,126.5 266.4,126.5 266.4,142.6 269.7,142.6 269.7,131.9 272.2,131.9 272.2,147.9 274.4,147.9 274.4,137.2 278.3,137.2 278.3,126.5 284.0,126.5 284.0,131.9 285.6,131.9 285.6,121.1 290.7,121.1 290.7,115.8 302.8,115.8 302.8,131.9 304.6,131.9 304.6,142.6 312.3,142.6 312.3,158.6 315.3,158.6 315.3,147.9 321.1,147.9 321.1,137.2 322.7,137.2 322.7,126.5 326.1,126.5 326.1,142.6 328.7,142.6 328.7,131.9 331.8,131.9 331.8,142.6 332.0,142.6 332.0,142.6 332.0,131.9" fill="var(--accent)" opacity="0.18" clip-path="url(#up)"/><polygon points="26.0,131.9 26.0,131.9 27.7,131.9 27.7,126.5 27.7,126.5 27.7,121.1 32.5,121.1 32.5,131.9 35.8,131.9 35.8,121.1 38.6,121.1 38.6,110.4 41.5,110.4 41.5,121.1 41.5,121.1 41.5,126.5 43.2,126.5 43.2,110.4 51.0,110.4 51.0,99.7 51.0,99.7 51.0,94.4 54.7,94.4 54.7,105.1 58.1,105.1 58.1,115.8 64.5,115.8 64.5,105.1 66.0,105.1 66.0,110.4 66.0,110.4 66.0,115.8 72.4,115.8 72.4,105.1 76.6,105.1 76.6,121.1 79.2,121.1 79.2,110.4 84.3,110.4 84.3,94.4 89.6,94.4 89.6,83.6 94.2,83.6 94.2,67.6 105.2,67.6 105.2,56.9 105.2,56.9 105.2,51.5 110.0,51.5 110.0,62.2 116.1,62.2 116.1,51.5 116.3,51.5 116.3,46.1 118.9,46.1 118.9,35.4 121.2,35.4 121.2,40.8 121.2,40.8 121.2,46.1 123.0,46.1 123.0,40.8 123.0,40.8 123.0,35.4 128.5,35.4 128.5,46.1 135.2,46.1 135.2,35.4 140.0,35.4 140.0,40.8 140.0,40.8 140.0,46.1 147.1,46.1 147.1,56.9 154.4,56.9 154.4,51.5 154.4,51.5 154.4,46.1 156.6,46.1 156.6,35.4 159.3,35.4 159.3,40.8 161.3,40.8 161.3,30.1 162.7,30.1 162.7,46.1 164.7,46.1 164.7,35.4 168.9,35.4 168.9,24.7 170.4,24.7 170.4,40.8 173.4,40.8 173.4,35.4 173.4,35.4 173.4,30.1 175.6,30.1 175.6,35.4 175.6,35.4 175.6,40.8 179.0,40.8 179.0,30.1 187.3,30.1 187.3,19.4 190.1,19.4 190.1,24.7 190.1,24.7 190.1,30.1 195.2,30.1 195.2,19.4 199.8,19.4 199.8,35.4 202.1,35.4 202.1,19.4 208.3,19.4 208.3,35.4 211.5,35.4 211.5,46.1 213.8,46.1 213.8,56.9 216.3,56.9 216.3,51.5 216.3,51.5 216.3,46.1 218.6,46.1 218.6,62.2 222.6,62.2 222.6,78.3 228.2,78.3 228.2,83.6 228.2,83.6 228.2,89.0 235.1,89.0 235.1,99.7 241.3,99.7 241.3,110.4 243.5,110.4 243.5,99.7 245.7,99.7 245.7,115.8 249.8,115.8 249.8,121.1 253.2,121.1 253.2,110.4 262.9,110.4 262.9,126.5 266.4,126.5 266.4,142.6 269.7,142.6 269.7,131.9 272.2,131.9 272.2,147.9 274.4,147.9 274.4,137.2 278.3,137.2 278.3,126.5 284.0,126.5 284.0,131.9 285.6,131.9 285.6,121.1 290.7,121.1 290.7,115.8 302.8,115.8 302.8,131.9 304.6,131.9 304.6,142.6 312.3,142.6 312.3,158.6 315.3,158.6 315.3,147.9 321.1,147.9 321.1,137.2 322.7,137.2 322.7,126.5 326.1,126.5 326.1,142.6 328.7,142.6 328.7,131.9 331.8,131.9 331.8,142.6 332.0,142.6 332.0,142.6 332.0,131.9" fill="var(--neg)" opacity="0.22" clip-path="url(#dn)"/><polyline points="26.0,131.9 27.7,131.9 27.7,126.5 27.7,126.5 27.7,121.1 32.5,121.1 32.5,131.9 35.8,131.9 35.8,121.1 38.6,121.1 38.6,110.4 41.5,110.4 41.5,121.1 41.5,121.1 41.5,126.5 43.2,126.5 43.2,110.4 51.0,110.4 51.0,99.7 51.0,99.7 51.0,94.4 54.7,94.4 54.7,105.1 58.1,105.1 58.1,115.8 64.5,115.8 64.5,105.1 66.0,105.1 66.0,110.4 66.0,110.4 66.0,115.8 72.4,115.8 72.4,105.1 76.6,105.1 76.6,121.1 79.2,121.1 79.2,110.4 84.3,110.4 84.3,94.4 89.6,94.4 89.6,83.6 94.2,83.6 94.2,67.6 105.2,67.6 105.2,56.9 105.2,56.9 105.2,51.5 110.0,51.5 110.0,62.2 116.1,62.2 116.1,51.5 116.3,51.5 116.3,46.1 118.9,46.1 118.9,35.4 121.2,35.4 121.2,40.8 121.2,40.8 121.2,46.1 123.0,46.1 123.0,40.8 123.0,40.8 123.0,35.4 128.5,35.4 128.5,46.1 135.2,46.1 135.2,35.4 140.0,35.4 140.0,40.8 140.0,40.8 140.0,46.1 147.1,46.1 147.1,56.9 154.4,56.9 154.4,51.5 154.4,51.5 154.4,46.1 156.6,46.1 156.6,35.4 159.3,35.4 159.3,40.8 161.3,40.8 161.3,30.1 162.7,30.1 162.7,46.1 164.7,46.1 164.7,35.4 168.9,35.4 168.9,24.7 170.4,24.7 170.4,40.8 173.4,40.8 173.4,35.4 173.4,35.4 173.4,30.1 175.6,30.1 175.6,35.4 175.6,35.4 175.6,40.8 179.0,40.8 179.0,30.1 187.3,30.1 187.3,19.4 190.1,19.4 190.1,24.7 190.1,24.7 190.1,30.1 195.2,30.1 195.2,19.4 199.8,19.4 199.8,35.4 202.1,35.4 202.1,19.4 208.3,19.4 208.3,35.4 211.5,35.4 211.5,46.1 213.8,46.1 213.8,56.9 216.3,56.9 216.3,51.5 216.3,51.5 216.3,46.1 218.6,46.1 218.6,62.2 222.6,62.2 222.6,78.3 228.2,78.3 228.2,83.6 228.2,83.6 228.2,89.0 235.1,89.0 235.1,99.7 241.3,99.7 241.3,110.4 243.5,110.4 243.5,99.7 245.7,99.7 245.7,115.8 249.8,115.8 249.8,121.1 253.2,121.1 253.2,110.4 262.9,110.4 262.9,126.5 266.4,126.5 266.4,142.6 269.7,142.6 269.7,131.9 272.2,131.9 272.2,147.9 274.4,147.9 274.4,137.2 278.3,137.2 278.3,126.5 284.0,126.5 284.0,131.9 285.6,131.9 285.6,121.1 290.7,121.1 290.7,115.8 302.8,115.8 302.8,131.9 304.6,131.9 304.6,142.6 312.3,142.6 312.3,158.6 315.3,158.6 315.3,147.9 321.1,147.9 321.1,137.2 322.7,137.2 322.7,126.5 326.1,126.5 326.1,142.6 328.7,142.6 328.7,131.9 331.8,131.9 331.8,142.6 332.0,142.6 332.0,142.6" fill="none" stroke="var(--accent)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="187.3" cy="19.4" r="2.3" fill="var(--accent)"/><text x="183.3" y="14.4" text-anchor="end" fill="var(--accent)" font-weight="600" font-size="10.5">+21</text><circle cx="312.3" cy="158.6" r="2.3" fill="var(--neg)"/><text x="317.3" y="162.6" fill="var(--neg)" font-weight="600" font-size="10.5">-5</text><text x="179.0" y="188" text-anchor="middle" fill="var(--muted)" font-size="10.5">Skallagrímur's lead (above zero = ahead)</text></svg></div>
+<ul class="flow">
+<li><span class="tag">Q1 26–14</span>Skallagrímur led 16–14 with 3:23 left, then closed the quarter on a 10–0 run, which became 13–0 early in Q2. KV went 4:22 without scoring.</li>
+<li><span class="tag">Q2 26–19</span>The lead stayed between 13 and 20 points. Markovic's put-back at the buzzer made it 52–33 at half-time. Skallagrímur made all 11 of their free throws in the first half.</li>
+<li><span class="tag">Q3 13–28</span>At 59–38 KV went on a 19–2 run, to 61–57. Skallagrímur went 3:33 without a point in that stretch and had 5 turnovers in the quarter, and KV made 5 threes.</li>
+<li><span class="tag">Q4 17–23</span>KV took their first lead at 67–65 with 8:34 left. With 5:24 left Skallagrímur led 74–71, then went 3:13 without scoring while KV ran 8–0. A 6–0 answer made it 80–79 with 1:13 left. Knudsen hit a three (82–80) and Markovic tied it with 26 seconds left. After a turnover at each end, Bragason scored the winning lay-up with one second left.</li>
+</ul>
+
+<h2 id="team">Team stats</h2>
+<p class="lead">Skallagrímur scored 0.97 points per possession and KV scored 1.03. Over about 84 possessions, that small difference was enough.</p>
+<div class="kpi"><div><b>0.97</b><span>points/possession Skallagrímur (≈ 84 possessions)</span></div><div><b>1.03</b><span>points/possession KV (≈ 81 possessions)</span></div><div><b>−0.06</b><span>difference per possession</span></div></div>
+<p>Four factors decide most possessions. Skallagrímur won two of them, rebounding and turnovers, but lost shooting efficiency by a wide margin:</p>
+<table class="team"><thead><tr><th></th><th>Skallagrímur</th><th>KV</th></tr></thead><tbody>
+<tr><th scope="row">Effective FG%</th><td>42.5%</td><td class="w2">53.1%</td></tr>
+<tr><th scope="row">Turnovers per possession</th><td class="w">17.8%</td><td>19.7%</td></tr>
+<tr><th scope="row">Offensive rebound rate</th><td class="w">37.3%</td><td>18.2%</td></tr>
+<tr><th scope="row">Free throws per shot (FTM/FGA)</th><td>0.18</td><td class="w2">0.25</td></tr></tbody></table>
+<p class="caveat">Effective FG% counts a made three as 1.5 made shots. True shooting (TS%, used on the player cards) also includes free throws. Possessions = field-goal attempts − offensive rebounds + turnovers + 0.44 × free-throw attempts (a standard estimate).</p>
+<h3 class="sub">All stats</h3>
+<table class="team"><thead><tr><th></th><th>Skallagrímur</th><th>KV</th></tr></thead><tbody>
+<tr><th scope="row">Field goals</th><td>32/80</td><td class="w2">27/64</td></tr>
+<tr><th scope="row">Three-pointers</th><td>4/26</td><td class="w2">14/37</td></tr>
+<tr><th scope="row">Free throws</th><td>14/19</td><td>16/21</td></tr>
+<tr><th scope="row">Rebounds (off.)</th><td class="w">50 (19)</td><td>38 (8)</td></tr>
+<tr><th scope="row">Assists</th><td>19</td><td>20</td></tr>
+<tr><th scope="row">Turnovers</th><td>15</td><td>16</td></tr>
+<tr><th scope="row">Steals</th><td class="w">9</td><td>6</td></tr>
+<tr><th scope="row">Fast-break points</th><td class="w">13</td><td>9</td></tr>
+<tr><th scope="row">Points off turnovers</th><td>14</td><td>15</td></tr>
+<tr><th scope="row">Second-chance points</th><td>10</td><td>7</td></tr>
+<tr><th scope="row">Points in the paint</th><td class="w">56</td><td>24</td></tr>
+<tr><th scope="row">Bench points</th><td>16</td><td>15</td></tr></tbody></table>
+<div class="two"><div class="panel good"><h3>What worked</h3><ul>
+<li>56 points in the paint against 24.</li>
+<li>19 offensive rebounds, 37% of their own misses.</li>
+<li>First half: 1.24 points per possession, 3 turnovers and 11/11 free throws.</li>
+<li>Markovic: 22 points, 15 rebounds and 9 assists.</li></ul></div>
+<div class="panel bad"><h3>The problems</h3><ul>
+<li>4/26 from three (15%), and 1/12 in the second half.</li>
+<li>12 second-half turnovers, 6 of them in the last 4:27.</li>
+<li>KV shot 11/22 from three after half-time.</li>
+<li>Free throws dropped to 3/8 in the second half.</li></ul></div></div>
+<p>The extra shots from offensive rebounds did not turn into many points. Skallagrímur took 16 more field-goal attempts than KV but got only 10 second-chance points from their 19 offensive rebounds.</p>
+
+<h2 id="lineups">Lineups</h2>
+<p class="lead">The starting five was +4 over 14:26, but its four stints went +5, +2, −3 and +0. It played the final 3:09 at 74–76 → 82–84.</p>
+<div class="kpi"><div><b>+4</b><span>starting five (14:26, 32–28)</span></div><div><b>−7 / +5</b><span>Markovic on (31:44) / off (8:16)</span></div><div><b>+5</b><span>Ólafsson on court (7:52, 17–12)</span></div></div>
+<table class="team"><thead><tr><th></th><th>Points for–against</th><th>Pts/poss for</th><th>against</th></tr></thead><tbody>
+<tr><th scope="row">Markovic on</th><td>65–72</td><td>1.01</td><td class="w2">1.12</td></tr>
+<tr><th scope="row">Markovic off</th><td>17–12</td><td>0.84</td><td class="w">0.72</td></tr>
+<tr><th scope="row">M. Pálmason on</th><td>70–66</td><td class="w">1.03</td><td>1.01</td></tr>
+<tr><th scope="row">M. Pálmason off</th><td>12–18</td><td>0.72</td><td class="w2">1.14</td></tr></tbody></table>
+<p>Markovic's −7 should not be read as a judgement of his game. He played most of the second half, when the whole team struggled, and about half of his 8:16 on the bench came in the strong first half. M. Pálmason's 6:39 on the bench came out at −6.</p>
+<h3 class="sub">Best lineups</h3>
+<article class="five"><p class="who">Markovic · M. Pálmason · Sedlarevic · S. Pálmason · Arnarsson</p><div class="fs"><div><dd>14:26</dd><dt>Minutes</dt></div><div><dd>32–28</dd><dt>Points for–against</dt></div><div><dd class="pos">+4</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 30 possessions</span><span>Pts/poss: <b>1.08</b> for · <b>0.93</b> against</span></div><p class="note">The starters. They were +7 in their first two stints (14–9 to open the game, 52–33 → 59–38 to open Q3) and −3 in the last two, in Q4.</p></article>
+<article class="five"><p class="who">Ríkharðsson · Gylfason · S. Pálmason · Ólafsson · Arnarsson</p><div class="fs"><div><dd>2:27</dd><dt>Minutes</dt></div><div><dd>8–4</dd><dt>Points for–against</dt></div><div><dd class="pos">+4</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 7 possessions</span><span>Pts/poss: <b>1.16</b> for · <b>0.68</b> against</span></div><p class="note">Opened Q2 and stretched the lead from 26–14 to 34–18.</p></article>
+<article class="five"><p class="who">Ríkharðsson · Gylfason · M. Pálmason · Sedlarevic · Ólafsson</p><div class="fs"><div><dd>1:21</dd><dt>Minutes</dt></div><div><dd>5–0</dd><dt>Points for–against</dt></div><div><dd class="pos">+5</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 3 possessions</span><span>Pts/poss: <b>1.67</b> for · <b>0.00</b> against</span></div><p class="note">Closed Q1 with a 5–0 finish to 26–14.</p></article>
+<h3 class="sub">Weakest lineups</h3>
+<article class="five"><p class="who">Ríkharðsson · Gylfason · Markovic · S. Pálmason · Arnarsson</p><div class="fs"><div><dd>3:00</dd><dt>Minutes</dt></div><div><dd>4–10</dd><dt>Points for–against</dt></div><div><dd class="neg">−6</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 8 possessions</span><span>Pts/poss: <b>0.52</b> for · <b>1.45</b> against</span></div><p class="note">Even in Q2. In Q3 it was on court for 1:33 of KV's run (59–45 → 61–53).</p></article>
+<article class="five"><p class="who">Ríkharðsson · M. Pálmason · Sedlarevic · Ólafsson · Arnarsson</p><div class="fs"><div><dd>2:49</dd><dt>Minutes</dt></div><div><dd>2–7</dd><dt>Points for–against</dt></div><div><dd class="neg">−5</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 6 possessions</span><span>Pts/poss: <b>0.34</b> for · <b>1.40</b> against</span></div><p class="note">Late Q3, 61–53 → 63–60, as the lead shrank to three.</p></article>
+<p>The pattern follows the score more than any one player. Almost every lineup did well in the first half, and almost every lineup struggled in the third quarter. The S. Pálmason–Markovic pair was −9 over 25:38 together. That is mostly the same second half, not a sign that the two do not fit.</p>
+<p class="caveat">Possessions per lineup are estimated from the minutes and the game's pace. Most lineups played only a few minutes, so a single possession moves their +/- a lot. The figures are counted from substitutions and scoring in the play-by-play, and here they match the official +/- for every player.</p>
+
+<h2 id="players">Players – Skallagrímur</h2>
+<p>Markovic and S. Pálmason carried the scoring with 42 points between them, and Ríkharðsson added 14 off the bench on 7/14 shooting.</p>
+<article class="card"><header><span class="num">#7</span><h3>Marinó Þór Pálmason</h3><span class="pm pos">+4</span></header>
+<dl class="stats"><div><dd>8</dd><dt>Pts</dt></div><div><dd>3/7</dd><dt>FG</dt></div><div><dd>0/2</dd><dt>3P</dt></div><div><dd>2/2</dd><dt>FT</dt></div><div><dd>4</dd><dt>Reb</dt></div><div><dd>2</dd><dt>Ast</dt></div><div><dd>4</dd><dt>TO</dt></div></dl>
+<p>The captain was +4 over 33 minutes, the best on-court figure among the starters, with 2 steals and 2/2 free throws. He had 4 turnovers, including the one with 4 seconds left. Taking care of the ball late is the clearest thing to work on.</p><p class="min">33:21 minutes · TS 50.8%</p></article>
+<article class="card"><header><span class="num">#20</span><h3>Milorad Sedlarevic</h3><span class="pm neg">−1</span></header>
+<dl class="stats"><div><dd>10</dd><dt>Pts</dt></div><div><dd>4/15</dd><dt>FG</dt></div><div><dd>2/9</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>4</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Played 33 minutes without a turnover and had 2 blocks and 4 rebounds. He made 2 of 9 threes and 4/15 overall (TS 33.3%), including the last-second attempt. With 9 of his 15 attempts from three, a few more drives could lift his efficiency.</p><p class="min">32:52 minutes · TS 33.3%</p></article>
+<article class="card"><header><span class="num">#92</span><h3>Miljan Markovic</h3><span class="pm neg">−7</span></header>
+<dl class="stats"><div><dd>22</dd><dt>Pts</dt></div><div><dd>8/17</dd><dt>FG</dt></div><div><dd>1/5</dd><dt>3P</dt></div><div><dd>5/7</dd><dt>FT</dt></div><div><dd>15</dd><dt>Reb</dt></div><div><dd>9</dd><dt>Ast</dt></div><div><dd>5</dd><dt>TO</dt></div></dl>
+<p>Led the team in points, rebounds and assists: 22, 15 and 9. 8 of the rebounds were offensive and he drew 6 fouls (TS 54.8%). He had 5 turnovers, and 1/5 from three suggests his touches are best kept close to the basket.</p><p class="min">31:44 minutes · TS 54.8%</p></article>
+<article class="card"><header><span class="num">#77</span><h3>Sævar Alexander Pálmason</h3><span class="pm neg">−4</span></header>
+<dl class="stats"><div><dd>20</dd><dt>Pts</dt></div><div><dd>7/19</dd><dt>FG</dt></div><div><dd>1/8</dd><dt>3P</dt></div><div><dd>5/5</dd><dt>FT</dt></div><div><dd>9</dd><dt>Reb</dt></div><div><dd>3</dd><dt>Ast</dt></div><div><dd>3</dd><dt>TO</dt></div></dl>
+<p>Scored 20 points, made all 5 free throws and had 9 rebounds, 2 steals and 2 blocks. He went 1/8 from three (TS 47.2%), so attacking the basket, where he made 6 of 11 two-pointers, was his most efficient route.</p><p class="min">29:14 minutes · TS 47.2%</p></article>
+<article class="card"><header><span class="num">#14</span><h3>Víðir Elís Arnarsson</h3><span class="pm neg">−1</span></header>
+<dl class="stats"><div><dd>6</dd><dt>Pts</dt></div><div><dd>3/7</dd><dt>FG</dt></div><div><dd>0/2</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>4</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>Made 3 of 5 two-pointers and grabbed 4 defensive rebounds in 28 minutes, with only one turnover. He had 4 fouls and 0/2 from three, and he did not record an assist.</p><p class="min">28:17 minutes · TS 42.9%</p></article>
+<article class="card"><header><span class="num">#9</span><h3>Björgvin Hafþór Ríkharðsson</h3><span class="pm neg">−4</span></header>
+<dl class="stats"><div><dd>14</dd><dt>Pts</dt></div><div><dd>7/14</dd><dt>FG</dt></div><div><dd>–</dd><dt>3P</dt></div><div><dd>0/3</dd><dt>FT</dt></div><div><dd>6</dd><dt>Reb</dt></div><div><dd>2</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>Scored 14 off the bench on 7/14 two-pointers and had 6 rebounds without committing a foul. He went 0/3 at the line, and better free-throw shooting would give his inside work more payoff.</p><p class="min">22:43 minutes · TS 45.7%</p></article>
+<article class="card"><header><span class="num">#4</span><h3>Jón Árni Gylfason</h3><span class="pm ">0</span></header>
+<dl class="stats"><div><dd>2</dd><dt>Pts</dt></div><div><dd>–</dd><dt>FG</dt></div><div><dd>–</dd><dt>3P</dt></div><div><dd>2/2</dd><dt>FT</dt></div><div><dd>0</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Made 2 steals and both free throws in 11:39, and was even (0) on the floor. He had 3 fouls in a short spell, so defending without fouling would let him stay on longer.</p><p class="min">11:39 minutes</p></article>
+<article class="card"><header><span class="num">#11</span><h3>Sigurður Ragnar Ólafsson</h3><span class="pm pos">+5</span></header>
+<dl class="stats"><div><dd>0</dd><dt>Pts</dt></div><div><dd>0/1</dd><dt>FG</dt></div><div><dd>–</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>0</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Skallagrímur won his 7:52 by 17–12 (+5), the best on/off figure on the team, and he had an assist. He took one shot and missed it. Short minutes, so the +/- is noisy.</p><p class="min">7:52 minutes · TS 0.0%</p></article>
+<article class="card"><header><span class="num">#5</span><h3>Gunnar Örn Ómarsson</h3><span class="pm neg">−2</span></header>
+<dl class="stats"><div><dd>0</dd><dt>Pts</dt></div><div><dd>–</dd><dt>FG</dt></div><div><dd>–</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>1</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Grabbed an offensive rebound in 2:19 on court. Skallagrímur were outscored 4–6 in his minutes, but that is too few possessions to judge.</p><p class="min">2:19 minutes</p></article>
+
+<h2 id="opponent">KV</h2>
+<ul class="flow">
+<li><b>Lars Erik Bragason (#21)</b> scored 31 points on 17 shots: 10/17 from the field, 5/11 from three and 6/7 at the line, for 77% TS. He made the three for 79–74 with 2:34 left and the winning lay-up.</li>
+<li><b>Reynir Róbertsson (#6)</b> had 16 points, 5 assists and 2 steals, and drew 6 fouls. He was +12 over 34 minutes.</li>
+<li><b>Alexander Knudsen (#43)</b> came off the bench and went 3/6 from three. All three came in Q4, the last one for 82–80 with 46 seconds left. He was +12 in 16 minutes.</li>
+<li><b>Hallgrímur Þrastarson (#0)</b> had 6 assists and 3/7 from three, including the 74–74 equaliser with 3:49 left.</li>
+</ul>
+
+<h2 id="next">Next game</h2>
+<ol class="todo">
+<li><b>Look after the ball with a lead.</b> Turnovers went from 3 in the first half to 12 in the second, 6 of them in the last 4:27. A calm set play when the lead starts to shrink would help.</li>
+<li><b>Contest the three-point line.</b> KV made 11 of 22 threes after half-time, and Bragason, Knudsen and Þrastarson made 11 of 24 for the game. Closing out on those three should come before helping inside.</li>
+<li><b>Keep going inside.</b> Skallagrímur shot 4/26 from three but scored 56 points in the paint. In the second half, 12 of 37 attempts were still threes and only one went in.</li>
+<li><b>Finish the extra possessions.</b> 19 offensive rebounds gave 10 second-chance points. Free throws (3/8 in the second half) also matter in a two-point game.</li>
+</ol>
+<footer>Game played 1 October 2026 at KV. Source: official statistics and play-by-play (Genius Sports). Attendance: 89.</footer>
+</main>
+</body></html>

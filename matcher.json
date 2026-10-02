@@ -1,6 +1,45 @@
 {
   "matcher": [
     {
+      "datum": "2026-10-01",
+      "lag": "Skallagrímur",
+      "motstandare": "KV",
+      "hemma": false,
+      "for": 82,
+      "emot": 84,
+      "url": "matcher/2026-10-01-skallagrimur-kv.html",
+      "sammanfattning": "Skallagrímur led 52–33 at half-time and by 21 early in Q3, but lost the second half 30–51. KV made 11/22 threes after the break while Skallagrímur had 12 second-half turnovers; Bragason (31 points) scored the winner with one second left.",
+      "sammanfattning_en": "Skallagrímur led 52–33 at half-time and by 21 early in Q3, but lost the second half 30–51. KV made 11/22 threes after the break while Skallagrímur had 12 second-half turnovers; Bragason (31 points) scored the winner with one second left.",
+      "spelare": [
+        "Marinó Þór Pálmason",
+        "Milorad Sedlarevic",
+        "Miljan Markovic",
+        "Sævar Alexander Pálmason",
+        "Víðir Elís Arnarsson",
+        "Björgvin Hafþór Ríkharðsson",
+        "Jón Árni Gylfason",
+        "Sigurður Ragnar Ólafsson",
+        "Gunnar Örn Ómarsson",
+        "Lars Erik Bragason",
+        "Reynir Bjarkan Barðdal Róbertsson",
+        "Hallgrímur Árni Þrastarson",
+        "Alexander Óðinn Knudsen",
+        "Sturla Böðvarsson",
+        "Finnur Tómasson",
+        "Óli Gunnar Gestsson",
+        "Tristan Ari Bang Margeirsson",
+        "Tómas Andri Bjartsson",
+        "Jóhannes Ragnar Hallgrímsson"
+      ],
+      "taggar": [
+        "förlust",
+        "loss",
+        "turnovers",
+        "three-point shooting",
+        "lost lead"
+      ]
+    },
+    {
       "datum": "2026-09-29",
       "lag": "BC Luleå",
       "motstandare": "Jämtland Basket",
