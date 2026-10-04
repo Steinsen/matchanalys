@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game analysis: BC Luleå Steelers 69–83 KFUM Blackebergs IK</title>
+<meta name="matchdatum" content="2026-09-20">
+<meta name="description" content="Blackeberg decided it in the first half. Steelers shot 7 of 36 from three and lost the rebounding battle.">
+<style>:root{--bg:#f6f7fa;--card:#fff;--ink:#1b2130;--muted:#6b7385;--line:#e2e5ec;--accent:#1f5fae;--accentink:#fff;--pos:#1e8a4c;--neg:#c0392b;--grid:#e6e8ee;--axis:#a3a9b6;--warnbg:#f7e6c9;--warn:#9a6a1c;--soft:#eef2f8}
+@media (prefers-color-scheme:dark){:root{--bg:#12151c;--card:#1b2029;--ink:#e8ebf2;--muted:#9aa2b3;--line:#2c3340;--accent:#5b9bef;--accentink:#0d1420;--pos:#4cc585;--neg:#ef6b5d;--grid:#2a303c;--axis:#566072;--warnbg:#3a2f1c;--warn:#e0b060;--soft:#222935}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:680px;margin:0 auto;padding:20px 16px 48px}
+.kick{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-size:28px;line-height:1.15;margin:6px 0 16px}
+h2{font-size:21px;margin:36px 0 10px;scroll-margin-top:64px}
+h3{margin:0;font-size:18px}
+p{margin:8px 0}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+nav div{max-width:680px;margin:0 auto;padding:10px 16px;display:flex;gap:8px}
+nav a{flex:none;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:14px}
+.score{background:var(--accent);color:var(--accentink);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.score .t{font-size:14px;opacity:.9} .score .s{font-size:40px;font-weight:800;line-height:1.1} .score .r{text-align:right} .score .mid{font-size:13px;opacity:.85;text-align:center}
+.qt{width:100%;border-collapse:collapse;margin-top:10px;background:var(--card);border-radius:12px;overflow:hidden;font-variant-numeric:tabular-nums;text-align:center;font-size:15px}
+.qt th,.qt td{padding:7px 4px;border-bottom:1px solid var(--line)} .qt tr:last-child td,.qt tr:last-child th{border-bottom:0}
+.qt thead th{color:var(--muted);font-weight:600;font-size:13px;background:var(--soft)}
+.lead{font-size:18px;font-weight:600}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 8px;text-align:center}
+.kpi b{display:block;font-size:24px;color:var(--accent);font-variant-numeric:tabular-nums} .kpi span{font-size:13px;color:var(--muted);line-height:1.3;display:block}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+svg text{font-family:inherit}
+ul.flow{padding:0;list-style:none} ul.flow li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0}
+.tag{display:inline-block;font-weight:700;color:var(--accent);margin-right:6px}
+table.team{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;font-variant-numeric:tabular-nums;font-size:15px}
+table.team th,table.team td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right}
+table.team th[scope=row]{text-align:left;font-weight:500} table.team thead th{color:var(--muted);font-size:13px;background:var(--soft)}
+table.team tr:last-child>*{border-bottom:0}
+td.w,td.w2{font-weight:700;color:var(--accent)}
+.two{display:grid;gap:10px;margin-top:12px} @media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.good{border-left:4px solid var(--pos)} .bad{border-left:4px solid var(--neg)}
+.two h3{font-size:16px;margin-bottom:4px} .two ul{margin:0;padding-left:18px} .two li{margin:5px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.card header{display:flex;align-items:baseline;gap:8px} .card h3{flex:1} .num{color:var(--muted);font-size:14px}
+.pm{font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums} .pm.pos{color:var(--pos)} .pm.neg{color:var(--neg)}
+.stats{display:grid;grid-template-columns:repeat(7,1fr);margin:10px 0 6px;padding:8px 0;background:var(--soft);border-radius:10px;text-align:center}
+.stats div{min-width:0} .stats dd{margin:0;font-weight:700;font-size:15px;font-variant-numeric:tabular-nums} .stats dt{font-size:11px;color:var(--muted)}
+.min{font-size:13px;color:var(--muted);margin:0}
+ol.todo{counter-reset:n;list-style:none;padding:0}
+ol.todo li{counter-increment:n;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 52px;margin:10px 0;position:relative}
+ol.todo li::before{content:counter(n);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accentink);font-weight:700;display:grid;place-items:center;font-size:14px}
+.ppp{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:8px;font-variant-numeric:tabular-nums} .ppp b{color:var(--ink)}
+.sub{font-size:17px;margin:20px 0 4px}
+.five{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:8px 0}
+.five .who{font-weight:650;margin:0 0 8px;line-height:1.35}
+.fs{display:grid;grid-template-columns:1fr 1.4fr 1fr;background:var(--soft);border-radius:10px;padding:8px 0;text-align:center}
+.fs dd{margin:0;font-weight:700;font-size:16px;font-variant-numeric:tabular-nums} .fs dt{font-size:11px;color:var(--muted)}
+.fs dd.pos{color:var(--pos)} .fs dd.neg{color:var(--neg)}
+.five .note{margin:8px 0 0;font-size:15px;color:var(--muted)}
+.caveat{font-size:14px;color:var(--muted);border-left:3px solid var(--line);padding-left:10px}
+footer{color:var(--muted);font-size:13px;margin-top:36px}
+@media(max-width:380px){body{font-size:16px} h1{font-size:24px} .score .s{font-size:34px} .stats dd{font-size:14px}}
+.back{display:inline-block;margin:0 0 8px;font-size:15px;color:var(--accent);text-decoration:none}
+</style></head><body>
+<nav aria-label="Contents"><div><a href="#summary">Summary</a><a href="#flow">Game flow</a><a href="#team">Team stats</a><a href="#lineups">Lineups</a><a href="#players">Players</a><a href="#opponent">Blackeberg</a><a href="#next">Next game</a></div></nav>
+<main>
+<a class="back" href="../index.html">← All games</a>
+<div class="kick">Game analysis · 20 September 2026</div>
+<h1>BC Luleå Steelers lost by 14 to KFUM Blackeberg</h1>
+<div class="score"><div><div class="t">BC Luleå Steelers</div><div class="s">69</div></div><div class="mid">final</div><div class="r"><div class="t">KFUM Blackebergs IK</div><div class="s">83</div></div></div>
+<table class="qt"><thead><tr><th></th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr></thead>
+<tbody><tr><th>Steelers</th><td>14</td><td>20</td><td>20</td><td>15</td></tr><tr><th>Blackeberg</th><td><b>24</b></td><td>20</td><td>21</td><td>18</td></tr></tbody></table>
+
+<h2 id="summary">Summary</h2>
+<p class="lead">The game was decided in the first quarter (14–24). Quarters 2–4 ended 55–59. Steelers led for just over 3 of 40 minutes, by at most 4, while Blackeberg's largest lead was 21.</p>
+<div class="kpi"><div><b>7/36</b><span>three-pointers (19%)</span></div><div><b>16–10</b><span>offensive rebounds to Blackeberg</span></div><div><b>7–20</b><span>second-chance points</span></div></div>
+<p>Steelers won the turnover battle (15 to 18) and scored 16 points off Blackeberg's turnovers against 8. It was not enough, because more than half of the shots were threes that did not go in, and Blackeberg got many second chances after their own misses.</p>
+
+<h2 id="flow">Game flow</h2>
+<div class="panel"><svg viewBox="0 0 340 190" width="100%" role="img" aria-label="Steelers' lead during the game" xmlns="http://www.w3.org/2000/svg" font-size="11.5"><defs><clipPath id="up"><rect x="0" y="0" width="340" height="66.9"/></clipPath><clipPath id="dn"><rect x="0" y="66.9" width="340" height="190"/></clipPath></defs><rect x="37.1" y="14" width="30.4" height="150" fill="var(--warnbg)"/><text x="52.3" y="25" text-anchor="middle" fill="var(--warn)" font-size="10">Drought</text><line x1="26" x2="332" y1="137.5" y2="137.5" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="140.5" text-anchor="end" fill="var(--muted)">-16</text><line x1="26" x2="332" y1="102.2" y2="102.2" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="105.2" text-anchor="end" fill="var(--muted)">-8</text><line x1="26" x2="332" y1="66.9" y2="66.9" stroke="var(--axis)" stroke-width="0.8"/><text x="22" y="69.9" text-anchor="end" fill="var(--muted)">0</text><line x1="26" x2="332" y1="31.6" y2="31.6" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="34.6" text-anchor="end" fill="var(--muted)">+8</text><line x1="102.5" x2="102.5" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="179.0" x2="179.0" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="255.5" x2="255.5" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><text x="64.2" y="177" text-anchor="middle" fill="var(--muted)">Q1</text><text x="140.8" y="177" text-anchor="middle" fill="var(--muted)">Q2</text><text x="217.2" y="177" text-anchor="middle" fill="var(--muted)">Q3</text><text x="293.8" y="177" text-anchor="middle" fill="var(--muted)">Q4</text><polygon points="26.0,66.9 26.0,66.9 27.5,66.9 27.5,53.7 34.0,53.7 34.0,62.5 37.1,62.5 37.1,58.1 37.1,58.1 37.1,53.7 37.1,53.7 37.1,49.3 38.9,49.3 38.9,58.1 53.2,58.1 53.2,62.5 53.2,62.5 53.2,66.9 61.8,66.9 61.8,75.8 64.4,75.8 64.4,80.2 65.6,80.2 65.6,89.0 67.5,89.0 67.5,80.2 76.7,80.2 76.7,89.0 82.5,89.0 82.5,84.6 82.5,84.6 82.5,80.2 83.6,80.2 83.6,93.4 89.0,93.4 89.0,97.8 89.0,97.8 89.0,102.2 90.6,102.2 90.6,97.8 90.6,97.8 90.6,93.4 96.2,93.4 96.2,106.6 98.4,106.6 98.4,97.8 100.0,97.8 100.0,111.1 105.2,111.1 105.2,124.3 116.0,124.3 116.0,128.7 116.0,128.7 116.0,133.1 119.1,133.1 119.1,128.7 119.1,128.7 119.1,124.3 119.7,124.3 119.7,133.1 126.8,133.1 126.8,137.5 130.8,137.5 130.8,146.4 132.6,146.4 132.6,155.2 139.8,155.2 139.8,150.8 139.8,150.8 139.8,146.4 141.0,146.4 141.0,159.6 147.0,159.6 147.0,146.4 155.1,146.4 155.1,155.2 156.8,155.2 156.8,146.4 158.1,146.4 158.1,150.8 160.9,150.8 160.9,141.9 163.5,141.9 163.5,133.1 167.0,133.1 167.0,119.9 170.6,119.9 170.6,115.5 170.6,115.5 170.6,111.1 172.5,111.1 172.5,115.5 172.5,115.5 172.5,119.9 174.2,119.9 174.2,111.1 187.8,111.1 187.8,119.9 196.7,119.9 196.7,106.6 199.7,106.6 199.7,111.1 201.3,111.1 201.3,102.2 204.5,102.2 204.5,111.1 205.8,111.1 205.8,106.6 208.3,106.6 208.3,97.8 211.3,97.8 211.3,89.0 213.2,89.0 213.2,97.8 213.4,97.8 213.4,89.0 214.3,89.0 214.3,93.4 214.3,93.4 214.3,97.8 216.1,97.8 216.1,89.0 218.2,89.0 218.2,102.2 220.7,102.2 220.7,93.4 220.7,93.4 220.7,89.0 230.4,89.0 230.4,97.8 235.5,97.8 235.5,106.6 245.8,106.6 245.8,102.2 245.8,102.2 245.8,97.8 248.0,97.8 248.0,93.4 250.3,93.4 250.3,102.2 253.8,102.2 253.8,115.5 257.3,115.5 257.3,119.9 257.3,119.9 257.3,124.3 272.5,124.3 272.5,128.7 274.0,128.7 274.0,115.5 279.2,115.5 279.2,106.6 290.2,106.6 290.2,111.1 290.2,111.1 290.2,115.5 294.3,115.5 294.3,124.3 296.3,124.3 296.3,119.9 299.3,119.9 299.3,115.5 306.5,115.5 306.5,119.9 306.5,119.9 306.5,124.3 313.5,124.3 313.5,111.1 318.0,111.1 318.0,115.5 318.0,115.5 318.0,119.9 319.6,119.9 319.6,115.5 319.6,115.5 319.6,111.1 321.3,111.1 321.3,115.5 321.3,115.5 321.3,119.9 324.7,119.9 324.7,106.6 325.7,106.6 325.7,119.9 329.2,119.9 329.2,128.7 332.0,128.7 332.0,128.7 332.0,66.9" fill="var(--accent)" opacity="0.18" clip-path="url(#up)"/><polygon points="26.0,66.9 26.0,66.9 27.5,66.9 27.5,53.7 34.0,53.7 34.0,62.5 37.1,62.5 37.1,58.1 37.1,58.1 37.1,53.7 37.1,53.7 37.1,49.3 38.9,49.3 38.9,58.1 53.2,58.1 53.2,62.5 53.2,62.5 53.2,66.9 61.8,66.9 61.8,75.8 64.4,75.8 64.4,80.2 65.6,80.2 65.6,89.0 67.5,89.0 67.5,80.2 76.7,80.2 76.7,89.0 82.5,89.0 82.5,84.6 82.5,84.6 82.5,80.2 83.6,80.2 83.6,93.4 89.0,93.4 89.0,97.8 89.0,97.8 89.0,102.2 90.6,102.2 90.6,97.8 90.6,97.8 90.6,93.4 96.2,93.4 96.2,106.6 98.4,106.6 98.4,97.8 100.0,97.8 100.0,111.1 105.2,111.1 105.2,124.3 116.0,124.3 116.0,128.7 116.0,128.7 116.0,133.1 119.1,133.1 119.1,128.7 119.1,128.7 119.1,124.3 119.7,124.3 119.7,133.1 126.8,133.1 126.8,137.5 130.8,137.5 130.8,146.4 132.6,146.4 132.6,155.2 139.8,155.2 139.8,150.8 139.8,150.8 139.8,146.4 141.0,146.4 141.0,159.6 147.0,159.6 147.0,146.4 155.1,146.4 155.1,155.2 156.8,155.2 156.8,146.4 158.1,146.4 158.1,150.8 160.9,150.8 160.9,141.9 163.5,141.9 163.5,133.1 167.0,133.1 167.0,119.9 170.6,119.9 170.6,115.5 170.6,115.5 170.6,111.1 172.5,111.1 172.5,115.5 172.5,115.5 172.5,119.9 174.2,119.9 174.2,111.1 187.8,111.1 187.8,119.9 196.7,119.9 196.7,106.6 199.7,106.6 199.7,111.1 201.3,111.1 201.3,102.2 204.5,102.2 204.5,111.1 205.8,111.1 205.8,106.6 208.3,106.6 208.3,97.8 211.3,97.8 211.3,89.0 213.2,89.0 213.2,97.8 213.4,97.8 213.4,89.0 214.3,89.0 214.3,93.4 214.3,93.4 214.3,97.8 216.1,97.8 216.1,89.0 218.2,89.0 218.2,102.2 220.7,102.2 220.7,93.4 220.7,93.4 220.7,89.0 230.4,89.0 230.4,97.8 235.5,97.8 235.5,106.6 245.8,106.6 245.8,102.2 245.8,102.2 245.8,97.8 248.0,97.8 248.0,93.4 250.3,93.4 250.3,102.2 253.8,102.2 253.8,115.5 257.3,115.5 257.3,119.9 257.3,119.9 257.3,124.3 272.5,124.3 272.5,128.7 274.0,128.7 274.0,115.5 279.2,115.5 279.2,106.6 290.2,106.6 290.2,111.1 290.2,111.1 290.2,115.5 294.3,115.5 294.3,124.3 296.3,124.3 296.3,119.9 299.3,119.9 299.3,115.5 306.5,115.5 306.5,119.9 306.5,119.9 306.5,124.3 313.5,124.3 313.5,111.1 318.0,111.1 318.0,115.5 318.0,115.5 318.0,119.9 319.6,119.9 319.6,115.5 319.6,115.5 319.6,111.1 321.3,111.1 321.3,115.5 321.3,115.5 321.3,119.9 324.7,119.9 324.7,106.6 325.7,106.6 325.7,119.9 329.2,119.9 329.2,128.7 332.0,128.7 332.0,128.7 332.0,66.9" fill="var(--neg)" opacity="0.22" clip-path="url(#dn)"/><polyline points="26.0,66.9 27.5,66.9 27.5,53.7 34.0,53.7 34.0,62.5 37.1,62.5 37.1,58.1 37.1,58.1 37.1,53.7 37.1,53.7 37.1,49.3 38.9,49.3 38.9,58.1 53.2,58.1 53.2,62.5 53.2,62.5 53.2,66.9 61.8,66.9 61.8,75.8 64.4,75.8 64.4,80.2 65.6,80.2 65.6,89.0 67.5,89.0 67.5,80.2 76.7,80.2 76.7,89.0 82.5,89.0 82.5,84.6 82.5,84.6 82.5,80.2 83.6,80.2 83.6,93.4 89.0,93.4 89.0,97.8 89.0,97.8 89.0,102.2 90.6,102.2 90.6,97.8 90.6,97.8 90.6,93.4 96.2,93.4 96.2,106.6 98.4,106.6 98.4,97.8 100.0,97.8 100.0,111.1 105.2,111.1 105.2,124.3 116.0,124.3 116.0,128.7 116.0,128.7 116.0,133.1 119.1,133.1 119.1,128.7 119.1,128.7 119.1,124.3 119.7,124.3 119.7,133.1 126.8,133.1 126.8,137.5 130.8,137.5 130.8,146.4 132.6,146.4 132.6,155.2 139.8,155.2 139.8,150.8 139.8,150.8 139.8,146.4 141.0,146.4 141.0,159.6 147.0,159.6 147.0,146.4 155.1,146.4 155.1,155.2 156.8,155.2 156.8,146.4 158.1,146.4 158.1,150.8 160.9,150.8 160.9,141.9 163.5,141.9 163.5,133.1 167.0,133.1 167.0,119.9 170.6,119.9 170.6,115.5 170.6,115.5 170.6,111.1 172.5,111.1 172.5,115.5 172.5,115.5 172.5,119.9 174.2,119.9 174.2,111.1 187.8,111.1 187.8,119.9 196.7,119.9 196.7,106.6 199.7,106.6 199.7,111.1 201.3,111.1 201.3,102.2 204.5,102.2 204.5,111.1 205.8,111.1 205.8,106.6 208.3,106.6 208.3,97.8 211.3,97.8 211.3,89.0 213.2,89.0 213.2,97.8 213.4,97.8 213.4,89.0 214.3,89.0 214.3,93.4 214.3,93.4 214.3,97.8 216.1,97.8 216.1,89.0 218.2,89.0 218.2,102.2 220.7,102.2 220.7,93.4 220.7,93.4 220.7,89.0 230.4,89.0 230.4,97.8 235.5,97.8 235.5,106.6 245.8,106.6 245.8,102.2 245.8,102.2 245.8,97.8 248.0,97.8 248.0,93.4 250.3,93.4 250.3,102.2 253.8,102.2 253.8,115.5 257.3,115.5 257.3,119.9 257.3,119.9 257.3,124.3 272.5,124.3 272.5,128.7 274.0,128.7 274.0,115.5 279.2,115.5 279.2,106.6 290.2,106.6 290.2,111.1 290.2,111.1 290.2,115.5 294.3,115.5 294.3,124.3 296.3,124.3 296.3,119.9 299.3,119.9 299.3,115.5 306.5,115.5 306.5,119.9 306.5,119.9 306.5,124.3 313.5,124.3 313.5,111.1 318.0,111.1 318.0,115.5 318.0,115.5 318.0,119.9 319.6,119.9 319.6,115.5 319.6,115.5 319.6,111.1 321.3,111.1 321.3,115.5 321.3,115.5 321.3,119.9 324.7,119.9 324.7,106.6 325.7,106.6 325.7,119.9 329.2,119.9 329.2,128.7 332.0,128.7 332.0,128.7" fill="none" stroke="var(--accent)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="37.1" cy="49.3" r="2.3" fill="var(--accent)"/><text x="33.1" y="44.3" text-anchor="end" fill="var(--accent)" font-weight="600" font-size="10.5">+4</text><circle cx="141.0" cy="159.6" r="2.3" fill="var(--neg)"/><text x="146.0" y="163.6" fill="var(--neg)" font-weight="600" font-size="10.5">-21</text><text x="179.0" y="188" text-anchor="middle" fill="var(--muted)" font-size="10.5">Lead in points during the game (above zero = Steelers lead)</text></svg></div>
+<ul class="flow">
+<li><span class="tag">Q1 14–24</span>Enbom scored the team's first 6 points (6–2), then 3:58 without a point while Blackeberg went 9–0. Three Blackeberg threes in the last 2:30 gave them a ten-point lead.</li>
+<li><span class="tag">Q2 20–20</span>Blackeberg pulled away to 18–39 (−21) with 5 minutes left. Steelers answered with 16–5, including a 9–0 run, to 34–44 at half-time.</li>
+<li><span class="tag">Q3 20–21</span>Nilsson and Steinsen brought the team to 44–49 and 51–56. Then 3:17 without a point, and Thorén scored 7 points late on: 54–65.</li>
+<li><span class="tag">Q4 15–18</span>Around the break between quarters there were 3:24 without a point while Blackeberg went 8–0 to 54–68. Steelers got no closer than 9 points (59–68 and 69–78).</li>
+</ul>
+
+<h2 id="team">Team stats</h2>
+<p class="lead">Steelers scored 0.86 points per possession to Blackeberg's 1.06. The difference of 0.21 points per possession roughly matches the whole losing margin.</p>
+<div class="kpi"><div><b>0.86</b><span>pts/possession Steelers (≈ 80 possessions)</span></div><div><b>1.06</b><span>pts/possession Blackeberg (≈ 78 possessions)</span></div><div><b>−0.21</b><span>difference per possession</span></div></div>
+<p>Of the four factors, Steelers won only the turnovers:</p>
+<table class="team"><thead><tr><th></th><th>Steelers</th><th>Blackeberg</th></tr></thead><tbody>
+<tr><th scope="row">Effective FG%</th><td>36.7%</td><td class="w2">47.5%</td></tr>
+<tr><th scope="row">Turnovers per possession</th><td class="w">19%</td><td>23%</td></tr>
+<tr><th scope="row">Offensive rebound rate</th><td>23%</td><td class="w2">37%</td></tr>
+<tr><th scope="row">Free throws per shot (FTM/FGA)</th><td>0.34</td><td class="w2">0.41</td></tr></tbody></table>
+<p class="caveat">Effective FG% counts a three as 1.5 shots. Possessions = field-goal attempts − offensive rebounds + turnovers + 0.44 × free-throw attempts (standard formula, an estimate).</p>
+<p>Two-point shooting was actually better than Blackeberg's (46% vs 44%). The difference was in the three-point shooting: 36 of 64 shots were threes, and they produced 0.58 points per shot against 0.93 for the twos. Nilsson made 3 of 4. The rest of the team made 4 of 32 (13%).</p>
+<h3 class="sub">All stats</h3>
+<table class="team"><thead><tr><th></th><th>Steelers</th><th>Blackeberg</th></tr></thead><tbody><tr><th scope="row">Field goals</th><td>20/64</td><td class="w2">25/61</td></tr><tr><th scope="row">Two-pointers</th><td class="w">13/28</td><td>17/39</td></tr><tr><th scope="row">Three-pointers</th><td>7/36</td><td class="w2">8/22</td></tr><tr><th scope="row">Free throws</th><td class="w">22/26</td><td>25/34</td></tr><tr><th scope="row">Rebounds (off.)</th><td>34 (10)</td><td class="w2">48 (16)</td></tr><tr><th scope="row">Assists</th><td class="w">23</td><td>12</td></tr><tr><th scope="row">Turnovers</th><td class="w">15</td><td>18</td></tr><tr><th scope="row">Steals</th><td class="w">10</td><td>7</td></tr><tr><th scope="row">Fast-break points</th><td>16</td><td>18</td></tr><tr><th scope="row">Points off turnovers</th><td class="w">16</td><td>8</td></tr><tr><th scope="row">Second-chance points</th><td>7</td><td class="w2">20</td></tr><tr><th scope="row">Points in the paint</th><td>22</td><td class="w2">34</td></tr><tr><th scope="row">Bench points</th><td>26</td><td>29</td></tr></tbody></table>
+<div class="two">
+<div class="panel good"><h3>What worked</h3><ul><li><b>Steals:</b> 10 steals and 16 points off Blackeberg's turnovers, twice as many as Blackeberg got.</li><li><b>Free throws:</b> 22 of 26 (85%). Nilsson and Steinsen drew 15 fouls between them.</li><li><b>Character:</b> from −21 back to −5 in Q3, with a 16–5 run before half-time.</li></ul></div>
+<div class="panel bad"><h3>The problems</h3><ul><li><b>Three-point shooting:</b> 7 of 36. The shots were there, but there were too many of them and they did not go in.</li><li><b>Defensive rebounding:</b> Blackeberg got back 37% of their misses and scored 20 second-chance points.</li><li><b>The start:</b> 3:58 without a point in Q1 and ten points down after the first quarter.</li></ul></div>
+</div>
+
+<h2 id="lineups">Lineups</h2>
+<p class="lead">Steelers lost by 12 points in the 10 minutes when at least two of Mugisha, Forsman, Palmqvist and Löwgren Madeira were on the floor together. The rest of the game, just under 30 minutes, ended 57–59.</p>
+<div class="kpi"><div><b>−12</b><span>at least two of the four on (10:16)</span></div><div><b>−2</b><span>other lineups (29:44)</span></div><div><b>+8</b><span>Kero + Persson together (7:41)</span></div></div>
+<table class="team"><thead><tr><th></th><th>Points for–against</th><th>Pts/poss. for</th><th>against</th></tr></thead><tbody>
+<tr><th scope="row">At least two of the four</th><td>12–24</td><td>0.65</td><td class="w2">1.22</td></tr>
+<tr><th scope="row">Other lineups</th><td>57–59</td><td class="w">0.92</td><td>1.01</td></tr></tbody></table>
+<p>This is more about how the lineups were put together than about individual players: with several substitutes on at once, the team scored only 0.65 points per possession. The team was also −12 with Nilsson on the bench and −10 with Jägare on the bench, and the 2:56 when both rested at the same time ended 0–7.</p>
+<h3 class="sub">Best lineups</h3>
+<article class="five"><p class="who">Jägare · Persson · Kero · Nilsson · Steinsen</p><div class="fs"><div><dd>2:44</dd><dt>Minutes</dt></div><div><dd>11–3</dd><dt>Points for–against</dt></div><div><dd class="pos">+8</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 6 possessions</span><span>Pts/poss.: <b>1.87</b> for · <b>0.52</b> against</span></div><p class="note">End of Q2, from 23–41 to 34–44. Persson had two steals during the run.</p></article>
+<article class="five"><p class="who">Jägare · Enbom · Nilsson · Steinsen · Erlandsson</p><div class="fs"><div><dd>6:53</dd><dt>Minutes</dt></div><div><dd>20–18</dd><dt>Points for–against</dt></div><div><dd class="pos">+2</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 15 possessions</span><span>Pts/poss.: <b>1.31</b> for · <b>1.10</b> against</span></div><p class="note">The most used lineup. Took the team from 34–46 to 51–56 in Q3.</p></article>
+<article class="five"><p class="who">Jägare · Enbom · Kero · Nilsson · Erlandsson</p><div class="fs"><div><dd>4:33</dd><dt>Minutes</dt></div><div><dd>6–6</dd><dt>Points for–against</dt></div><div><dd>0</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 8 possessions</span><span>Pts/poss.: <b>0.72</b> for · <b>0.76</b> against</span></div><p class="note">The starting five. Led 6–2 but then did not score before the first substitution.</p></article>
+<h3 class="sub">Weakest lineups</h3>
+<article class="five"><p class="who">Mugisha · Forsman · Palmqvist · Nilsson · Steinsen</p><div class="fs"><div><dd>3:40</dd><dt>Minutes</dt></div><div><dd>4–12</dd><dt>Points for–against</dt></div><div><dd class="neg">−8</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 8 possessions</span><span>Pts/poss.: <b>0.51</b> for · <b>1.55</b> against</span></div><p class="note">End of Q1 (10–13 to 14–24) and a short spell in Q4.</p></article>
+<article class="five"><p class="who">Jägare · Enbom · Forsman · Persson · Steinsen</p><div class="fs"><div><dd>2:12</dd><dt>Minutes</dt></div><div><dd>2–7</dd><dt>Points for–against</dt></div><div><dd class="neg">−5</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 6 possessions</span><span>Pts/poss.: <b>0.34</b> for · <b>1.62</b> against</span></div><p class="note">Middle of Q2, when Blackeberg went from 14–29 to 16–36.</p></article>
+<article class="five"><p class="who">Mugisha · Forsman · Persson · Palmqvist · Steinsen</p><div class="fs"><div><dd>1:46</dd><dt>Minutes</dt></div><div><dd>0–5</dd><dt>Points for–against</dt></div><div><dd class="neg">−5</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 2 possessions</span><span>Pts/poss.: <b>0.00</b> for · <b>1.74</b> against</span></div><p class="note">The start of Q2.</p></article>
+<p>The pattern: things went best when Nilsson and Jägare were joined by Steinsen and either Kero or Persson. The Kero–Persson pair was +8 and Jägare–Persson +3 in their minutes together.</p>
+<p class="caveat">Each lineup only played a few minutes, so +/- is heavily affected by single possessions. Possessions per lineup are estimated. The figures are calculated from substitutions and scoring in the play-by-play and, in this game, match the official +/- exactly for every player.</p>
+
+<h2 id="players">Players – BC Luleå Steelers</h2>
+<p>Nilsson and Steinsen scored 47 of the 69 points. Jägare ran the game with 10 assists. The other eight players made 4 of 26 shots.</p>
+<article class="card"><header><span class="num">#14</span><h3>Calvin Jägare (C)</h3><span class="pm neg">−4</span></header>
+<dl class="stats"><div><dd>7</dd><dt>Pts</dt></div><div><dd>3/11</dd><dt>FG</dt></div><div><dd>1/4</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>5</dd><dt>Reb</dt></div><div><dd>10</dd><dt>Ast</dt></div><div><dd>3</dd><dt>TO</dt></div></dl>
+<p>Most minutes and the team's playmaker: 10 assists, 3 steals and 4 offensive rebounds as a guard. The team was −10 in his just over 7 minutes on the bench. Finishing near the basket (2 of 7 on twos, one blocked) is what can improve.</p><p class="min">32:42 minutes</p></article>
+<article class="card"><header><span class="num">#24</span><h3>Kembo Nilsson</h3><span class="pm neg">−2</span></header>
+<dl class="stats"><div><dd>28</dd><dt>Pts</dt></div><div><dd>8/13</dd><dt>FG</dt></div><div><dd>3/4</dd><dt>3P</dt></div><div><dd>9/11</dd><dt>FT</dt></div><div><dd>7</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>The team's best player in the game: 28 points on 13 shots, 79% true shooting (free throws included), 7 rebounds and only 1 turnover. Drew 7 fouls. The team was −12 in his just over 8 minutes on the bench. Picked up his fourth foul with 5:28 left.</p><p class="min">31:41 minutes</p></article>
+<article class="card"><header><span class="num">#29</span><h3>Leo Steinsen</h3><span class="pm neg">−12</span></header>
+<dl class="stats"><div><dd>19</dd><dt>Pts</dt></div><div><dd>5/14</dd><dt>FG</dt></div><div><dd>2/8</dd><dt>3P</dt></div><div><dd>7/8</dd><dt>FT</dt></div><div><dd>2</dd><dt>Reb</dt></div><div><dd>3</dd><dt>Ast</dt></div><div><dd>3</dd><dt>TO</dt></div></dl>
+<p>15 of his 19 points came after half-time, and he drove the comeback in Q3. Drew 8 fouls, the most on the team, and made 7 of 8 free throws. 3 of 6 on twos against 2 of 8 on threes: more drives pay off. The −12 reflects that he played a lot in the weak lineups in Q1 and Q2.</p><p class="min">28:01 minutes</p></article>
+<article class="card"><header><span class="num">#7</span><h3>Elliot Enbom</h3><span class="pm neg">−2</span></header>
+<dl class="stats"><div><dd>6</dd><dt>Pts</dt></div><div><dd>1/9</dd><dt>FG</dt></div><div><dd>1/7</dd><dt>3P</dt></div><div><dd>3/3</dd><dt>FT</dt></div><div><dd>2</dd><dt>Reb</dt></div><div><dd>3</dd><dt>Ast</dt></div><div><dd>2</dd><dt>TO</dt></div></dl>
+<p>Opened the game with a three and three free throws, all 6 points in 87 seconds. After that 0 of 8, 6 of them threes. Three assists and drew 4 fouls.</p><p class="min">24:52 minutes</p></article>
+<article class="card"><header><span class="num">#30</span><h3>Leo Erlandsson</h3><span class="pm neg">−1</span></header>
+<dl class="stats"><div><dd>0</dd><dt>Pts</dt></div><div><dd>0/2</dd><dt>FG</dt></div><div><dd>0/2</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>3</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>No turnovers, one steal and one offensive rebound. Close to even (−1) in 17 minutes. Two fouls in 26 seconds late in the game gave Blackeberg four free throws.</p><p class="min">17:03 minutes</p></article>
+<article class="card"><header><span class="num">#9</span><h3>Ville Kero</h3><span class="pm pos">+2</span></header>
+<dl class="stats"><div><dd>2</dd><dt>Pts</dt></div><div><dd>1/5</dd><dt>FG</dt></div><div><dd>0/3</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>4</dd><dt>Reb</dt></div><div><dd>5</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>The team's only plus: +2 in 17 minutes, and the team lost his bench minutes by 16. 5 assists to 1 turnover and 4 defensive rebounds. 4 fouls.</p><p class="min">17:01 minutes</p></article>
+<article class="card"><header><span class="num">#4</span><h3>Franck Mugisha</h3><span class="pm neg">−15</span></header>
+<dl class="stats"><div><dd>1</dd><dt>Pts</dt></div><div><dd>0/4</dd><dt>FG</dt></div><div><dd>0/4</dd><dt>3P</dt></div><div><dd>1/2</dd><dt>FT</dt></div><div><dd>3</dd><dt>Reb</dt></div><div><dd>2</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>Two assists to Nilsson in Q1 and 3 defensive rebounds. All four of his shots were threes. Was mostly on the floor in the lineups with several substitutes, which explains much of the −15.</p><p class="min">16:23 minutes</p></article>
+<article class="card"><header><span class="num">#18</span><h3>Erik Persson</h3><span class="pm neg">−2</span></header>
+<dl class="stats"><div><dd>2</dd><dt>Pts</dt></div><div><dd>1/2</dd><dt>FG</dt></div><div><dd>0/1</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>1</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>Two steals in the run before half-time, one of which became his own lay-up. Was part of the best lineup of the game and of the two best pairs.</p><p class="min">12:03 minutes</p></article>
+<article class="card"><header><span class="num">#16</span><h3>Erik Forsman</h3><span class="pm neg">−18</span></header>
+<dl class="stats"><div><dd>2</dd><dt>Pts</dt></div><div><dd>0/1</dd><dt>FG</dt></div><div><dd>0/1</dd><dt>3P</dt></div><div><dd>2/2</dd><dt>FT</dt></div><div><dd>2</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>Grabbed an offensive rebound and made both free throws. The −18 comes from his minutes falling in the weakest spells of the game, the end of Q1 and the start of Q2. The number says more about the lineups than about him.</p><p class="min">9:33 minutes</p></article>
+<article class="card"><header><span class="num">#20</span><h3>Gustav Palmqvist</h3><span class="pm neg">−12</span></header>
+<dl class="stats"><div><dd>2</dd><dt>Pts</dt></div><div><dd>1/2</dd><dt>FG</dt></div><div><dd>0/1</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>0</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Lay-up from a Steinsen pass late in Q1. Three fouls in 7 minutes, two of them shooting fouls early in Q4.</p><p class="min">6:57 minutes</p></article>
+<article class="card"><header><span class="num">#22</span><h3>Sandro Löwgren Madeira</h3><span class="pm neg">−4</span></header>
+<dl class="stats"><div><dd>0</dd><dt>Pts</dt></div><div><dd>0/1</dd><dt>FG</dt></div><div><dd>0/1</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>0</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>The team's only block, in Q3. Just under 4 minutes, too short to say much.</p><p class="min">3:44 minutes</p></article>
+
+<h2 id="opponent">KFUM Blackebergs IK</h2>
+<ul class="flow">
+<li><b>Guedé</b> was the best player on the floor: 28 points, 11 of 13 free throws, 3 steals and 9 fouls drawn. 13 of the points came on fast breaks.</li>
+<li><b>Detthoff</b> scored 18 points off the bench with 5 of 8 from three and had 13 rebounds without a single turnover or foul.</li>
+<li><b>Gregoriadis</b> had 5 offensive rebounds and was +22. <b>Thorén</b> scored 11 points on 5 shots.</li>
+<li>Apart from Detthoff and Thorén, Blackeberg made only 1 of 12 threes. Captain <b>Petersson</b> was 0 of 7.</li>
+</ul>
+
+<h2 id="next">Next game</h2>
+<ol class="todo">
+<li><b>More drives, fewer threes.</b> 36 threes produced 0.58 points per shot, the twos 0.93. The team made 85% of its free throws, so every drive that draws fouls pays off.</li>
+<li><b>Box out.</b> 16 offensive rebounds gave Blackeberg 20 second-chance points, more than the losing margin.</li>
+<li><b>Stop Guedé in transition.</b> 13 fast-break points. Get back on defence after our own misses.</li>
+<li><b>Don't rest Nilsson and Jägare at the same time.</b> The 2:56 when both were on the bench ended 0–7, and the lineups with several substitutes lost 12–24 in 10 minutes.</li>
+</ol>
+<footer>Game played 20 September 2026. Source: official statistics and play-by-play (Genius Sports). Attendance: 120.</footer>
+</main></body></html>

@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game analysis: BC Luleå 108–77 Sloga Uppsala</title>
+<meta name="matchdatum" content="2026-10-02">
+<meta name="description" content="Team and player-by-player game analysis, BC Luleå vs Sloga Uppsala 108–77.">
+<meta property="og:title" content="Game analysis: BC Luleå 108–77 Sloga Uppsala">
+<meta property="og:description" content="Team stats, game flow, lineups, player by player and glossary.">
+<style>:root{--bg:#f6f7fa;--card:#fff;--ink:#1b2130;--muted:#6b7385;--line:#e2e5ec;--accent:#1f5fae;--accentink:#fff;--pos:#1e8a4c;--neg:#c0392b;--grid:#e6e8ee;--axis:#a3a9b6;--warnbg:#f7e6c9;--warn:#9a6a1c;--soft:#eef2f8}
+@media (prefers-color-scheme:dark){:root{--bg:#12151c;--card:#1b2029;--ink:#e8ebf2;--muted:#9aa2b3;--line:#2c3340;--accent:#5b9bef;--accentink:#0d1420;--pos:#4cc585;--neg:#ef6b5d;--grid:#2a303c;--axis:#566072;--warnbg:#3a2f1c;--warn:#e0b060;--soft:#222935}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:680px;margin:0 auto;padding:20px 16px 48px}
+.kick{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-size:28px;line-height:1.15;margin:6px 0 16px}
+h2{font-size:21px;margin:36px 0 10px;scroll-margin-top:64px}
+h3{margin:0;font-size:18px}
+p{margin:8px 0}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+nav div{max-width:680px;margin:0 auto;padding:10px 16px;display:flex;gap:8px}
+nav a{flex:none;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:14px}
+.score{background:var(--accent);color:var(--accentink);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.score .t{font-size:14px;opacity:.9} .score .s{font-size:40px;font-weight:800;line-height:1.1} .score .r{text-align:right} .score .mid{font-size:13px;opacity:.85;text-align:center}
+.qt{width:100%;border-collapse:collapse;margin-top:10px;background:var(--card);border-radius:12px;overflow:hidden;font-variant-numeric:tabular-nums;text-align:center;font-size:15px}
+.qt th,.qt td{padding:7px 4px;border-bottom:1px solid var(--line)} .qt tr:last-child td,.qt tr:last-child th{border-bottom:0}
+.qt thead th{color:var(--muted);font-weight:600;font-size:13px;background:var(--soft)}
+.lead{font-size:18px;font-weight:600}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 8px;text-align:center}
+.kpi b{display:block;font-size:24px;color:var(--accent);font-variant-numeric:tabular-nums} .kpi span{font-size:13px;color:var(--muted);line-height:1.3;display:block}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+svg text{font-family:inherit}
+ul.flow{padding:0;list-style:none} ul.flow li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0}
+.tag{display:inline-block;font-weight:700;color:var(--accent);margin-right:6px}
+table.team{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;font-variant-numeric:tabular-nums;font-size:15px}
+table.team th,table.team td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right}
+table.team th[scope=row]{text-align:left;font-weight:500} table.team thead th{color:var(--muted);font-size:13px;background:var(--soft)}
+table.team tr:last-child>*{border-bottom:0}
+td.w,td.w2{font-weight:700;color:var(--accent)}
+.two{display:grid;gap:10px;margin-top:12px} @media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.good{border-left:4px solid var(--pos)} .bad{border-left:4px solid var(--neg)}
+.two h3{font-size:16px;margin-bottom:4px} .two ul{margin:0;padding-left:18px} .two li{margin:5px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.card header{display:flex;align-items:baseline;gap:8px} .card h3{flex:1} .num{color:var(--muted);font-size:14px}
+.pm{font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums} .pm.pos{color:var(--pos)} .pm.neg{color:var(--neg)}
+.stats{display:grid;grid-template-columns:repeat(7,1fr);margin:10px 0 6px;padding:8px 0;background:var(--soft);border-radius:10px;text-align:center}
+.stats div{min-width:0} .stats dd{margin:0;font-weight:700;font-size:15px;font-variant-numeric:tabular-nums} .stats dt{font-size:11px;color:var(--muted)}
+.min{font-size:13px;color:var(--muted);margin:0}
+ol.todo{counter-reset:n;list-style:none;padding:0}
+ol.todo li{counter-increment:n;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 52px;margin:10px 0;position:relative}
+ol.todo li::before{content:counter(n);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accentink);font-weight:700;display:grid;place-items:center;font-size:14px}
+.ppp{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:8px;font-variant-numeric:tabular-nums} .ppp b{color:var(--ink)}
+.sub{font-size:17px;margin:20px 0 4px}
+.five{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:8px 0}
+.five .who{font-weight:650;margin:0 0 8px;line-height:1.35}
+.fs{display:grid;grid-template-columns:1fr 1.4fr 1fr;background:var(--soft);border-radius:10px;padding:8px 0;text-align:center}
+.fs dd{margin:0;font-weight:700;font-size:16px;font-variant-numeric:tabular-nums} .fs dt{font-size:11px;color:var(--muted)}
+.fs dd.pos{color:var(--pos)} .fs dd.neg{color:var(--neg)}
+.five .note{margin:8px 0 0;font-size:15px;color:var(--muted)}
+.caveat{font-size:14px;color:var(--muted);border-left:3px solid var(--line);padding-left:10px}
+footer{color:var(--muted);font-size:13px;margin-top:36px}
+@media(max-width:380px){body{font-size:16px} h1{font-size:24px} .score .s{font-size:34px} .stats dd{font-size:14px}}
+.back{display:inline-block;margin:0 0 8px;font-size:15px;color:var(--accent);text-decoration:none}
+</style></head><body>
+<nav aria-label="Contents"><div><a href="#summary">Summary</a><a href="#flow">Game flow</a><a href="#team">Team stats</a><a href="#lineups">Lineups</a><a href="#players">Players</a><a href="#opponent">Sloga</a><a href="#next">Next game</a><a href="#glossary">Glossary</a></div></nav>
+<main>
+<a class="back" href="../index.html">← All games</a>
+<div class="kick">Game analysis · 2 October 2026</div>
+<h1>BC Luleå beat Sloga Uppsala by 31 at home</h1>
+<div class="score"><div><div class="t">BC Luleå</div><div class="s">108</div></div><div class="mid">final</div><div class="r"><div class="t">Sloga Uppsala</div><div class="s">77</div></div></div>
+<table class="qt"><thead><tr><th></th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr></thead>
+<tbody><tr><th>Luleå</th><td><b>29</b></td><td><b>27</b></td><td><b>30</b></td><td>22</td></tr><tr><th>Sloga</th><td>11</td><td>18</td><td>19</td><td><b>29</b></td></tr></tbody></table>
+
+<h2 id="summary">Summary</h2>
+<p class="lead">The game was decided as early as Q1, which Luleå won 29–11. Luleå led for 38:31 of 40 minutes and were up by as many as 44 points (97–53).</p>
+<div class="kpi"><div><b>1.46</b><span>points per possession, vs Sloga 1.02</span></div><div><b>28–13</b><span>points off turnovers</span></div><div><b>25–6</b><span>fast-break points</span></div></div>
+<p>Luleå won each of the first three quarters and led 86–48 going into the final quarter. Sloga committed 17 turnovers, 7 of them in Q1, and Luleå had 12 steals. Sloga's 29–22 in Q4 came almost entirely after 97–53, when both teams were rotating and the game was decided.</p>
+
+<h2 id="flow">Game flow</h2>
+<div class="panel"><svg viewBox="0 0 340 190" width="100%" role="img" aria-label="The lead during the game" xmlns="http://www.w3.org/2000/svg" font-size="11.5"><defs><clipPath id="up"><rect x="0" y="0" width="340" height="149.0"/></clipPath><clipPath id="dn"><rect x="0" y="149.0" width="340" height="190"/></clipPath></defs><rect x="278.8" y="14" width="22.3" height="150" fill="var(--warnbg)"/><text x="290.0" y="25" text-anchor="middle" fill="var(--warn)" font-size="10">Drought</text><line x1="26" x2="332" y1="149.0" y2="149.0" stroke="var(--axis)" stroke-width="0.8"/><text x="22" y="152.0" text-anchor="end" fill="var(--muted)">0</text><line x1="26" x2="332" y1="125.0" y2="125.0" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="128.0" text-anchor="end" fill="var(--muted)">+8</text><line x1="26" x2="332" y1="101.0" y2="101.0" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="104.0" text-anchor="end" fill="var(--muted)">+16</text><line x1="26" x2="332" y1="77.0" y2="77.0" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="80.0" text-anchor="end" fill="var(--muted)">+24</text><line x1="26" x2="332" y1="53.0" y2="53.0" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="56.0" text-anchor="end" fill="var(--muted)">+32</text><line x1="26" x2="332" y1="29.0" y2="29.0" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="32.0" text-anchor="end" fill="var(--muted)">+40</text><line x1="102.5" x2="102.5" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="179.0" x2="179.0" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="255.5" x2="255.5" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><text x="64.2" y="177" text-anchor="middle" fill="var(--muted)">Q1</text><text x="140.8" y="177" text-anchor="middle" fill="var(--muted)">Q2</text><text x="217.2" y="177" text-anchor="middle" fill="var(--muted)">Q3</text><text x="293.8" y="177" text-anchor="middle" fill="var(--muted)">Q4</text><polygon points="26.0,149.0 26.0,149.0 28.1,149.0 28.1,155.0 31.0,155.0 31.0,149.0 35.7,149.0 35.7,143.0 38.6,143.0 38.6,149.0 40.3,149.0 40.3,143.0 44.2,143.0 44.2,134.0 46.7,134.0 46.7,131.0 46.7,131.0 46.7,128.0 50.5,128.0 50.5,134.0 51.6,134.0 51.6,128.0 54.8,128.0 54.8,134.0 58.7,134.0 58.7,131.0 62.9,131.0 62.9,122.0 66.7,122.0 66.7,116.0 77.8,116.0 77.8,110.0 79.7,110.0 79.7,107.0 79.7,107.0 79.7,104.0 81.6,104.0 81.6,113.0 91.9,113.0 91.9,107.0 94.6,107.0 94.6,101.0 97.1,101.0 97.1,98.0 97.1,98.0 97.1,95.0 105.9,95.0 105.9,101.0 109.2,101.0 109.2,104.0 109.2,104.0 109.2,107.0 116.5,107.0 116.5,98.0 122.2,98.0 122.2,92.0 124.5,92.0 124.5,95.0 124.5,95.0 124.5,98.0 127.1,98.0 127.1,92.0 128.7,92.0 128.7,98.0 131.8,98.0 131.8,92.0 134.1,92.0 134.1,98.0 136.4,98.0 136.4,92.0 141.3,92.0 141.3,86.0 145.2,86.0 145.2,80.0 148.0,80.0 148.0,83.0 148.0,83.0 148.0,86.0 149.5,86.0 149.5,77.0 151.1,77.0 151.1,80.0 151.1,80.0 151.1,83.0 155.1,83.0 155.1,77.0 159.3,77.0 159.3,68.0 165.1,68.0 165.1,62.0 167.9,62.0 167.9,71.0 172.6,71.0 172.6,74.0 178.8,74.0 178.8,68.0 183.2,68.0 183.2,59.0 186.5,59.0 186.5,53.0 188.6,53.0 188.6,62.0 191.6,62.0 191.6,59.0 191.6,59.0 191.6,56.0 196.8,56.0 196.8,50.0 200.3,50.0 200.3,41.0 204.6,41.0 204.6,35.0 208.7,35.0 208.7,29.0 209.8,29.0 209.8,26.0 210.9,26.0 210.9,35.0 212.5,35.0 212.5,26.0 214.2,26.0 214.2,32.0 214.3,32.0 214.3,35.0 214.3,35.0 214.3,38.0 217.0,38.0 217.0,29.0 219.0,29.0 219.0,38.0 224.7,38.0 224.7,44.0 224.7,44.0 224.7,47.0 225.8,47.0 225.8,44.0 225.8,44.0 225.8,41.0 233.2,41.0 233.2,35.0 244.4,35.0 244.4,41.0 246.7,41.0 246.7,32.0 250.3,32.0 250.3,35.0 257.6,35.0 257.6,44.0 259.3,44.0 259.3,35.0 262.4,35.0 262.4,41.0 266.1,41.0 266.1,32.0 271.9,32.0 271.9,23.0 278.8,23.0 278.8,20.0 278.8,20.0 278.8,17.0 285.3,17.0 285.3,23.0 295.8,23.0 295.8,32.0 299.6,32.0 299.6,38.0 301.2,38.0 301.2,32.0 304.1,32.0 304.1,38.0 307.1,38.0 307.1,35.0 307.1,35.0 307.1,32.0 312.1,32.0 312.1,41.0 314.4,41.0 314.4,38.0 316.5,38.0 316.5,44.0 318.4,44.0 318.4,53.0 320.1,53.0 320.1,50.0 320.9,50.0 320.9,41.0 322.6,41.0 322.6,50.0 327.7,50.0 327.7,56.0 331.1,56.0 331.1,50.0 331.8,50.0 331.8,53.0 331.8,53.0 331.8,56.0 332.0,56.0 332.0,56.0 332.0,149.0" fill="var(--accent)" opacity="0.18" clip-path="url(#up)"/><polygon points="26.0,149.0 26.0,149.0 28.1,149.0 28.1,155.0 31.0,155.0 31.0,149.0 35.7,149.0 35.7,143.0 38.6,143.0 38.6,149.0 40.3,149.0 40.3,143.0 44.2,143.0 44.2,134.0 46.7,134.0 46.7,131.0 46.7,131.0 46.7,128.0 50.5,128.0 50.5,134.0 51.6,134.0 51.6,128.0 54.8,128.0 54.8,134.0 58.7,134.0 58.7,131.0 62.9,131.0 62.9,122.0 66.7,122.0 66.7,116.0 77.8,116.0 77.8,110.0 79.7,110.0 79.7,107.0 79.7,107.0 79.7,104.0 81.6,104.0 81.6,113.0 91.9,113.0 91.9,107.0 94.6,107.0 94.6,101.0 97.1,101.0 97.1,98.0 97.1,98.0 97.1,95.0 105.9,95.0 105.9,101.0 109.2,101.0 109.2,104.0 109.2,104.0 109.2,107.0 116.5,107.0 116.5,98.0 122.2,98.0 122.2,92.0 124.5,92.0 124.5,95.0 124.5,95.0 124.5,98.0 127.1,98.0 127.1,92.0 128.7,92.0 128.7,98.0 131.8,98.0 131.8,92.0 134.1,92.0 134.1,98.0 136.4,98.0 136.4,92.0 141.3,92.0 141.3,86.0 145.2,86.0 145.2,80.0 148.0,80.0 148.0,83.0 148.0,83.0 148.0,86.0 149.5,86.0 149.5,77.0 151.1,77.0 151.1,80.0 151.1,80.0 151.1,83.0 155.1,83.0 155.1,77.0 159.3,77.0 159.3,68.0 165.1,68.0 165.1,62.0 167.9,62.0 167.9,71.0 172.6,71.0 172.6,74.0 178.8,74.0 178.8,68.0 183.2,68.0 183.2,59.0 186.5,59.0 186.5,53.0 188.6,53.0 188.6,62.0 191.6,62.0 191.6,59.0 191.6,59.0 191.6,56.0 196.8,56.0 196.8,50.0 200.3,50.0 200.3,41.0 204.6,41.0 204.6,35.0 208.7,35.0 208.7,29.0 209.8,29.0 209.8,26.0 210.9,26.0 210.9,35.0 212.5,35.0 212.5,26.0 214.2,26.0 214.2,32.0 214.3,32.0 214.3,35.0 214.3,35.0 214.3,38.0 217.0,38.0 217.0,29.0 219.0,29.0 219.0,38.0 224.7,38.0 224.7,44.0 224.7,44.0 224.7,47.0 225.8,47.0 225.8,44.0 225.8,44.0 225.8,41.0 233.2,41.0 233.2,35.0 244.4,35.0 244.4,41.0 246.7,41.0 246.7,32.0 250.3,32.0 250.3,35.0 257.6,35.0 257.6,44.0 259.3,44.0 259.3,35.0 262.4,35.0 262.4,41.0 266.1,41.0 266.1,32.0 271.9,32.0 271.9,23.0 278.8,23.0 278.8,20.0 278.8,20.0 278.8,17.0 285.3,17.0 285.3,23.0 295.8,23.0 295.8,32.0 299.6,32.0 299.6,38.0 301.2,38.0 301.2,32.0 304.1,32.0 304.1,38.0 307.1,38.0 307.1,35.0 307.1,35.0 307.1,32.0 312.1,32.0 312.1,41.0 314.4,41.0 314.4,38.0 316.5,38.0 316.5,44.0 318.4,44.0 318.4,53.0 320.1,53.0 320.1,50.0 320.9,50.0 320.9,41.0 322.6,41.0 322.6,50.0 327.7,50.0 327.7,56.0 331.1,56.0 331.1,50.0 331.8,50.0 331.8,53.0 331.8,53.0 331.8,56.0 332.0,56.0 332.0,56.0 332.0,149.0" fill="var(--neg)" opacity="0.22" clip-path="url(#dn)"/><polyline points="26.0,149.0 28.1,149.0 28.1,155.0 31.0,155.0 31.0,149.0 35.7,149.0 35.7,143.0 38.6,143.0 38.6,149.0 40.3,149.0 40.3,143.0 44.2,143.0 44.2,134.0 46.7,134.0 46.7,131.0 46.7,131.0 46.7,128.0 50.5,128.0 50.5,134.0 51.6,134.0 51.6,128.0 54.8,128.0 54.8,134.0 58.7,134.0 58.7,131.0 62.9,131.0 62.9,122.0 66.7,122.0 66.7,116.0 77.8,116.0 77.8,110.0 79.7,110.0 79.7,107.0 79.7,107.0 79.7,104.0 81.6,104.0 81.6,113.0 91.9,113.0 91.9,107.0 94.6,107.0 94.6,101.0 97.1,101.0 97.1,98.0 97.1,98.0 97.1,95.0 105.9,95.0 105.9,101.0 109.2,101.0 109.2,104.0 109.2,104.0 109.2,107.0 116.5,107.0 116.5,98.0 122.2,98.0 122.2,92.0 124.5,92.0 124.5,95.0 124.5,95.0 124.5,98.0 127.1,98.0 127.1,92.0 128.7,92.0 128.7,98.0 131.8,98.0 131.8,92.0 134.1,92.0 134.1,98.0 136.4,98.0 136.4,92.0 141.3,92.0 141.3,86.0 145.2,86.0 145.2,80.0 148.0,80.0 148.0,83.0 148.0,83.0 148.0,86.0 149.5,86.0 149.5,77.0 151.1,77.0 151.1,80.0 151.1,80.0 151.1,83.0 155.1,83.0 155.1,77.0 159.3,77.0 159.3,68.0 165.1,68.0 165.1,62.0 167.9,62.0 167.9,71.0 172.6,71.0 172.6,74.0 178.8,74.0 178.8,68.0 183.2,68.0 183.2,59.0 186.5,59.0 186.5,53.0 188.6,53.0 188.6,62.0 191.6,62.0 191.6,59.0 191.6,59.0 191.6,56.0 196.8,56.0 196.8,50.0 200.3,50.0 200.3,41.0 204.6,41.0 204.6,35.0 208.7,35.0 208.7,29.0 209.8,29.0 209.8,26.0 210.9,26.0 210.9,35.0 212.5,35.0 212.5,26.0 214.2,26.0 214.2,32.0 214.3,32.0 214.3,35.0 214.3,35.0 214.3,38.0 217.0,38.0 217.0,29.0 219.0,29.0 219.0,38.0 224.7,38.0 224.7,44.0 224.7,44.0 224.7,47.0 225.8,47.0 225.8,44.0 225.8,44.0 225.8,41.0 233.2,41.0 233.2,35.0 244.4,35.0 244.4,41.0 246.7,41.0 246.7,32.0 250.3,32.0 250.3,35.0 257.6,35.0 257.6,44.0 259.3,44.0 259.3,35.0 262.4,35.0 262.4,41.0 266.1,41.0 266.1,32.0 271.9,32.0 271.9,23.0 278.8,23.0 278.8,20.0 278.8,20.0 278.8,17.0 285.3,17.0 285.3,23.0 295.8,23.0 295.8,32.0 299.6,32.0 299.6,38.0 301.2,38.0 301.2,32.0 304.1,32.0 304.1,38.0 307.1,38.0 307.1,35.0 307.1,35.0 307.1,32.0 312.1,32.0 312.1,41.0 314.4,41.0 314.4,38.0 316.5,38.0 316.5,44.0 318.4,44.0 318.4,53.0 320.1,53.0 320.1,50.0 320.9,50.0 320.9,41.0 322.6,41.0 322.6,50.0 327.7,50.0 327.7,56.0 331.1,56.0 331.1,50.0 331.8,50.0 331.8,53.0 331.8,53.0 331.8,56.0 332.0,56.0 332.0,56.0" fill="none" stroke="var(--accent)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="278.8" cy="17.0" r="2.3" fill="var(--accent)"/><text x="274.8" y="12.0" text-anchor="end" fill="var(--accent)" font-weight="600" font-size="10.5">+44</text><circle cx="28.1" cy="155.0" r="2.3" fill="var(--neg)"/><text x="33.1" y="159.0" fill="var(--neg)" font-weight="600" font-size="10.5">-2</text><text x="179.0" y="188" text-anchor="middle" fill="var(--muted)" font-size="10.5">Lead in points during the game (above zero = Luleå lead)</text></svg></div>
+<ul class="flow">
+<li><span class="tag">Q1 29–11</span>Sloga led 2–0, then Luleå took over. Naivalurua scored 10 points in the quarter and Arvidsson 8. Sloga went 3:30 without scoring while Luleå went on a 10–0 run to 23–8. Sloga had 7 turnovers and made 1 of 8 threes.</li>
+<li><span class="tag">Q2 27–18</span>Luleå made 9 of 11 two-pointers. Arvidsson's step-back three and two lay-ups from Holmes kept Sloga at a distance. Sloga got 9 of their 18 points at the line. Half-time 56–29.</li>
+<li><span class="tag">Q3 30–19</span>The starting five opened with 16–3 over four minutes, including a 12–0 run to 73–32. Sloga's coach was given a technical foul at 72–32. 5 of 10 threes in the quarter and 86–48 going into the final quarter.</li>
+<li><span class="tag">Q4 22–29</span>Two threes from Arvidsson and one from Nilsson made it 97–53 (+44) with 6:57 left. After that Sloga won the rest of the game 24–11, as Luleå went 2:55 without scoring and committed 5 turnovers in the quarter.</li>
+</ul>
+
+<h2 id="team">Team stats</h2>
+<p class="lead">Luleå scored 1.46 points per possession to Sloga's 1.02, on almost exactly the same number of possessions (74 vs 75). Luleå won all four factors, most clearly the shooting and the turnovers.</p>
+<div class="kpi"><div><b>1.46</b><span>pts/possession Luleå (≈ 74 possessions)</span></div><div><b>1.02</b><span>pts/possession Sloga (≈ 75 possessions)</span></div><div><b>+0.44</b><span>difference per possession</span></div></div>
+<p>Possessions are largely decided by four factors. Luleå won all four:</p>
+<table class="team"><thead><tr><th></th><th>Luleå</th><th>Sloga</th></tr></thead><tbody>
+<tr><th scope="row">Effective FG%</th><td class="w">66.2%</td><td>51.7%</td></tr>
+<tr><th scope="row">Turnovers per possession</th><td class="w">14%</td><td>23%</td></tr>
+<tr><th scope="row">Offensive rebound rate</th><td class="w">39%</td><td>26%</td></tr>
+<tr><th scope="row">Free throws per shot (FTM/FGA)</th><td class="w">0.26</td><td>0.25</td></tr></tbody></table>
+<p class="caveat">Effective FG% counts a three as 1.5 shots. Possessions = field-goal attempts − offensive rebounds + turnovers + 0.44 × free-throw attempts (standard formula, an estimate).</p>
+<h3 class="sub">All stats</h3>
+<table class="team"><thead><tr><th></th><th>Luleå</th><th>Sloga</th></tr></thead><tbody>
+<tr><th scope="row">Field goals</th><td class="w">38/68</td><td>26/60</td></tr>
+<tr><th scope="row">Three-pointers</th><td class="w">14/29</td><td>10/31</td></tr>
+<tr><th scope="row">Free throws</th><td>18/21</td><td>15/19</td></tr>
+<tr><th scope="row">Rebounds (off.)</th><td class="w">38 (13)</td><td>28 (10)</td></tr>
+<tr><th scope="row">Assists</th><td class="w">21</td><td>16</td></tr>
+<tr><th scope="row">Turnovers</th><td class="w">10</td><td>17</td></tr>
+<tr><th scope="row">Steals</th><td class="w">12</td><td>4</td></tr>
+<tr><th scope="row">Fast-break points</th><td class="w">25</td><td>6</td></tr>
+<tr><th scope="row">Points off turnovers</th><td class="w">28</td><td>13</td></tr>
+<tr><th scope="row">Second-chance points</th><td>16</td><td>13</td></tr>
+<tr><th scope="row">Points in the paint</th><td class="w">46</td><td>28</td></tr>
+<tr><th scope="row">Bench points</th><td>31</td><td>24</td></tr></tbody></table>
+<div class="two">
+<div class="panel good"><h3>What worked</h3><ul><li><b>Transition:</b> 12 steals became 28 points off turnovers and 25 fast-break points, against Sloga's 6.</li><li><b>Shot selection:</b> 24 of 39 two-pointers (62%) and 14 of 29 threes (48%). 46 points in the paint.</li><li><b>Rebounding:</b> 38–28, and 13 offensive rebounds (39% of own misses).</li><li><b>Ball movement:</b> 21 assists on 38 baskets and only 10 turnovers.</li></ul></div>
+<div class="panel bad"><h3>The problems</h3><ul><li><b>Q4:</b> 22–29. 2 of 8 two-pointers and 5 turnovers, half of the game total.</li><li><b>Debrick under the basket:</b> 22 points on 12 shots, 16 of them in the paint, and 9 second-chance points.</li><li><b>Fouls:</b> 21 personal fouls gave Sloga 19 free throws, 11 of them in Q2.</li></ul></div>
+</div>
+
+<h2 id="lineups">Lineups</h2>
+<p class="lead">The team was +40 with Arvidsson on the floor and −9 in the just under 18 minutes he sat.</p>
+<div class="kpi"><div><b>+40</b><span>Arvidsson on (22:14)</span></div><div><b>+37</b><span>Naivalurua on (21:50)</span></div><div><b>+18</b><span>starting five (8:19)</span></div></div>
+<table class="team"><thead><tr><th></th><th>Points for–against</th><th>Pts/poss. for</th><th>against</th></tr></thead><tbody>
+<tr><th scope="row">Arvidsson on</th><td>72–32</td><td class="w">1.91</td><td class="w">0.83</td></tr>
+<tr><th scope="row">Arvidsson off</th><td>36–45</td><td>0.98</td><td>1.22</td></tr>
+<tr><th scope="row">Naivalurua on</th><td>62–25</td><td class="w">1.62</td><td class="w">0.64</td></tr>
+<tr><th scope="row">Hansson on</th><td>57–27</td><td class="w">1.61</td><td class="w">0.79</td></tr></tbody></table>
+<p>Arvidsson's, Naivalurua's and Hansson's bench minutes include almost all of Q4 after 97–53, so the gap between on and off looks bigger than it really is. The best pair was Hansson and Arvidsson together: 50–17 in 14:37.</p>
+<h3 class="sub">Best lineups</h3>
+<article class="five"><p class="who">Leach · Hansson · Arvidsson · Galette · Naivalurua</p><div class="fs"><div><dd>8:19</dd><dt>Minutes</dt></div><div><dd>29–11</dd><dt>Points for–against</dt></div><div><dd class="pos">+18</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 14 possessions</span><span>Pts/poss.: <b>2.11</b> for · <b>0.73</b> against</span></div><p class="note">The starting five. 13–8 at the start of Q1 and 16–3 at the start of Q3, including the 12–0 run.</p></article>
+<article class="five"><p class="who">Leach · Steinsen · Holmes · Ninkingira · Naivalurua</p><div class="fs"><div><dd>4:23</dd><dt>Minutes</dt></div><div><dd>14–4</dd><dt>Points for–against</dt></div><div><dd class="pos">+10</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 10 possessions</span><span>Pts/poss.: <b>1.45</b> for · <b>0.42</b> against</span></div><p class="note">End of Q1 (10–3, from 19–8 to 29–11) and a short spell in Q3.</p></article>
+<article class="five"><p class="who">Hansson · Arvidsson · Holmes · Ninkingira · Galette</p><div class="fs"><div><dd>1:28</dd><dt>Minutes</dt></div><div><dd>6–0</dd><dt>Points for–against</dt></div><div><dd class="pos">+6</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 3 possessions</span><span>Pts/poss.: <b>2.08</b> for · <b>0.00</b> against</span></div><p class="note">Middle of Q1, during Sloga's scoring drought: 13–8 to 19–8.</p></article>
+<h3 class="sub">Weakest lineups</h3>
+<article class="five"><p class="who">Enbom · Steinsen · Gonzalez · Ninkingira · Galette</p><div class="fs"><div><dd>2:08</dd><dt>Minutes</dt></div><div><dd>6–12</dd><dt>Points for–against</dt></div><div><dd class="neg">−6</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 5 possessions</span><span>Pts/poss.: <b>1.55</b> for · <b>2.46</b> against</span></div><p class="note">The last 2:08 at 102–65. Sloga won those minutes 12–6, including two threes from Friberg.</p></article>
+<article class="five"><p class="who">Leach · Steinsen · Holmes · Ninkingira · Galette</p><div class="fs"><div><dd>3:24</dd><dt>Minutes</dt></div><div><dd>7–12</dd><dt>Points for–against</dt></div><div><dd class="neg">−5</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 7 possessions</span><span>Pts/poss.: <b>1.09</b> for · <b>1.64</b> against</span></div><p class="note">Almost all of the deficit came in Q3 at 72–32, when Sloga scored 12 points in two minutes: threes from Bajic and Gayman and 4 points from Debrick after offensive rebounds.</p></article>
+<article class="five"><p class="who">Enbom · Leach · Gonzalez · Ninkingira · Galette</p><div class="fs"><div><dd>0:52</dd><dt>Minutes</dt></div><div><dd>0–5</dd><dt>Points for–against</dt></div><div><dd class="neg">−5</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 2 possessions</span><span>Pts/poss.: <b>0.00</b> for · <b>2.50</b> against</span></div><p class="note">Q4 at 97–55: a Vujicic three after a Galette turnover and a fast-break dunk from Debrick.</p></article>
+<p>The pattern: lineups with two or three of Arvidsson, Hansson and Naivalurua won their minutes by a wide margin. The weakest lineups played almost only when the lead was 35–44 points, so their numbers should be read with caution.</p>
+<p class="caveat">Possessions per lineup are estimated from playing time and the pace of the game. Each lineup only played a few minutes, so +/- is heavily affected by single possessions and should not be used to judge an individual player. Here, in addition, most of the minus minutes come from Q4 when the game was decided. The figures are calculated from substitutions and scoring in the play-by-play and match the official +/- exactly for every player.</p>
+
+<h2 id="players">Players – BC Luleå</h2>
+<p>Arvidsson was the best player of the game, Galette and Naivalurua carried the play close to the basket and Holmes was the best off the bench.</p>
+<article class="card"><header><span class="num">#20</span><h3>Jonatan Arvidsson</h3><span class="pm pos">+40</span></header>
+<dl class="stats"><div><dd>25</dd><dt>Pts</dt></div><div><dd>9/12</dd><dt>FG</dt></div><div><dd>4/5</dd><dt>3P</dt></div><div><dd>3/4</dd><dt>FT</dt></div><div><dd>3</dd><dt>Reb</dt></div><div><dd>4</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Best player of the game: 25 points on 12 shots, 91% true shooting, 3 steals and 0 turnovers. The team's best +/- (+40) and drew 5 fouls. Hard to find anything to point out: three missed shots and one missed free throw in the whole game.</p><p class="min">22:14 minutes</p></article>
+<article class="card"><header><span class="num">#44</span><h3>Nicolas Galette</h3><span class="pm pos">+12</span></header>
+<dl class="stats"><div><dd>22</dd><dt>Pts</dt></div><div><dd>7/13</dd><dt>FG</dt></div><div><dd>2/5</dd><dt>3P</dt></div><div><dd>6/8</dd><dt>FT</dt></div><div><dd>10</dd><dt>Reb</dt></div><div><dd>4</dd><dt>Ast</dt></div><div><dd>6</dd><dt>TO</dt></div></dl>
+<p>22 points and 10 rebounds, 4 of them offensive, plus 4 assists, 2 steals and a block. Did the most work of anyone on the team. 6 turnovers, more than half of the team's total, are what can improve: 3 bad passes, 2 travels and an offensive foul.</p><p class="min">26:29 minutes</p></article>
+<article class="card"><header><span class="num">#13</span><h3>Tuburu Naivalurua</h3><span class="pm pos">+37</span></header>
+<dl class="stats"><div><dd>16</dd><dt>Pts</dt></div><div><dd>7/10</dd><dt>FG</dt></div><div><dd>0/3</dd><dt>3P</dt></div><div><dd>2/2</dd><dt>FT</dt></div><div><dd>9</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>7 of 7 two-pointers with three dunks, 9 rebounds, 2 steals and a block. Set the tone with 10 points in Q1. Sloga scored only 0.64 points per possession with him on the floor. 0 of 3 from three; the two-point game was clearly better.</p><p class="min">21:50 minutes</p></article>
+<article class="card"><header><span class="num">#0</span><h3>Robert Holmes</h3><span class="pm pos">+25</span></header>
+<dl class="stats"><div><dd>11</dd><dt>Pts</dt></div><div><dd>4/7</dd><dt>FG</dt></div><div><dd>1/2</dd><dt>3P</dt></div><div><dd>2/2</dd><dt>FT</dt></div><div><dd>2</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Best off the bench: 11 points, 70% true shooting, 2 steals and 0 turnovers, +25 on the floor. Two lay-ups off drives in Q2 and a three in Q3.</p><p class="min">24:54 minutes</p></article>
+<article class="card"><header><span class="num">#12</span><h3>Jonathan Ninkingira</h3><span class="pm neg">−1</span></header>
+<dl class="stats"><div><dd>13</dd><dt>Pts</dt></div><div><dd>4/8</dd><dt>FG</dt></div><div><dd>3/4</dd><dt>3P</dt></div><div><dd>2/2</dd><dt>FT</dt></div><div><dd>1</dd><dt>Reb</dt></div><div><dd>3</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>3 of 4 from three and 3 assists, 73% true shooting. Was on the floor during Sloga's closing run in Q4, hence −1. 4 fouls, two of which gave Sloga free throws in Q2, and 1 of 4 two-pointers.</p><p class="min">18:28 minutes</p></article>
+<article class="card"><header><span class="num">#6</span><h3>Daniel Hansson (C)</h3><span class="pm pos">+30</span></header>
+<dl class="stats"><div><dd>8</dd><dt>Pts</dt></div><div><dd>3/5</dd><dt>FG</dt></div><div><dd>2/4</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>1</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>+30 in 19 minutes and part of the starting five that won its minutes 29–11. 2 threes, including one in the 12–0 run in Q3. No assists and only one rebound; more to give in the all-round game.</p><p class="min">19:00 minutes</p></article>
+<article class="card"><header><span class="num">#3</span><h3>Jalen Leach</h3><span class="pm pos">+18</span></header>
+<dl class="stats"><div><dd>6</dd><dt>Pts</dt></div><div><dd>2/5</dd><dt>FG</dt></div><div><dd>1/3</dd><dt>3P</dt></div><div><dd>1/1</dd><dt>FT</dt></div><div><dd>3</dd><dt>Reb</dt></div><div><dd>4</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>Ran the offence with 4 assists and 1 turnover, +18 on the floor. The three that opened Q3. Took only 5 shots and made 2.</p><p class="min">24:44 minutes</p></article>
+<article class="card"><header><span class="num">#25</span><h3>John Gonzalez</h3><span class="pm neg">−1</span></header>
+<dl class="stats"><div><dd>4</dd><dt>Pts</dt></div><div><dd>1/4</dd><dt>FG</dt></div><div><dd>0/1</dd><dt>3P</dt></div><div><dd>2/2</dd><dt>FT</dt></div><div><dd>4</dd><dt>Reb</dt></div><div><dd>3</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>4 offensive rebounds in 13 minutes, the most on the team along with Galette, plus 3 assists and a steal. 1 of 4 from the field, including a blocked lay-up attempt.</p><p class="min">12:52 minutes</p></article>
+<article class="card"><header><span class="num">#11</span><h3>Leo Steinsen</h3><span class="pm neg">−1</span></header>
+<dl class="stats"><div><dd>0</dd><dt>Pts</dt></div><div><dd>0/1</dd><dt>FG</dt></div><div><dd>–</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>1</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Part of the lineup that finished Q1 with 10–3, and drew an offensive foul on Friberg. 0 turnovers in 12 minutes. 3 fouls in a short time, one of them on a shot that gave Sloga a free throw, are something to keep working on.</p><p class="min">11:59 minutes</p></article>
+<article class="card"><header><span class="num">#2</span><h3>Kembo Nilsson</h3><span class="pm pos">+7</span></header>
+<dl class="stats"><div><dd>3</dd><dt>Pts</dt></div><div><dd>1/1</dd><dt>FG</dt></div><div><dd>1/1</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>0</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>The three for 92–53 and a steal that led to a Holmes lay-up in Q2, +7 on the floor. A foul on a three-point attempt that gave Sloga three free throws.</p><p class="min">9:50 minutes</p></article>
+<article class="card"><header><span class="num">#8</span><h3>Elliot Enbom</h3><span class="pm neg">−11</span></header>
+<dl class="stats"><div><dd>0</dd><dt>Pts</dt></div><div><dd>0/2</dd><dt>FG</dt></div><div><dd>0/1</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>0</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>Played the last 7:40 when the lead was 42 points. The assist on Galette's lay-up. 0 of 2 shooting and a turnover; the −11 mostly reflects the lineups in the closing minutes.</p><p class="min">7:40 minutes</p></article>
+
+<h2 id="opponent">Sloga Uppsala</h2>
+<ul class="flow">
+<li><b>Kj Debrick</b> (center) scored 22 points on 12 shots, 16 of them in the paint, and 9 second-chance points, plus 6 of 7 free throws. The player Luleå could not stop.</li>
+<li><b>Milos Bajic</b> scored 15 points with 3 of 5 from three and 4 assists, and played the most minutes of anyone (30 minutes).</li>
+<li><b>Lukas Friberg</b> (captain) had 7 rebounds and 4 assists, and scored 8 points in the last 2 minutes when the game was decided.</li>
+<li>The shooters around them were cold: <b>Larsson</b> 2 of 9 and <b>Gayman</b> 2 of 8, at −25 and −38 on the floor. <b>Vujicic</b> and <b>Ryott</b> accounted for 6 of the team's 17 turnovers.</li>
+</ul>
+
+<h2 id="next">Next game</h2>
+<ol class="todo">
+<li><b>Keep running.</b> 12 steals became 25 fast-break points. The defensive pressure in Q1 (7 turnovers for Sloga) is a model to take forward.</li>
+<li><b>Box out the center.</b> Debrick scored 9 second-chance points and Sloga had 10 offensive rebounds. Against a stronger center that gets expensive.</li>
+<li><b>Look after the ball with a big lead.</b> 5 of the team's 10 turnovers came in Q4, 3 of them Galette's. He had 6 in total. Simple passes even when the game is decided.</li>
+<li><b>Play all four quarters.</b> 11–24 after 97–53. No harm done here, but the minutes at the end are practice for those who get them, so use them like game minutes.</li>
+</ol>
+
+<h2 id="glossary">Glossary</h2>
+<ul class="flow">
+<li><b>Possession</b> – a spell with the ball until the opponent gets it. Estimated as field-goal attempts − offensive rebounds + turnovers + 0.44 × free-throw attempts.</li>
+<li><b>Points per possession</b> – points divided by possessions. The best single measure of how well an offence or defence works.</li>
+<li><b>Four factors</b> – shooting (effective FG%), turnovers per possession, offensive rebound rate and free throws per shot. Together they explain most of points per possession.</li>
+<li><b>Effective FG%</b> – shooting percentage where a three counts as 1.5 shots, since it is worth 50% more points.</li>
+<li><b>True shooting (TS%)</b> – shooting percentage that also includes free throws. Shows how efficiently a player scores.</li>
+<li><b>Turnovers per possession</b> – share of possessions that end with the ball lost without a shot.</li>
+<li><b>Offensive rebound rate</b> – share of own misses the team rebounds itself.</li>
+<li><b>Free throws per shot (FTM/FGA)</b> – free throws made per field-goal attempt. Shows how often a team gets to the line.</li>
+<li><b>Second-chance points</b> – points after an offensive rebound.</li>
+<li><b>Fast-break points</b> – points in transition before the defence is set.</li>
+<li><b>Points off turnovers</b> – points scored on the possession right after the opponent loses the ball.</li>
+<li><b>The paint</b> – the painted area under the basket (the three-second area).</li>
+<li><b>Scoring drought</b> – the longest time a team went without scoring.</li>
+<li><b>Run</b> – a series of unanswered points for one team, for example 12–0.</li>
+<li><b>+/-</b> – the team's point difference while the player was on the floor. <b>On/off</b> compares time on the floor with time on the bench.</li>
+<li><b>Lineup</b> – the five players on the floor at the same time.</li>
+</ul>
+<footer>Game played 2 October 2026. Source: official statistics and play-by-play (Genius Sports). Attendance: 1,744.</footer>
+</main></body></html>
