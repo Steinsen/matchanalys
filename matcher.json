@@ -1,6 +1,49 @@
 {
   "matcher": [
     {
+      "datum": "2026-10-04",
+      "lag": "BC Luleå Steelers",
+      "motstandare": "Västerås Basket",
+      "hemma": true,
+      "for": 88,
+      "emot": 75,
+      "url": "matcher/2026-10-04-bc-lulea-steelers-vasteras-basket.html",
+      "sammanfattning": "Revansch en vecka efter förlusten i Västerås: Steelers ledde i 38:54 av 40 minuter och vann returerna 53–36. Västerås kom ikapp till 65–63, men Steelers svarade med 16–4; Nasradin hölls till 6 av 20 skott.",
+      "sammanfattning_en": "Revenge a week after the overtime loss in Västerås: Steelers led for 38:54 of 40 minutes and won the boards 53–36. Västerås closed to 65–63, but Steelers answered with a 16–4 run; Nasradin was held to 6-of-20 shooting.",
+      "spelare": [
+        "Calvin Jägare",
+        "Ville Kero",
+        "Elliot Enbom",
+        "Noah Olsson",
+        "Leo Steinsen",
+        "Kembo Nilsson",
+        "James Aitomäki",
+        "Gustav Palmqvist",
+        "Jack Sundelin",
+        "Erik Persson",
+        "Sandro Löwgren Madeira",
+        "Leo Erlandsson",
+        "Mir Nasradin",
+        "William Challans",
+        "Gustav Falkeström",
+        "Alexander Nzonyansi",
+        "Henry Kingston",
+        "Adin Isovic",
+        "Axel Nzonyansi",
+        "Ibrahim Hamid",
+        "Algot Kallin",
+        "Leo Gavino Hedman",
+        "Baraq Al-Bayati"
+      ],
+      "taggar": [
+        "seger",
+        "returer",
+        "straffar",
+        "bollförluster",
+        "revansch"
+      ]
+    },
+    {
       "datum": "2026-10-02",
       "lag": "BC Luleå",
       "motstandare": "Sloga Uppsala",
