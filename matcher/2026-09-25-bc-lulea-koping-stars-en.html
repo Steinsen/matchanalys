@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game analysis: BC Luleå 95–91 Köping Stars</title>
+<meta name="matchdatum" content="2026-09-25">
+<meta name="description" content="Team and player-by-player game analysis, BC Luleå vs Köping Stars 95–91.">
+<meta property="og:title" content="Game analysis: BC Luleå 95–91 Köping Stars">
+<meta property="og:description" content="Team stats, game flow and player by player.">
+<style>
+:root{--bg:#f6f7fa;--card:#fff;--ink:#1b2130;--muted:#6b7385;--line:#e2e5ec;--accent:#1f5fae;--accentink:#fff;--pos:#1e8a4c;--neg:#c0392b;--grid:#e6e8ee;--axis:#a3a9b6;--warnbg:#f7e6c9;--warn:#9a6a1c;--soft:#eef2f8}
+@media (prefers-color-scheme:dark){:root{--bg:#12151c;--card:#1b2029;--ink:#e8ebf2;--muted:#9aa2b3;--line:#2c3340;--accent:#5b9bef;--accentink:#0d1420;--pos:#4cc585;--neg:#ef6b5d;--grid:#2a303c;--axis:#566072;--warnbg:#3a2f1c;--warn:#e0b060;--soft:#222935}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:680px;margin:0 auto;padding:20px 16px 48px}
+.kick{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-size:28px;line-height:1.15;margin:6px 0 16px}
+h2{font-size:21px;margin:36px 0 10px;scroll-margin-top:64px}
+h3{margin:0;font-size:18px}
+p{margin:8px 0}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+nav div{max-width:680px;margin:0 auto;padding:10px 16px;display:flex;gap:8px}
+nav a{flex:none;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:14px}
+.score{background:var(--accent);color:var(--accentink);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.score .t{font-size:14px;opacity:.9} .score .s{font-size:40px;font-weight:800;line-height:1.1} .score .r{text-align:right} .score .mid{font-size:13px;opacity:.85;text-align:center}
+.qt{width:100%;border-collapse:collapse;margin-top:10px;background:var(--card);border-radius:12px;overflow:hidden;font-variant-numeric:tabular-nums;text-align:center;font-size:15px}
+.qt th,.qt td{padding:7px 4px;border-bottom:1px solid var(--line)} .qt tr:last-child td,.qt tr:last-child th{border-bottom:0}
+.qt thead th{color:var(--muted);font-weight:600;font-size:13px;background:var(--soft)}
+.lead{font-size:18px;font-weight:600}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 8px;text-align:center}
+.kpi b{display:block;font-size:24px;color:var(--accent);font-variant-numeric:tabular-nums} .kpi span{font-size:13px;color:var(--muted);line-height:1.3;display:block}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+svg text{font-family:inherit}
+ul.flow{padding:0;list-style:none} ul.flow li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0}
+.tag{display:inline-block;font-weight:700;color:var(--accent);margin-right:6px}
+table.team{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;font-variant-numeric:tabular-nums;font-size:15px}
+table.team th,table.team td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right}
+table.team th[scope=row]{text-align:left;font-weight:500} table.team thead th{color:var(--muted);font-size:13px;background:var(--soft)}
+table.team tr:last-child>*{border-bottom:0}
+td.w,td.w2{font-weight:700;color:var(--accent)}
+.two{display:grid;gap:10px;margin-top:12px} @media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.good{border-left:4px solid var(--pos)} .bad{border-left:4px solid var(--neg)}
+.two h3{font-size:16px;margin-bottom:4px} .two ul{margin:0;padding-left:18px} .two li{margin:5px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.card header{display:flex;align-items:baseline;gap:8px} .card h3{flex:1} .num{color:var(--muted);font-size:14px}
+.pm{font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums} .pm.pos{color:var(--pos)} .pm.neg{color:var(--neg)}
+.stats{display:grid;grid-template-columns:repeat(7,1fr);margin:10px 0 6px;padding:8px 0;background:var(--soft);border-radius:10px;text-align:center}
+.stats div{min-width:0} .stats dd{margin:0;font-weight:700;font-size:15px;font-variant-numeric:tabular-nums} .stats dt{font-size:11px;color:var(--muted)}
+.min{font-size:13px;color:var(--muted);margin:0}
+ol.todo{counter-reset:n;list-style:none;padding:0}
+ol.todo li{counter-increment:n;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 52px;margin:10px 0;position:relative}
+ol.todo li::before{content:counter(n);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accentink);font-weight:700;display:grid;place-items:center;font-size:14px}
+.ppp{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:8px;font-variant-numeric:tabular-nums} .ppp b{color:var(--ink)}
+.sub{font-size:17px;margin:20px 0 4px}
+.five{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:8px 0}
+.five .who{font-weight:650;margin:0 0 8px;line-height:1.35}
+.fs{display:grid;grid-template-columns:1fr 1.4fr 1fr;background:var(--soft);border-radius:10px;padding:8px 0;text-align:center}
+.fs dd{margin:0;font-weight:700;font-size:16px;font-variant-numeric:tabular-nums} .fs dt{font-size:11px;color:var(--muted)}
+.fs dd.pos{color:var(--pos)} .fs dd.neg{color:var(--neg)}
+.five .note{margin:8px 0 0;font-size:15px;color:var(--muted)}
+.caveat{font-size:14px;color:var(--muted);border-left:3px solid var(--line);padding-left:10px}
+footer{color:var(--muted);font-size:13px;margin-top:36px}
+@media(max-width:380px){body{font-size:16px} h1{font-size:24px} .score .s{font-size:34px} .stats dd{font-size:14px}}
+
+.back{display:inline-block;margin:0 0 8px;font-size:15px;color:var(--accent);text-decoration:none}
+</style></head><body>
+<nav aria-label="Contents"><div><a href="#summary">Summary</a><a href="#flow">Game flow</a><a href="#team">Team stats</a><a href="#lineups">Lineups</a><a href="#players">Players</a><a href="#opponent">Köping</a><a href="#next">Next game</a></div></nav>
+<main>
+<a class="back" href="../index.html">← All games</a>
+<div class="kick">Game analysis · 25 September 2026</div>
+<h1>BC Luleå beat Köping Stars by four points</h1>
+<div class="score"><div><div class="t">BC Luleå</div><div class="s">95</div></div><div class="mid">final</div><div class="r"><div class="t">Köping Stars</div><div class="s">91</div></div></div>
+<table class="qt"><thead><tr><th></th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr></thead>
+<tbody><tr><th>Luleå</th><td><b>33</b></td><td>20</td><td>22</td><td>20</td></tr><tr><th>Köping</th><td>29</td><td>20</td><td>22</td><td>20</td></tr></tbody></table>
+
+<h2 id="summary">Summary</h2>
+<p class="lead">The whole winning margin came in Q1. Q2–Q4 were all tied. Luleå led for 31.5 of 40 minutes, by as many as 11.</p>
+<div class="kpi"><div><b>+9</b><span>points from better three-point shooting</span></div><div><b>11–6</b><span>steals</span></div><div><b>24–9</b><span>fast-break points</span></div></div>
+<p>Köping stayed in the game by rebounding almost half of their own misses: 13 offensive rebounds and 22 second-chance points.</p>
+
+<h2 id="flow">Game flow</h2>
+<div class="panel"><svg viewBox="0 0 340 190" width="100%" role="img" aria-label="Luleå's lead during the game" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Helvetica,Arial" font-size="11.5">
+<defs><clipPath id="up"><rect x="0" y="0" width="340" height="119.9"/></clipPath><clipPath id="dn"><rect x="0" y="119.9" width="340" height="190"/></clipPath></defs>
+<rect x="287.2" y="14" width="26.2" height="150" fill="var(--warnbg)"/>
+<text x="300.4" y="24" text-anchor="middle" fill="var(--warn)" font-size="10">Drought</text><line x1="26" x2="332" y1="155.2" y2="155.2" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="158.2" text-anchor="end" fill="var(--muted)">-4</text><line x1="26" x2="332" y1="119.9" y2="119.9" stroke="var(--axis)" stroke-width="0.8"/><text x="22" y="122.9" text-anchor="end" fill="var(--muted)">0</text><line x1="26" x2="332" y1="84.6" y2="84.6" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="87.6" text-anchor="end" fill="var(--muted)">+4</text><line x1="26" x2="332" y1="49.3" y2="49.3" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="52.3" text-anchor="end" fill="var(--muted)">+8</text><line x1="26" x2="332" y1="14.0" y2="14.0" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="17.0" text-anchor="end" fill="var(--muted)">+12</text><line x1="102.5" x2="102.5" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="179.0" x2="179.0" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="255.5" x2="255.5" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><text x="64.2" y="176" text-anchor="middle" fill="var(--muted)">Q1</text><text x="140.8" y="176" text-anchor="middle" fill="var(--muted)">Q2</text><text x="217.2" y="176" text-anchor="middle" fill="var(--muted)">Q3</text><text x="293.8" y="176" text-anchor="middle" fill="var(--muted)">Q4</text><polygon points="26.0,119.9 26.0,119.9 31.1,119.9 31.1,111.1 38.0,111.1 38.0,137.5 40.7,137.5 40.7,111.1 43.1,111.1 43.1,128.7 45.7,128.7 45.7,111.1 49.6,111.1 49.6,93.4 51.8,93.4 51.8,111.1 53.0,111.1 53.0,84.6 56.1,84.6 56.1,111.1 60.0,111.1 60.0,128.7 61.8,128.7 61.8,102.2 64.5,102.2 64.5,128.7 75.9,128.7 75.9,102.2 81.1,102.2 81.1,111.1 82.8,111.1 82.8,93.4 85.8,93.4 85.8,119.9 88.5,119.9 88.5,93.4 90.1,93.4 90.1,111.1 91.0,111.1 91.0,93.4 92.8,93.4 92.8,119.9 94.6,119.9 94.6,102.2 96.0,102.2 96.0,111.1 97.5,111.1 97.5,93.4 100.7,93.4 100.7,111.1 101.9,111.1 101.9,93.4 102.4,93.4 102.4,111.1 102.5,111.1 102.5,84.6 104.3,84.6 104.3,75.8 107.7,75.8 107.7,93.4 112.1,93.4 112.1,119.9 122.9,119.9 122.9,102.2 124.8,102.2 124.8,119.9 127.4,119.9 127.4,102.2 135.4,102.2 135.4,119.9 136.9,119.9 136.9,93.4 142.1,93.4 142.1,111.1 145.3,111.1 145.3,93.4 149.7,93.4 149.7,75.8 152.2,75.8 152.2,102.2 156.2,102.2 156.2,119.9 158.7,119.9 158.7,137.5 165.8,137.5 165.8,155.2 167.9,155.2 167.9,137.5 174.4,137.5 174.4,119.9 178.5,119.9 178.5,102.2 179.0,102.2 179.0,84.6 180.4,84.6 180.4,66.9 182.6,66.9 182.6,84.6 187.8,84.6 187.8,102.2 190.7,102.2 190.7,75.8 193.4,75.8 193.4,93.4 194.9,93.4 194.9,66.9 199.1,66.9 199.1,93.4 205.2,93.4 205.2,75.8 208.3,75.8 208.3,93.4 211.1,93.4 211.1,75.8 215.9,75.8 215.9,49.3 217.0,49.3 217.0,66.9 225.5,66.9 225.5,84.6 228.1,84.6 228.1,66.9 234.6,66.9 234.6,84.6 236.6,84.6 236.6,58.1 239.3,58.1 239.3,84.6 242.3,84.6 242.3,102.2 243.4,102.2 243.4,84.6 257.9,84.6 257.9,58.1 265.4,58.1 265.4,40.5 271.0,40.5 271.0,22.8 274.0,22.8 274.0,40.5 277.3,40.5 277.3,58.1 279.8,58.1 279.8,40.5 285.0,40.5 285.0,58.1 287.2,58.1 287.2,40.5 299.7,40.5 299.7,58.1 305.6,58.1 305.6,75.8 308.7,75.8 308.7,102.2 313.5,102.2 313.5,75.8 316.3,75.8 316.3,93.4 319.0,93.4 319.0,75.8 320.1,75.8 320.1,93.4 323.0,93.4 323.0,75.8 328.8,75.8 328.8,58.1 329.6,58.1 329.6,84.6 332.0,84.6 332.0,84.6 332.0,119.9" fill="var(--accent)" opacity="0.18" clip-path="url(#up)"/><polygon points="26.0,119.9 26.0,119.9 31.1,119.9 31.1,111.1 38.0,111.1 38.0,137.5 40.7,137.5 40.7,111.1 43.1,111.1 43.1,128.7 45.7,128.7 45.7,111.1 49.6,111.1 49.6,93.4 51.8,93.4 51.8,111.1 53.0,111.1 53.0,84.6 56.1,84.6 56.1,111.1 60.0,111.1 60.0,128.7 61.8,128.7 61.8,102.2 64.5,102.2 64.5,128.7 75.9,128.7 75.9,102.2 81.1,102.2 81.1,111.1 82.8,111.1 82.8,93.4 85.8,93.4 85.8,119.9 88.5,119.9 88.5,93.4 90.1,93.4 90.1,111.1 91.0,111.1 91.0,93.4 92.8,93.4 92.8,119.9 94.6,119.9 94.6,102.2 96.0,102.2 96.0,111.1 97.5,111.1 97.5,93.4 100.7,93.4 100.7,111.1 101.9,111.1 101.9,93.4 102.4,93.4 102.4,111.1 102.5,111.1 102.5,84.6 104.3,84.6 104.3,75.8 107.7,75.8 107.7,93.4 112.1,93.4 112.1,119.9 122.9,119.9 122.9,102.2 124.8,102.2 124.8,119.9 127.4,119.9 127.4,102.2 135.4,102.2 135.4,119.9 136.9,119.9 136.9,93.4 142.1,93.4 142.1,111.1 145.3,111.1 145.3,93.4 149.7,93.4 149.7,75.8 152.2,75.8 152.2,102.2 156.2,102.2 156.2,119.9 158.7,119.9 158.7,137.5 165.8,137.5 165.8,155.2 167.9,155.2 167.9,137.5 174.4,137.5 174.4,119.9 178.5,119.9 178.5,102.2 179.0,102.2 179.0,84.6 180.4,84.6 180.4,66.9 182.6,66.9 182.6,84.6 187.8,84.6 187.8,102.2 190.7,102.2 190.7,75.8 193.4,75.8 193.4,93.4 194.9,93.4 194.9,66.9 199.1,66.9 199.1,93.4 205.2,93.4 205.2,75.8 208.3,75.8 208.3,93.4 211.1,93.4 211.1,75.8 215.9,75.8 215.9,49.3 217.0,49.3 217.0,66.9 225.5,66.9 225.5,84.6 228.1,84.6 228.1,66.9 234.6,66.9 234.6,84.6 236.6,84.6 236.6,58.1 239.3,58.1 239.3,84.6 242.3,84.6 242.3,102.2 243.4,102.2 243.4,84.6 257.9,84.6 257.9,58.1 265.4,58.1 265.4,40.5 271.0,40.5 271.0,22.8 274.0,22.8 274.0,40.5 277.3,40.5 277.3,58.1 279.8,58.1 279.8,40.5 285.0,40.5 285.0,58.1 287.2,58.1 287.2,40.5 299.7,40.5 299.7,58.1 305.6,58.1 305.6,75.8 308.7,75.8 308.7,102.2 313.5,102.2 313.5,75.8 316.3,75.8 316.3,93.4 319.0,93.4 319.0,75.8 320.1,75.8 320.1,93.4 323.0,93.4 323.0,75.8 328.8,75.8 328.8,58.1 329.6,58.1 329.6,84.6 332.0,84.6 332.0,84.6 332.0,119.9" fill="var(--neg)" opacity="0.22" clip-path="url(#dn)"/><polyline points="26.0,119.9 31.1,119.9 31.1,111.1 38.0,111.1 38.0,137.5 40.7,137.5 40.7,111.1 43.1,111.1 43.1,128.7 45.7,128.7 45.7,111.1 49.6,111.1 49.6,93.4 51.8,93.4 51.8,111.1 53.0,111.1 53.0,84.6 56.1,84.6 56.1,111.1 60.0,111.1 60.0,128.7 61.8,128.7 61.8,102.2 64.5,102.2 64.5,128.7 75.9,128.7 75.9,102.2 81.1,102.2 81.1,111.1 82.8,111.1 82.8,93.4 85.8,93.4 85.8,119.9 88.5,119.9 88.5,93.4 90.1,93.4 90.1,111.1 91.0,111.1 91.0,93.4 92.8,93.4 92.8,119.9 94.6,119.9 94.6,102.2 96.0,102.2 96.0,111.1 97.5,111.1 97.5,93.4 100.7,93.4 100.7,111.1 101.9,111.1 101.9,93.4 102.4,93.4 102.4,111.1 102.5,111.1 102.5,84.6 104.3,84.6 104.3,75.8 107.7,75.8 107.7,93.4 112.1,93.4 112.1,119.9 122.9,119.9 122.9,102.2 124.8,102.2 124.8,119.9 127.4,119.9 127.4,102.2 135.4,102.2 135.4,119.9 136.9,119.9 136.9,93.4 142.1,93.4 142.1,111.1 145.3,111.1 145.3,93.4 149.7,93.4 149.7,75.8 152.2,75.8 152.2,102.2 156.2,102.2 156.2,119.9 158.7,119.9 158.7,137.5 165.8,137.5 165.8,155.2 167.9,155.2 167.9,137.5 174.4,137.5 174.4,119.9 178.5,119.9 178.5,102.2 179.0,102.2 179.0,84.6 180.4,84.6 180.4,66.9 182.6,66.9 182.6,84.6 187.8,84.6 187.8,102.2 190.7,102.2 190.7,75.8 193.4,75.8 193.4,93.4 194.9,93.4 194.9,66.9 199.1,66.9 199.1,93.4 205.2,93.4 205.2,75.8 208.3,75.8 208.3,93.4 211.1,93.4 211.1,75.8 215.9,75.8 215.9,49.3 217.0,49.3 217.0,66.9 225.5,66.9 225.5,84.6 228.1,84.6 228.1,66.9 234.6,66.9 234.6,84.6 236.6,84.6 236.6,58.1 239.3,58.1 239.3,84.6 242.3,84.6 242.3,102.2 243.4,102.2 243.4,84.6 257.9,84.6 257.9,58.1 265.4,58.1 265.4,40.5 271.0,40.5 271.0,22.8 274.0,22.8 274.0,40.5 277.3,40.5 277.3,58.1 279.8,58.1 279.8,40.5 285.0,40.5 285.0,58.1 287.2,58.1 287.2,40.5 299.7,40.5 299.7,58.1 305.6,58.1 305.6,75.8 308.7,75.8 308.7,102.2 313.5,102.2 313.5,75.8 316.3,75.8 316.3,93.4 319.0,93.4 319.0,75.8 320.1,75.8 320.1,93.4 323.0,93.4 323.0,75.8 328.8,75.8 328.8,58.1 329.6,58.1 329.6,84.6 332.0,84.6 332.0,84.6" fill="none" stroke="var(--accent)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="271.0" cy="22.8" r="2.3" fill="var(--accent)"/><text x="267.0" y="18.8" text-anchor="end" fill="var(--accent)" font-weight="600" font-size="10.5">+11 (82–71)</text><circle cx="165.8" cy="155.2" r="2.3" fill="var(--neg)"/><text x="170.8" y="158.2" fill="var(--neg)" font-weight="600" font-size="10.5">−4 (45–49)</text><text x="179.0" y="188" text-anchor="middle" fill="var(--muted)" font-size="10.5">Luleå's lead in points over the 40 minutes of the game</text></svg></div>
+<ul class="flow">
+<li><span class="tag">Q1 33–29</span>Galette scored 13 points and Leach 11, both with three threes. Köping answered with Henderson's drives and offensive rebounds.</li>
+<li><span class="tag">Q2 20–20</span>Köping led 49–45. Nilsson's steal earned Naivalurua two free throws with 0.9 s left: 53–49 at half-time.</li>
+<li><span class="tag">Q3 22–22</span>Luleå reached +8 (68–60) after Arvidsson's steal and Leach's three. Köping closed the gap through offensive rebounds.</li>
+<li><span class="tag">Q4 20–20</span>A run to 82–71. Then 3:26 without scoring, and Köping closed to 86–84. Leach scored 7 of the team's last 9 points, and Holmes' drive with 25 s left decided it.</li>
+</ul>
+
+<h2 id="team">Team stats</h2>
+<p class="lead">Luleå scored 1.19 points per possession to Köping's 1.11. Köping got about three more possessions thanks to their offensive rebounds, which is why the margin was only 4 points.</p>
+<div class="kpi"><div><b>1.19</b><span>pts/possession Luleå (≈ 79 possessions)</span></div><div><b>1.11</b><span>pts/possession Köping (≈ 82 possessions)</span></div><div><b>+0.08</b><span>difference per possession</span></div></div>
+<p>Possessions are largely decided by four factors. Luleå won three of them:</p>
+<table class="team"><thead><tr><th></th><th>Luleå</th><th>Köping</th></tr></thead><tbody>
+<tr><th scope="row">Effective FG%</th><td class="w">58.7%</td><td>55.6%</td></tr>
+<tr><th scope="row">Turnovers per possession</th><td class="w">15%</td><td>21%</td></tr>
+<tr><th scope="row">Offensive rebound rate</th><td>23%</td><td class="w2">36%</td></tr>
+<tr><th scope="row">Free throws per shot (FTM/FGA)</th><td class="w">0.20</td><td>0.15</td></tr></tbody></table>
+<p class="caveat">Possessions = field-goal attempts − offensive rebounds + turnovers + 0.44 × free-throw attempts (standard formula, an estimate).</p>
+<h3 class="sub">All stats</h3>
+<table class="team"><thead><tr><th></th><th>Luleå</th><th>Köping</th></tr></thead><tbody><tr><th scope="row">Field goals</th><td class="">34/69</td><td class="">35/72</td></tr><tr><th scope="row">Three-pointers</th><td class="w">13/28</td><td class="">10/27</td></tr><tr><th scope="row">Free throws</th><td class="">14/17</td><td class="">11/14</td></tr><tr><th scope="row">Rebounds (off.)</th><td class="">32 (9)</td><td class="w2">41 (13)</td></tr><tr><th scope="row">Assists</th><td class="w">20</td><td class="">12</td></tr><tr><th scope="row">Turnovers</th><td class="w">12</td><td class="">17</td></tr><tr><th scope="row">Steals</th><td class="w">11</td><td class="">6</td></tr><tr><th scope="row">Fast-break points</th><td class="w">24</td><td class="">9</td></tr><tr><th scope="row">Points off turnovers</th><td class="w">16</td><td class="">10</td></tr><tr><th scope="row">Second-chance points</th><td class="">11</td><td class="w2">22</td></tr><tr><th scope="row">Points in the paint</th><td class="">42</td><td class="">42</td></tr><tr><th scope="row">Bench points</th><td class="w">23</td><td class="">16</td></tr></tbody></table>
+<div class="two">
+<div class="panel good"><h3>What worked</h3><ul><li><b>Transition:</b> 11 steals led to 24 fast-break points.</li><li><b>Three-point shooting:</b> three more threes, 9 points, more than the winning margin.</li><li><b>Ball movement:</b> 20 assists on 34 baskets (59%) against Köping's 34%.</li></ul></div>
+<div class="panel bad"><h3>The problems</h3><ul><li><b>Defensive rebounding:</b> only 64% of Köping's misses were rebounded.</li><li><b>Closing out:</b> 3:26 without scoring from 86–77, 0 of 6 shooting.</li><li><b>The final seconds:</b> an 8-second violation at 95–91. Leach's steal saved the game.</li></ul></div>
+</div>
+
+<h2 id="lineups">Lineups</h2>
+<p class="lead">Luleå were +14 with Leach on the floor and −10 in the just over 10 minutes without him.</p>
+<div class="kpi"><div><b>+14</b><span>Leach on (29:51)</span></div><div><b>−10</b><span>Leach off (10:09)</span></div><div><b>+16</b><span>Leach + Naivalurua together (18 min)</span></div></div>
+<table class="team"><thead><tr><th></th><th>Points for–against</th><th>Pts/poss. for</th><th>against</th></tr></thead><tbody>
+<tr><th scope="row">Leach on</th><td>73–59</td><td class="w">1.21</td><td>0.98</td></tr>
+<tr><th scope="row">Leach off</th><td>22–32</td><td>1.07</td><td class="w2">1.56</td></tr></tbody></table>
+<h3 class="sub">Best lineups</h3><article class="five"><p class="who">Leach · Galette · Arvidsson · Naivalurua · Ninkingira</p><div class="fs"><div><dd>5:19</dd><dt>Minutes</dt></div><div><dd>17–11</dd><dt>Points for–against</dt></div><div><dd class="pos">+6</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 11 possessions</span><span>Pts/poss.: <b>1.58</b> for · <b>1.02</b> against</span></div><p class="note">Opened Q3 and pulled away to 68–60.</p></article><article class="five"><p class="who">Leach · Holmes · Arvidsson · Naivalurua · Nilsson</p><div class="fs"><div><dd>2:53</dd><dt>Minutes</dt></div><div><dd>7–4</dd><dt>Points for–against</dt></div><div><dd class="pos">+3</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 6 possessions</span><span>Pts/poss.: <b>1.20</b> for · <b>0.69</b> against</span></div><p class="note">Opened Q4 with the run to 82–71.</p></article><article class="five"><p class="who">Leach · Hansson · Galette · Arvidsson · Holmes</p><div class="fs"><div><dd>1:54</dd><dt>Minutes</dt></div><div><dd>7–4</dd><dt>Points for–against</dt></div><div><dd class="pos">+3</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 4 possessions</span><span>Pts/poss.: <b>1.82</b> for · <b>1.04</b> against</span></div><p class="note">The closing lineup. Leach scored all 7 points.</p></article><article class="five"><p class="who">Leach · Galette · Hansson · Naivalurua · Nilsson</p><div class="fs"><div><dd>1:41</dd><dt>Minutes</dt></div><div><dd>5–2</dd><dt>Points for–against</dt></div><div><dd class="pos">+3</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 3 possessions</span><span>Pts/poss.: <b>1.47</b> for · <b>0.59</b> against</span></div><p class="note">Midway through Q2.</p></article><article class="five"><p class="who">Leach · Hansson · Galette · Arvidsson · Naivalurua</p><div class="fs"><div><dd>3:56</dd><dt>Minutes</dt></div><div><dd>11–9</dd><dt>Points for–against</dt></div><div><dd class="pos">+2</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 8 possessions</span><span>Pts/poss.: <b>1.38</b> for · <b>1.13</b> against</span></div><p class="note">The starting five, played only at the start of the game.</p></article>
+<h3 class="sub">Weakest lineups</h3><article class="five"><p class="who">Hansson · Galette · Arvidsson · Naivalurua · Ninkingira</p><div class="fs"><div><dd>1:41</dd><dt>Minutes</dt></div><div><dd>0–7</dd><dt>Points for–against</dt></div><div><dd class="neg">−7</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 3 possessions</span><span>Pts/poss.: <b>0.00</b> for · <b>2.06</b> against</span></div><p class="note">The scoring drought in Q4, without Leach on the floor.</p></article><article class="five"><p class="who">Hansson · Holmes · Arvidsson · Naivalurua · Nilsson</p><div class="fs"><div><dd>2:11</dd><dt>Minutes</dt></div><div><dd>4–9</dd><dt>Points for–against</dt></div><div><dd class="neg">−5</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 4 possessions</span><span>Pts/poss.: <b>0.91</b> for · <b>2.04</b> against</span></div><p class="note">Q2, when Köping turned 41–38 into 45–47.</p></article><article class="five"><p class="who">Leach · Hansson · Galette · Holmes · Ninkingira</p><div class="fs"><div><dd>2:02</dd><dt>Minutes</dt></div><div><dd>2–7</dd><dt>Points for–against</dt></div><div><dd class="neg">−5</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 4 possessions</span><span>Pts/poss.: <b>0.49</b> for · <b>1.70</b> against</span></div><p class="note">Two short stints, in Q3 and at the end.</p></article>
+<p>The pattern is clear: lineups without Leach struggled to score, and the five minutes with Leach, Galette, Arvidsson, Naivalurua and Ninkingira were the best of the game. The trio of Leach, Galette and Arvidsson was +11 in 11 minutes together.</p>
+<p class="caveat">Possessions per lineup are estimated from playing time and the pace of the game (about 2 possessions per team per minute). Note: each lineup only played a few minutes, so +/- is heavily affected by single possessions. The figures are calculated from substitutions and scoring in the play-by-play, and free throws around substitutions can cause a difference of ±1 from the official statistics.</p>
+
+<h2 id="players">Players – BC Luleå</h2>
+<p>Leach carried the offence, and Naivalurua and Galette were the most efficient. Arvidsson and Hansson had tough shooting nights.</p>
+<article class="card"><header><span class="num">#3</span><h3>Jalen Leach</h3><span class="pm pos">+14</span></header>
+<dl class="stats"><div><dd>27</dd><dt>Pts</dt></div><div><dd>10/20</dd><dt>FG</dt></div><div><dd>7/12</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>4</dd><dt>Reb</dt></div><div><dd>6</dd><dt>Ast</dt></div><div><dd>5</dd><dt>TO</dt></div></dl>
+<p>The decisive player of the game: 27 points, 7 of 12 from three, 67% true shooting and the team's best +/-. Decided the closing minutes. The downside: 5 turnovers, three of which led directly to Köping points.</p><p class="min">29:51 minutes</p></article><article class="card"><header><span class="num">#44</span><h3>Nicolas Galette</h3><span class="pm pos">+2</span></header>
+<dl class="stats"><div><dd>20</dd><dt>Pts</dt></div><div><dd>8/12</dd><dt>FG</dt></div><div><dd>4/5</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>5</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>3</dd><dt>TO</dt></div></dl>
+<p>20 points on 12 shots, 3 offensive rebounds and 3 steals. 13 points in Q1, 7 after that. Should get the ball more often when the game is close.</p><p class="min">28:01 minutes</p></article><article class="card"><header><span class="num">#20</span><h3>Jonatan Arvidsson</h3><span class="pm pos">+7</span></header>
+<dl class="stats"><div><dd>13</dd><dt>Pts</dt></div><div><dd>4/13</dd><dt>FG</dt></div><div><dd>0/4</dd><dt>3P</dt></div><div><dd>5/6</dd><dt>FT</dt></div><div><dd>4</dd><dt>Reb</dt></div><div><dd>4</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>Missed several drives and went 0 of 4 from three. Still drew 6 fouls, made 5 of 6 free throws, and had 4 assists and 2 blocks.</p><p class="min">27:10 minutes</p></article><article class="card"><header><span class="num">#13</span><h3>Tuburu Naivalurua</h3><span class="pm pos">+7</span></header>
+<dl class="stats"><div><dd>12</dd><dt>Pts</dt></div><div><dd>4/5</dd><dt>FG</dt></div><div><dd>–</dd><dt>3P</dt></div><div><dd>4/4</dd><dt>FT</dt></div><div><dd>7</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Perhaps the team's most efficient player: 4 of 5, 4 of 4 free throws, 7 rebounds, no turnovers. Could perhaps play more, given the rebounding.</p><p class="min">24:32 minutes</p></article><article class="card"><header><span class="num">#0</span><h3>Robert Holmes</h3><span class="pm neg">−1</span></header>
+<dl class="stats"><div><dd>12</dd><dt>Pts</dt></div><div><dd>3/7</dd><dt>FG</dt></div><div><dd>1/3</dd><dt>3P</dt></div><div><dd>5/6</dd><dt>FT</dt></div><div><dd>2</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>2</dd><dt>TO</dt></div></dl>
+<p>Earned 6 free throws and scored the basket that effectively decided it with 25 seconds left.</p><p class="min">22:36 minutes</p></article><article class="card"><header><span class="num">#2</span><h3>Kembo Nilsson</h3><span class="pm pos">+5</span></header>
+<dl class="stats"><div><dd>5</dd><dt>Pts</dt></div><div><dd>2/3</dd><dt>FG</dt></div><div><dd>1/1</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>2</dd><dt>Reb</dt></div><div><dd>2</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>+5 in just under 12 minutes. A steal before half-time and the three that opened Q4.</p><p class="min">11:50 minutes</p></article><article class="card"><header><span class="num">#12</span><h3>Jonathan Ninkingira</h3><span class="pm neg">−2</span></header>
+<dl class="stats"><div><dd>4</dd><dt>Pts</dt></div><div><dd>2/4</dd><dt>FG</dt></div><div><dd>0/1</dd><dt>3P</dt></div><div><dd>0/1</dd><dt>FT</dt></div><div><dd>2</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Two lay-ups, a block and a steal. Missed the and-one free throw; 3 fouls limited him.</p><p class="min">20:30 minutes</p></article><article class="card"><header><span class="num">#11</span><h3>Leo Steinsen</h3><span class="pm neg">−2</span></header>
+<dl class="stats"><div><dd>2</dd><dt>Pts</dt></div><div><dd>1/1</dd><dt>FG</dt></div><div><dd>–</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>0</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Finished a fast break after Leach's steal, and his pass earned Holmes free throws. No turnovers or fouls.</p><p class="min">3:47 minutes</p></article><article class="card"><header><span class="num">#6</span><h3>Daniel Hansson (C)</h3><span class="pm neg">−10</span></header>
+<dl class="stats"><div><dd>0</dd><dt>Pts</dt></div><div><dd>0/3</dd><dt>FG</dt></div><div><dd>0/2</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>2</dd><dt>Reb</dt></div><div><dd>2</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>0 points, but also 0 turnovers and 2 assists. −10 is a blunt measure. Missed an important three during the drought in Q4.</p><p class="min">26:53 minutes</p></article><article class="card"><header><span class="num">#15</span><h3>Tobias Sjöberg</h3><span class="pm ">0</span></header>
+<dl class="stats"><div><dd>0</dd><dt>Pts</dt></div><div><dd>0/1</dd><dt>FG</dt></div><div><dd>–</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>4</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>4 defensive rebounds in just under 5 minutes, but 2 fouls.</p><p class="min">4:51 minutes</p></article>
+
+<h2 id="opponent">Köping Stars</h2>
+<ul class="flow">
+<li><b>Henderson</b> was the best player on the floor: 28 points, 7 assists, 3 steals and 8 fouls drawn. 8 of 13 two-pointers, mostly lay-ups at speed.</li>
+<li><b>Tafra and Minott Gauthier</b> had 13 rebounds each, 11 of them offensive between them, but also 8 turnovers.</li>
+<li><b>Broström</b> scored 20 points but needed 17 shots. <b>Edwardsson</b> hit 4 of 8 threes.</li>
+<li><b>Jonsson</b> played 29.5 minutes without a basket (0/5). Köping used only seven players.</li>
+</ul>
+
+<h2 id="next">Next game</h2>
+<ol class="todo">
+<li><b>Win the rebounds.</b> The whole team, not just the bigs. 13 offensive rebounds and 22 second-chance points is too many.</li>
+<li><b>Protect the ball when closing out a game.</b> A clear play for the final minutes and a safe plan against the press.</li>
+<li><b>Keep pressuring the ball handler.</b> Steals and fast breaks were the winning formula.</li>
+<li><b>Close the paint against driving guards.</b> Help defence earlier; weak shooters can be left open.</li>
+</ol>
+<footer>Game played 25 September 2026. Source: official statistics and play-by-play (Genius Sports). Attendance: 2,301.</footer>
+</main></body></html>
