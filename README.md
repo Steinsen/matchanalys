@@ -6,7 +6,7 @@ Statisk sajt med matchanalyser, publicerad via Cloudflare Workers (static assets
 - `index.html` – startsida med sök (läser `matcher.json`)
 - `matcher.json` – en post per analyserad match
 - `matcher/ÅÅÅÅ-MM-DD-lag-motstandare.html` – en fristående analyssida per match
-- `matcher/…-en.html` – engelsk version (valfri). Båda sidorna har språkväljaren `.lang` (Svenska/English) som länkar till varandra
+- `matcher/…-en.html` – engelsk version av varje analys (`…-sv.html` när originalet är engelskt). Båda sidorna har språkväljaren `.lang` (Svenska/English) och länkar till varandra
 - `assets/matchanalys.css` – gemensam stil (kopieras inline i varje matchsida så att sidan även fungerar som lös fil)
 - `tools/analys.py` – räknar fram statistik, femmor, on/off, poäng per anfall och ledningsdiagram ur Genius-JSON
 - `mallar/match-mall.html` – sektionsordning för en matchsida
