@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game analysis: Aros BBK 92–71 BC Luleå Steelers</title>
+<meta name="matchdatum" content="2026-09-26">
+<meta name="description" content="Aros won 60–24 in the paint. Steelers played even against the Aros bench but lost by 20 against the Aros starting five.">
+<style>:root{--bg:#f6f7fa;--card:#fff;--ink:#1b2130;--muted:#6b7385;--line:#e2e5ec;--accent:#1f5fae;--accentink:#fff;--pos:#1e8a4c;--neg:#c0392b;--grid:#e6e8ee;--axis:#a3a9b6;--warnbg:#f7e6c9;--warn:#9a6a1c;--soft:#eef2f8}
+@media (prefers-color-scheme:dark){:root{--bg:#12151c;--card:#1b2029;--ink:#e8ebf2;--muted:#9aa2b3;--line:#2c3340;--accent:#5b9bef;--accentink:#0d1420;--pos:#4cc585;--neg:#ef6b5d;--grid:#2a303c;--axis:#566072;--warnbg:#3a2f1c;--warn:#e0b060;--soft:#222935}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:680px;margin:0 auto;padding:20px 16px 48px}
+.kick{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-size:28px;line-height:1.15;margin:6px 0 16px}
+h2{font-size:21px;margin:36px 0 10px;scroll-margin-top:64px}
+h3{margin:0;font-size:18px}
+p{margin:8px 0}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+nav div{max-width:680px;margin:0 auto;padding:10px 16px;display:flex;gap:8px}
+nav a{flex:none;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:14px}
+.score{background:var(--accent);color:var(--accentink);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.score .t{font-size:14px;opacity:.9} .score .s{font-size:40px;font-weight:800;line-height:1.1} .score .r{text-align:right} .score .mid{font-size:13px;opacity:.85;text-align:center}
+.qt{width:100%;border-collapse:collapse;margin-top:10px;background:var(--card);border-radius:12px;overflow:hidden;font-variant-numeric:tabular-nums;text-align:center;font-size:15px}
+.qt th,.qt td{padding:7px 4px;border-bottom:1px solid var(--line)} .qt tr:last-child td,.qt tr:last-child th{border-bottom:0}
+.qt thead th{color:var(--muted);font-weight:600;font-size:13px;background:var(--soft)}
+.lead{font-size:18px;font-weight:600}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 8px;text-align:center}
+.kpi b{display:block;font-size:24px;color:var(--accent);font-variant-numeric:tabular-nums} .kpi span{font-size:13px;color:var(--muted);line-height:1.3;display:block}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+svg text{font-family:inherit}
+ul.flow{padding:0;list-style:none} ul.flow li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0}
+.tag{display:inline-block;font-weight:700;color:var(--accent);margin-right:6px}
+table.team{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;font-variant-numeric:tabular-nums;font-size:15px}
+table.team th,table.team td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right}
+table.team th[scope=row]{text-align:left;font-weight:500} table.team thead th{color:var(--muted);font-size:13px;background:var(--soft)}
+table.team tr:last-child>*{border-bottom:0}
+td.w,td.w2{font-weight:700;color:var(--accent)}
+.two{display:grid;gap:10px;margin-top:12px} @media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.good{border-left:4px solid var(--pos)} .bad{border-left:4px solid var(--neg)}
+.two h3{font-size:16px;margin-bottom:4px} .two ul{margin:0;padding-left:18px} .two li{margin:5px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.card header{display:flex;align-items:baseline;gap:8px} .card h3{flex:1} .num{color:var(--muted);font-size:14px}
+.pm{font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums} .pm.pos{color:var(--pos)} .pm.neg{color:var(--neg)}
+.stats{display:grid;grid-template-columns:repeat(7,1fr);margin:10px 0 6px;padding:8px 0;background:var(--soft);border-radius:10px;text-align:center}
+.stats div{min-width:0} .stats dd{margin:0;font-weight:700;font-size:15px;font-variant-numeric:tabular-nums} .stats dt{font-size:11px;color:var(--muted)}
+.min{font-size:13px;color:var(--muted);margin:0}
+ol.todo{counter-reset:n;list-style:none;padding:0}
+ol.todo li{counter-increment:n;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 52px;margin:10px 0;position:relative}
+ol.todo li::before{content:counter(n);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accentink);font-weight:700;display:grid;place-items:center;font-size:14px}
+.ppp{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:8px;font-variant-numeric:tabular-nums} .ppp b{color:var(--ink)}
+.sub{font-size:17px;margin:20px 0 4px}
+.five{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:8px 0}
+.five .who{font-weight:650;margin:0 0 8px;line-height:1.35}
+.fs{display:grid;grid-template-columns:1fr 1.4fr 1fr;background:var(--soft);border-radius:10px;padding:8px 0;text-align:center}
+.fs dd{margin:0;font-weight:700;font-size:16px;font-variant-numeric:tabular-nums} .fs dt{font-size:11px;color:var(--muted)}
+.fs dd.pos{color:var(--pos)} .fs dd.neg{color:var(--neg)}
+.five .note{margin:8px 0 0;font-size:15px;color:var(--muted)}
+.caveat{font-size:14px;color:var(--muted);border-left:3px solid var(--line);padding-left:10px}
+footer{color:var(--muted);font-size:13px;margin-top:36px}
+@media(max-width:380px){body{font-size:16px} h1{font-size:24px} .score .s{font-size:34px} .stats dd{font-size:14px}}
+.back{display:inline-block;margin:0 0 8px;font-size:15px;color:var(--accent);text-decoration:none}</style></head><body>
+<nav aria-label="Contents"><div><a href="#summary">Summary</a><a href="#flow">Game flow</a><a href="#team">Team stats</a><a href="#lineups">Lineups</a><a href="#players">Players</a><a href="#opponent">Aros</a><a href="#next">Next game</a></div></nav>
+<main>
+<a class="back" href="../index.html">← All games</a>
+<div class="kick">Game analysis · 26 September 2026</div>
+<h1>BC Luleå Steelers lost by 21 away to Aros BBK</h1>
+<div class="score"><div><div class="t">Aros BBK</div><div class="s">92</div></div><div class="mid">final</div><div class="r"><div class="t">BC Luleå Steelers</div><div class="s">71</div></div></div>
+<table class="qt"><thead><tr><th></th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr></thead>
+<tbody><tr><th>Aros</th><td>20</td><td><b>22</b></td><td>21</td><td><b>29</b></td></tr><tr><th>Steelers</th><td>15</td><td>13</td><td>21</td><td>22</td></tr></tbody></table>
+
+<h2 id="summary">Summary</h2>
+<p class="lead">The game was decided in the paint, where Aros scored 60 points to Steelers' 24. Steelers led for about 2 of 40 minutes, by at most 3 (5–2), while Aros led by as many as 27.</p>
+<div class="kpi"><div><b>24–60</b><span>points in the paint</span></div><div><b>8/33</b><span>three-pointers (24%)</span></div><div><b>20–40</b><span>against the Aros starting five (13:45)</span></div></div>
+<p>Steelers kept it even in most other areas: turnovers (14 vs 13), second-chance points (11–11), fast-break points (19–18) and bench points (20–20). Against the other Aros lineups the game finished 51–52. The difference came when the Aros best five were on the floor, and in Q2, when Steelers made 4 of 17 shots.</p>
+
+<h2 id="flow">Game flow</h2>
+<div class="panel"><svg viewBox="0 0 340 190" width="100%" role="img" aria-label="Steelers' lead during the game" xmlns="http://www.w3.org/2000/svg" font-size="11.5"><defs><clipPath id="up"><rect x="0" y="0" width="340" height="59.0"/></clipPath><clipPath id="dn"><rect x="0" y="59.0" width="340" height="190"/></clipPath></defs><rect x="212.9" y="14" width="24.2" height="150" fill="var(--warnbg)"/><text x="225.0" y="25" text-anchor="middle" fill="var(--warn)" font-size="10">Drought</text><line x1="26" x2="332" y1="149.0" y2="149.0" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="152.0" text-anchor="end" fill="var(--muted)">-24</text><line x1="26" x2="332" y1="119.0" y2="119.0" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="122.0" text-anchor="end" fill="var(--muted)">-16</text><line x1="26" x2="332" y1="89.0" y2="89.0" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="92.0" text-anchor="end" fill="var(--muted)">-8</text><line x1="26" x2="332" y1="59.0" y2="59.0" stroke="var(--axis)" stroke-width="0.8"/><text x="22" y="62.0" text-anchor="end" fill="var(--muted)">0</text><line x1="26" x2="332" y1="29.0" y2="29.0" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="32.0" text-anchor="end" fill="var(--muted)">+8</text><line x1="103.2" x2="103.2" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="180.5" x2="180.5" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="257.7" x2="257.7" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><text x="64.6" y="177" text-anchor="middle" fill="var(--muted)">Q1</text><text x="141.9" y="177" text-anchor="middle" fill="var(--muted)">Q2</text><text x="219.1" y="177" text-anchor="middle" fill="var(--muted)">Q3</text><text x="296.3" y="177" text-anchor="middle" fill="var(--muted)">Q4</text><polygon points="26.0,59.0 26.0,59.0 29.5,59.0 29.5,47.8 32.2,47.8 32.2,55.2 34.0,55.2 34.0,47.8 40.3,47.8 40.3,55.2 43.2,55.2 43.2,62.8 44.8,62.8 44.8,55.2 44.8,55.2 44.8,51.5 47.0,51.5 47.0,59.0 48.8,59.0 48.8,66.5 53.3,66.5 53.3,74.0 64.1,74.0 64.1,81.5 66.3,81.5 66.3,74.0 74.7,74.0 74.7,62.8 81.8,62.8 81.8,70.2 88.2,70.2 88.2,62.8 91.0,62.8 91.0,70.2 93.6,70.2 93.6,74.0 98.1,74.0 98.1,77.8 108.5,77.8 108.5,70.2 122.2,70.2 122.2,74.0 125.4,74.0 125.4,70.2 127.4,70.2 127.4,77.8 132.0,77.8 132.0,81.5 132.0,81.5 132.0,85.2 134.9,85.2 134.9,96.5 137.4,96.5 137.4,89.0 149.0,89.0 149.0,96.5 153.6,96.5 153.6,104.0 155.5,104.0 155.5,100.2 155.5,100.2 155.5,96.5 156.8,96.5 156.8,104.0 158.8,104.0 158.8,111.5 162.5,111.5 162.5,119.0 164.2,119.0 164.2,111.5 166.0,111.5 166.0,119.0 172.4,119.0 172.4,111.5 175.8,111.5 175.8,107.8 175.8,107.8 175.8,104.0 176.6,104.0 176.6,111.5 185.6,111.5 185.6,119.0 189.9,119.0 189.9,126.5 191.9,126.5 191.9,122.8 191.9,122.8 191.9,119.0 193.0,119.0 193.0,126.5 197.5,126.5 197.5,134.0 200.3,134.0 200.3,122.8 203.5,122.8 203.5,115.2 206.1,115.2 206.1,126.5 208.3,126.5 208.3,119.0 212.9,119.0 212.9,115.2 225.5,115.2 225.5,122.8 230.4,122.8 230.4,126.5 234.4,126.5 234.4,134.0 237.1,134.0 237.1,122.8 239.7,122.8 239.7,111.5 242.6,111.5 242.6,119.0 249.1,119.0 249.1,107.8 251.3,107.8 251.3,119.0 254.8,119.0 254.8,111.5 258.5,111.5 258.5,122.8 260.6,122.8 260.6,115.2 263.3,115.2 263.3,122.8 266.0,122.8 266.0,119.0 267.6,119.0 267.6,126.5 269.8,126.5 269.8,130.2 273.8,130.2 273.8,137.8 276.2,137.8 276.2,134.0 276.2,134.0 276.2,130.2 277.2,130.2 277.2,137.8 280.3,137.8 280.3,141.5 280.3,141.5 280.3,145.2 283.6,145.2 283.6,152.8 286.8,152.8 286.8,149.0 288.1,149.0 288.1,156.5 291.1,156.5 291.1,149.0 297.6,149.0 297.6,152.8 297.6,152.8 297.6,156.5 300.6,156.5 300.6,145.2 303.3,145.2 303.3,152.8 306.1,152.8 306.1,160.2 309.6,160.2 309.6,149.0 313.9,149.0 313.9,141.5 317.0,141.5 317.0,134.0 321.4,134.0 321.4,126.5 322.6,126.5 322.6,130.2 322.6,130.2 322.6,134.0 324.5,134.0 324.5,141.5 328.1,141.5 328.1,137.8 328.1,137.8 328.1,134.0 329.7,134.0 329.7,137.8 332.0,137.8 332.0,137.8 332.0,59.0" fill="var(--accent)" opacity="0.18" clip-path="url(#up)"/><polygon points="26.0,59.0 26.0,59.0 29.5,59.0 29.5,47.8 32.2,47.8 32.2,55.2 34.0,55.2 34.0,47.8 40.3,47.8 40.3,55.2 43.2,55.2 43.2,62.8 44.8,62.8 44.8,55.2 44.8,55.2 44.8,51.5 47.0,51.5 47.0,59.0 48.8,59.0 48.8,66.5 53.3,66.5 53.3,74.0 64.1,74.0 64.1,81.5 66.3,81.5 66.3,74.0 74.7,74.0 74.7,62.8 81.8,62.8 81.8,70.2 88.2,70.2 88.2,62.8 91.0,62.8 91.0,70.2 93.6,70.2 93.6,74.0 98.1,74.0 98.1,77.8 108.5,77.8 108.5,70.2 122.2,70.2 122.2,74.0 125.4,74.0 125.4,70.2 127.4,70.2 127.4,77.8 132.0,77.8 132.0,81.5 132.0,81.5 132.0,85.2 134.9,85.2 134.9,96.5 137.4,96.5 137.4,89.0 149.0,89.0 149.0,96.5 153.6,96.5 153.6,104.0 155.5,104.0 155.5,100.2 155.5,100.2 155.5,96.5 156.8,96.5 156.8,104.0 158.8,104.0 158.8,111.5 162.5,111.5 162.5,119.0 164.2,119.0 164.2,111.5 166.0,111.5 166.0,119.0 172.4,119.0 172.4,111.5 175.8,111.5 175.8,107.8 175.8,107.8 175.8,104.0 176.6,104.0 176.6,111.5 185.6,111.5 185.6,119.0 189.9,119.0 189.9,126.5 191.9,126.5 191.9,122.8 191.9,122.8 191.9,119.0 193.0,119.0 193.0,126.5 197.5,126.5 197.5,134.0 200.3,134.0 200.3,122.8 203.5,122.8 203.5,115.2 206.1,115.2 206.1,126.5 208.3,126.5 208.3,119.0 212.9,119.0 212.9,115.2 225.5,115.2 225.5,122.8 230.4,122.8 230.4,126.5 234.4,126.5 234.4,134.0 237.1,134.0 237.1,122.8 239.7,122.8 239.7,111.5 242.6,111.5 242.6,119.0 249.1,119.0 249.1,107.8 251.3,107.8 251.3,119.0 254.8,119.0 254.8,111.5 258.5,111.5 258.5,122.8 260.6,122.8 260.6,115.2 263.3,115.2 263.3,122.8 266.0,122.8 266.0,119.0 267.6,119.0 267.6,126.5 269.8,126.5 269.8,130.2 273.8,130.2 273.8,137.8 276.2,137.8 276.2,134.0 276.2,134.0 276.2,130.2 277.2,130.2 277.2,137.8 280.3,137.8 280.3,141.5 280.3,141.5 280.3,145.2 283.6,145.2 283.6,152.8 286.8,152.8 286.8,149.0 288.1,149.0 288.1,156.5 291.1,156.5 291.1,149.0 297.6,149.0 297.6,152.8 297.6,152.8 297.6,156.5 300.6,156.5 300.6,145.2 303.3,145.2 303.3,152.8 306.1,152.8 306.1,160.2 309.6,160.2 309.6,149.0 313.9,149.0 313.9,141.5 317.0,141.5 317.0,134.0 321.4,134.0 321.4,126.5 322.6,126.5 322.6,130.2 322.6,130.2 322.6,134.0 324.5,134.0 324.5,141.5 328.1,141.5 328.1,137.8 328.1,137.8 328.1,134.0 329.7,134.0 329.7,137.8 332.0,137.8 332.0,137.8 332.0,59.0" fill="var(--neg)" opacity="0.22" clip-path="url(#dn)"/><polyline points="26.0,59.0 29.5,59.0 29.5,47.8 32.2,47.8 32.2,55.2 34.0,55.2 34.0,47.8 40.3,47.8 40.3,55.2 43.2,55.2 43.2,62.8 44.8,62.8 44.8,55.2 44.8,55.2 44.8,51.5 47.0,51.5 47.0,59.0 48.8,59.0 48.8,66.5 53.3,66.5 53.3,74.0 64.1,74.0 64.1,81.5 66.3,81.5 66.3,74.0 74.7,74.0 74.7,62.8 81.8,62.8 81.8,70.2 88.2,70.2 88.2,62.8 91.0,62.8 91.0,70.2 93.6,70.2 93.6,74.0 98.1,74.0 98.1,77.8 108.5,77.8 108.5,70.2 122.2,70.2 122.2,74.0 125.4,74.0 125.4,70.2 127.4,70.2 127.4,77.8 132.0,77.8 132.0,81.5 132.0,81.5 132.0,85.2 134.9,85.2 134.9,96.5 137.4,96.5 137.4,89.0 149.0,89.0 149.0,96.5 153.6,96.5 153.6,104.0 155.5,104.0 155.5,100.2 155.5,100.2 155.5,96.5 156.8,96.5 156.8,104.0 158.8,104.0 158.8,111.5 162.5,111.5 162.5,119.0 164.2,119.0 164.2,111.5 166.0,111.5 166.0,119.0 172.4,119.0 172.4,111.5 175.8,111.5 175.8,107.8 175.8,107.8 175.8,104.0 176.6,104.0 176.6,111.5 185.6,111.5 185.6,119.0 189.9,119.0 189.9,126.5 191.9,126.5 191.9,122.8 191.9,122.8 191.9,119.0 193.0,119.0 193.0,126.5 197.5,126.5 197.5,134.0 200.3,134.0 200.3,122.8 203.5,122.8 203.5,115.2 206.1,115.2 206.1,126.5 208.3,126.5 208.3,119.0 212.9,119.0 212.9,115.2 225.5,115.2 225.5,122.8 230.4,122.8 230.4,126.5 234.4,126.5 234.4,134.0 237.1,134.0 237.1,122.8 239.7,122.8 239.7,111.5 242.6,111.5 242.6,119.0 249.1,119.0 249.1,107.8 251.3,107.8 251.3,119.0 254.8,119.0 254.8,111.5 258.5,111.5 258.5,122.8 260.6,122.8 260.6,115.2 263.3,115.2 263.3,122.8 266.0,122.8 266.0,119.0 267.6,119.0 267.6,126.5 269.8,126.5 269.8,130.2 273.8,130.2 273.8,137.8 276.2,137.8 276.2,134.0 276.2,134.0 276.2,130.2 277.2,130.2 277.2,137.8 280.3,137.8 280.3,141.5 280.3,141.5 280.3,145.2 283.6,145.2 283.6,152.8 286.8,152.8 286.8,149.0 288.1,149.0 288.1,156.5 291.1,156.5 291.1,149.0 297.6,149.0 297.6,152.8 297.6,152.8 297.6,156.5 300.6,156.5 300.6,145.2 303.3,145.2 303.3,152.8 306.1,152.8 306.1,160.2 309.6,160.2 309.6,149.0 313.9,149.0 313.9,141.5 317.0,141.5 317.0,134.0 321.4,134.0 321.4,126.5 322.6,126.5 322.6,130.2 322.6,130.2 322.6,134.0 324.5,134.0 324.5,141.5 328.1,141.5 328.1,137.8 328.1,137.8 328.1,134.0 329.7,134.0 329.7,137.8 332.0,137.8 332.0,137.8" fill="none" stroke="var(--accent)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="29.5" cy="47.8" r="2.3" fill="var(--accent)"/><text x="25.5" y="42.8" text-anchor="end" fill="var(--accent)" font-weight="600" font-size="10.5">+3</text><circle cx="306.1" cy="160.2" r="2.3" fill="var(--neg)"/><text x="311.1" y="164.2" fill="var(--neg)" font-weight="600" font-size="10.5">-27</text><text x="179.0" y="188" text-anchor="middle" fill="var(--muted)" font-size="10.5">Lead in points during the game (above zero = Steelers lead)</text></svg></div>
+<ul class="flow">
+<li><span class="tag">Q1 15–20</span>Enbom scored 10 points and Steelers led 8–6. Then 2:47 without scoring while Aros went 8–0 to 14–8. Petersen scored 4 points on two tip-ins after offensive rebounds.</li>
+<li><span class="tag">Q2 13–22</span>Steelers made 4 of 17 shots. Aros went 7–0 and then 6–0 to 38–22 (−16) and led 42–28 at half-time. Ekh scored 11 points in the quarter.</li>
+<li><span class="tag">Q3 21–21</span>Aros extended the lead to 50–30 (−20) and Steelers went 3:08 without scoring (38–53 to 41–58). Kero hit four threes in the quarter, and it finished even: 49–63.</li>
+<li><span class="tag">Q4 22–29</span>Aros went up 87–60 (−27) with 3:44 left. A lineup with four bench players answered with a 9–0 run to 69–87.</li>
+</ul>
+
+<h2 id="team">Team stats</h2>
+<p class="lead">Steelers scored 0.88 points per possession to Aros' 1.14. The difference of 0.25 points per possession accounts for the whole losing margin over about 80 possessions.</p>
+<div class="kpi"><div><b>0.88</b><span>pts/possession Steelers (≈ 80 possessions)</span></div><div><b>1.14</b><span>pts/possession Aros (≈ 81 possessions)</span></div><div><b>−0.25</b><span>difference per possession</span></div></div>
+<p>Three of the four factors were nearly equal. The difference was in shot quality:</p>
+<table class="team"><thead><tr><th></th><th>Steelers</th><th>Aros</th></tr></thead><tbody>
+<tr><th scope="row">Effective FG%</th><td>39.4%</td><td class="w2">57.4%</td></tr>
+<tr><th scope="row">Turnovers per possession</th><td>17%</td><td class="w2">16%</td></tr>
+<tr><th scope="row">Offensive rebound rate</th><td>25%</td><td class="w2">28%</td></tr>
+<tr><th scope="row">Free throws per shot (FTM/FGA)</th><td>0.21</td><td>0.21</td></tr></tbody></table>
+<p class="caveat">Effective FG% counts a three as 1.5 shots. Possessions = field-goal attempts − offensive rebounds + turnovers + 0.44 × free-throw attempts (standard formula, an estimate).</p>
+<p>Aros made 33 of 51 two-pointers (65%), Steelers 16 of 38 (42%). Steelers took 33 of 71 shots (46%) as threes, and they produced 0.73 points per shot against 0.84 for the twos. Kero made 5 of 11. The rest of the team made 3 of 22 (14%).</p>
+<h3 class="sub">All stats</h3>
+<table class="team"><thead><tr><th></th><th>Steelers</th><th>Aros</th></tr></thead><tbody><tr><th scope="row">Field goals</th><td>24/71</td><td class="w2">37/68</td></tr><tr><th scope="row">Two-pointers</th><td>16/38</td><td class="w2">33/51</td></tr><tr><th scope="row">Three-pointers</th><td class="w">8/33</td><td>4/17</td></tr><tr><th scope="row">Free throws</th><td class="w">15/19</td><td>14/25</td></tr><tr><th scope="row">Rebounds (off.)</th><td>39 (13)</td><td class="w2">47 (11)</td></tr><tr><th scope="row">Assists</th><td>20</td><td class="w2">28</td></tr><tr><th scope="row">Turnovers</th><td>14</td><td class="w2">13</td></tr><tr><th scope="row">Steals</th><td>7</td><td class="w2">10</td></tr><tr><th scope="row">Fast-break points</th><td>19</td><td>18</td></tr><tr><th scope="row">Points off turnovers</th><td>21</td><td>22</td></tr><tr><th scope="row">Second-chance points</th><td>11</td><td>11</td></tr><tr><th scope="row">Points in the paint</th><td>24</td><td class="w2">60</td></tr><tr><th scope="row">Bench points</th><td>20</td><td>20</td></tr></tbody></table>
+<div class="two">
+<div class="panel good"><h3>What worked</h3><ul><li><b>Free throws:</b> 15 of 19 (79%), against Aros' 14 of 25. Kero made 6 of 6.</li><li><b>Transition:</b> 19 fast-break points, one more than Aros.</li><li><b>Offensive rebounds:</b> 13 vs 11, and second-chance points were even (11–11).</li><li><b>Q3:</b> 21–21 despite trailing by 20, with Kero scoring 12 points.</li></ul></div>
+<div class="panel bad"><h3>The problems</h3><ul><li><b>The paint:</b> 24–60. Ekh scored 16 points there, Petersen 14.</li><li><b>Three-point shooting outside Kero:</b> 3 of 22.</li><li><b>Q2:</b> 4 of 17 shooting and 13 points.</li><li><b>Defensive rebounds:</b> 26 to Aros' 36, and total rebounds 39–47.</li></ul></div>
+</div>
+
+<h2 id="lineups">Lineups</h2>
+<p class="lead">The Aros starting five won their 13:45 on the floor 40–20. The other 25:52 finished 51–52, in other words even.</p>
+<div class="kpi"><div><b>−20</b><span>against the Aros starting five (13:45)</span></div><div><b>−1</b><span>against the other Aros lineups (25:52)</span></div><div><b>+6</b><span>Persson + Löwgren Madeira together (13:43)</span></div></div>
+<table class="team"><thead><tr><th></th><th>Points for–against</th><th>Pts/poss. for</th><th>against</th></tr></thead><tbody>
+<tr><th scope="row">Against the Aros starting five</th><td>20–40</td><td>0.71</td><td class="w2">1.40</td></tr>
+<tr><th scope="row">Against other lineups</th><td>51–52</td><td>0.98</td><td>0.99</td></tr>
+<tr><th scope="row">Löwgren Madeira on (17:55)</th><td>34–30</td><td>0.88</td><td class="w">0.80</td></tr>
+<tr><th scope="row">Löwgren Madeira off</th><td>37–62</td><td>0.88</td><td class="w2">1.43</td></tr></tbody></table>
+<p>This explains most of the players' +/-. Kero and Erlandsson each played 12:06 against the Aros starting five (19–34), Palmqvist 10:10, Forsman 9:51 and Enbom 9:03. Persson and Löwgren Madeira played mostly against the Aros bench, and the team won their minutes against the other lineups 38–32 and 27–15 respectively. With Persson on the floor Aros scored 0.94 points per possession, without him 1.46.</p>
+<h3 class="sub">Best lineups</h3>
+<article class="five"><p class="who">Persson · Mugisha · Palmqvist · Aitomäki · Kero</p><div class="fs"><div><dd>2:58</dd><dt>Minutes</dt></div><div><dd>11–5</dd><dt>Points for–against</dt></div><div><dd class="pos">+6</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 5 possessions</span><span>Pts/poss.: <b>2.20</b> for · <b>1.00</b> against</span></div><p class="note">End of Q3, from 38–58 to 49–63. Kero hit three threes.</p></article>
+<article class="five"><p class="who">Forsman · Persson · Palmqvist · Kjällman · Löwgren Madeira</p><div class="fs"><div><dd>3:43</dd><dt>Minutes</dt></div><div><dd>11–7</dd><dt>Points for–against</dt></div><div><dd class="pos">+4</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 11 possessions</span><span>Pts/poss.: <b>1.01</b> for · <b>0.69</b> against</span></div><p class="note">End of Q4. Produced the 9–0 run to 69–87, in which Löwgren Madeira scored 5 points.</p></article>
+<h3 class="sub">Weakest lineups</h3>
+<article class="five"><p class="who">Persson · Mugisha · Palmqvist · Erlandsson · Kero</p><div class="fs"><div><dd>3:37</dd><dt>Minutes</dt></div><div><dd>2–12</dd><dt>Points for–against</dt></div><div><dd class="neg">−10</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 6 possessions</span><span>Pts/poss.: <b>0.33</b> for · <b>1.55</b> against</span></div><p class="note">Middle of Q2, when Aros went from 23–18 to 32–20.</p></article>
+<article class="five"><p class="who">Enbom · Forsman · Palmqvist · Erlandsson · Kero</p><div class="fs"><div><dd>5:28</dd><dt>Minutes</dt></div><div><dd>10–14</dd><dt>Points for–against</dt></div><div><dd class="neg">−4</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 11 possessions</span><span>Pts/poss.: <b>0.87</b> for · <b>1.27</b> against</span></div><p class="note">The starting five, the most used lineup. Led 8–6 but lost the Aros 8–0 run in Q1.</p></article>
+<p>The pattern: the lineups that played against the Aros bench held even or won. The Persson–Löwgren Madeira pair was best (+6 in 13:43), followed by Kjällman–Löwgren Madeira (+5 in 6:55). The starters got the toughest minutes, against Ekh, Mizrahi, Wahlberg, Videhult and Candell.</p>
+<p class="caveat">Each lineup only played a few minutes, so +/- is heavily affected by single possessions. Possessions per lineup are estimated. The figures are calculated from substitutions and scoring in the play-by-play and match the official +/- (at most ±1 for free throws around substitutions). Do not judge any player on +/- alone.</p>
+
+<h2 id="players">Players – BC Luleå Steelers</h2>
+<p>Kero and Enbom scored 42 of 71 points. The other eight players made 11 of 36 shots and scored 29 points.</p>
+<article class="card"><header><span class="num">#20</span><h3>Gustav Palmqvist</h3><span class="pm neg">−11</span></header>
+<dl class="stats"><div><dd>0</dd><dt>Pts</dt></div><div><dd>0/1</dd><dt>FG</dt></div><div><dd>0/1</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>5</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Most minutes on the team, 5 rebounds, a block and no turnovers. Played 10 minutes against the Aros starting five. Can be more active on offence: one shot in 25 minutes.</p><p class="min">25:02 minutes</p></article>
+<article class="card"><header><span class="num">#18</span><h3>Erik Persson</h3><span class="pm neg">−6</span></header>
+<dl class="stats"><div><dd>4</dd><dt>Pts</dt></div><div><dd>1/9</dd><dt>FG</dt></div><div><dd>0/4</dd><dt>3P</dt></div><div><dd>2/4</dd><dt>FT</dt></div><div><dd>4</dd><dt>Reb</dt></div><div><dd>5</dd><dt>Ast</dt></div><div><dd>2</dd><dt>TO</dt></div></dl>
+<p>The team's best defensive numbers: Aros scored 0.94 points per possession with him on the floor and 1.46 without. 5 assists, 3 steals and 2 offensive rebounds. His shots did not fall (1 of 9, two blocked), so fewer shots of his own and more passing may pay off.</p><p class="min">24:27 minutes</p></article>
+<article class="card"><header><span class="num">#9</span><h3>Ville Kero (C)</h3><span class="pm neg">−20</span></header>
+<dl class="stats"><div><dd>25</dd><dt>Pts</dt></div><div><dd>7/20</dd><dt>FG</dt></div><div><dd>5/11</dd><dt>3P</dt></div><div><dd>6/6</dd><dt>FT</dt></div><div><dd>5</dd><dt>Reb</dt></div><div><dd>3</dd><dt>Ast</dt></div><div><dd>2</dd><dt>TO</dt></div></dl>
+<p>The team's top scorer: 25 points, 5 of 11 from three, 6 of 6 free throws and 55% true shooting (free throws included). Kept the team in it in Q3 with 12 points. The two-pointers (2 of 9) can improve. The −20 reflects that half of his minutes were against the Aros starting five.</p><p class="min">24:18 minutes</p></article>
+<article class="card"><header><span class="num">#16</span><h3>Erik Forsman</h3><span class="pm neg">−16</span></header>
+<dl class="stats"><div><dd>9</dd><dt>Pts</dt></div><div><dd>3/4</dd><dt>FG</dt></div><div><dd>–</dd><dt>3P</dt></div><div><dd>3/4</dd><dt>FT</dt></div><div><dd>6</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>2</dd><dt>TO</dt></div></dl>
+<p>Most efficient on the team: 9 points on 4 shots (78% true shooting), 6 rebounds and 3 steals. All four shots were twos, three of them lay-ups. Deserves more shots. The −16 comes largely from the minutes against the Aros starting five.</p><p class="min">22:09 minutes</p></article>
+<article class="card"><header><span class="num">#30</span><h3>Leo Erlandsson</h3><span class="pm neg">−25</span></header>
+<dl class="stats"><div><dd>0</dd><dt>Pts</dt></div><div><dd>0/2</dd><dt>FG</dt></div><div><dd>0/2</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>2</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>2</dd><dt>TO</dt></div></dl>
+<p>Started and had the toughest job: 12 of his 21 minutes were against the Aros starting five. One offensive rebound and one assist. The turnovers (2) and three fouls are what can improve. The −25 says more about the opposition on the floor than about him.</p><p class="min">20:51 minutes</p></article>
+<article class="card"><header><span class="num">#4</span><h3>Franck Mugisha</h3><span class="pm neg">−14</span></header>
+<dl class="stats"><div><dd>4</dd><dt>Pts</dt></div><div><dd>2/8</dd><dt>FG</dt></div><div><dd>0/1</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>2</dd><dt>Reb</dt></div><div><dd>3</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>3 assists to 1 turnover, two of them at the end of Q3. Scored the team's first basket of Q2 on a fast break. The mid-range shots (2 of 7 on twos) did not fall.</p><p class="min">20:19 minutes</p></article>
+<article class="card"><header><span class="num">#7</span><h3>Elliot Enbom</h3><span class="pm neg">−12</span></header>
+<dl class="stats"><div><dd>17</dd><dt>Pts</dt></div><div><dd>6/15</dd><dt>FG</dt></div><div><dd>1/7</dd><dt>3P</dt></div><div><dd>4/5</dd><dt>FT</dt></div><div><dd>0</dd><dt>Reb</dt></div><div><dd>3</dd><dt>Ast</dt></div><div><dd>3</dd><dt>TO</dt></div></dl>
+<p>10 points in Q1, mostly on drives. 5 of 8 on twos and 4 fouls drawn, but 1 of 7 from three. More drives and fewer threes suit his game. Three turnovers.</p><p class="min">20:01 minutes</p></article>
+<article class="card"><header><span class="num">#22</span><h3>Sandro Löwgren Madeira</h3><span class="pm pos">+3</span></header>
+<dl class="stats"><div><dd>5</dd><dt>Pts</dt></div><div><dd>2/4</dd><dt>FG</dt></div><div><dd>1/2</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>6</dd><dt>Reb</dt></div><div><dd>2</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>One of the team's two players with a plus. 6 rebounds, 3 of them offensive, 2 assists and no turnovers. The team won his minutes 34–30 and lost the rest by 25. Three fouls in 18 minutes.</p><p class="min">17:54 minutes</p></article>
+<article class="card"><header><span class="num">#17</span><h3>James Aitomäki</h3><span class="pm neg">−7</span></header>
+<dl class="stats"><div><dd>4</dd><dt>Pts</dt></div><div><dd>2/3</dd><dt>FG</dt></div><div><dd>–</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>4</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>Efficient in his minutes: 2 of 3, 4 rebounds, a block and a steal. Part of the best lineup at the end of Q3. Four fouls in 15 minutes limited his playing time.</p><p class="min">14:50 minutes</p></article>
+<article class="card"><header><span class="num">#1</span><h3>Melwin Kjällman</h3><span class="pm pos">+3</span></header>
+<dl class="stats"><div><dd>3</dd><dt>Pts</dt></div><div><dd>1/5</dd><dt>FG</dt></div><div><dd>1/5</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>0</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>A plus in his 8 minutes and part of the lineup that went 9–0 in Q4. Hit one three and had one assist. All five of his shots were threes.</p><p class="min">8:09 minutes</p></article>
+
+<h2 id="opponent">Aros BBK</h2>
+<ul class="flow">
+<li><b>Oskar Ekh</b> was the best player on the floor: 32 points on 20 shots, 7 of 8 free throws, 9 rebounds, 3 steals and 7 fouls drawn. 16 of the points came in the paint. Aros lost his 5 minutes on the bench 4–11.</li>
+<li><b>Michiel Petersen</b> made 7 of 7 off the bench, all in the paint, and had 9 rebounds, 3 of them offensive.</li>
+<li><b>Matan Mizrahi</b> (8 assists) and <b>Alexander Videhult</b> (7 assists, 3 steals, 2 blocks) ran the game. <b>Simon Wahlberg</b> added 14 points, 8 rebounds and 6 assists.</li>
+<li>The weaknesses: 14 of 25 free throws (56%) and 4 of 17 from three. Aros won by getting to the basket, not by their shooting.</li>
+</ul>
+
+<h2 id="next">Next game</h2>
+<ol class="todo">
+<li><b>Close down the paint.</b> 60 points there and 33 of 51 two-pointers for Aros. Help earlier against drives and box out big players like Petersen.</li>
+<li><b>Attack the basket more.</b> 33 threes produced 0.73 points per shot, the twos 0.84, and the team made 79% of its free throws. Kero shot well (5 of 11), the others 3 of 22.</li>
+<li><b>Have a plan for the opponent's best lineup.</b> The Aros starting five won 40–20 in just under 14 minutes. The rest of the game was even.</li>
+<li><b>Build on the bench's energy.</b> Persson and Löwgren Madeira were +6 together, and a lineup with four bench players went 9–0 in Q4.</li>
+</ol>
+<footer>Game played 26 September 2026. Source: official statistics and play-by-play (Genius Sports), retrieved with 0:23 left in Q4 at 92–71. Referees: Ioannis Mirianidis and Andrea Capponi.</footer>
+</main></body></html>
