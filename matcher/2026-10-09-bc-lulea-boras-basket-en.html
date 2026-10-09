@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game analysis: Borås Basket 81–113 BC Luleå</title>
+<meta name="matchdatum" content="2026-10-09">
+<meta name="description" content="Team and player-by-player game analysis, BC Luleå at Borås Basket 113–81.">
+<meta property="og:title" content="Game analysis: Borås Basket 81–113 BC Luleå">
+<meta property="og:description" content="Team stats, game flow, lineups and player by player.">
+<link rel="alternate" hreflang="sv" href="2026-10-09-bc-lulea-boras-basket.html">
+<link rel="alternate" hreflang="en" href="2026-10-09-bc-lulea-boras-basket-en.html">
+<style>:root{--bg:#f6f7fa;--card:#fff;--ink:#1b2130;--muted:#6b7385;--line:#e2e5ec;--accent:#1f5fae;--accentink:#fff;--pos:#1e8a4c;--neg:#c0392b;--grid:#e6e8ee;--axis:#a3a9b6;--warnbg:#f7e6c9;--warn:#9a6a1c;--soft:#eef2f8}
+@media (prefers-color-scheme:dark){:root{--bg:#12151c;--card:#1b2029;--ink:#e8ebf2;--muted:#9aa2b3;--line:#2c3340;--accent:#5b9bef;--accentink:#0d1420;--pos:#4cc585;--neg:#ef6b5d;--grid:#2a303c;--axis:#566072;--warnbg:#3a2f1c;--warn:#e0b060;--soft:#222935}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:680px;margin:0 auto;padding:20px 16px 48px}
+.kick{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-size:28px;line-height:1.15;margin:6px 0 16px}
+h2{font-size:21px;margin:36px 0 10px;scroll-margin-top:64px}
+h3{margin:0;font-size:18px}
+p{margin:8px 0}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+nav div{max-width:680px;margin:0 auto;padding:10px 16px;display:flex;gap:8px}
+nav a{flex:none;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:14px}
+.score{background:var(--accent);color:var(--accentink);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.score .t{font-size:14px;opacity:.9} .score .s{font-size:40px;font-weight:800;line-height:1.1} .score .r{text-align:right} .score .mid{font-size:13px;opacity:.85;text-align:center}
+.qt{width:100%;border-collapse:collapse;margin-top:10px;background:var(--card);border-radius:12px;overflow:hidden;font-variant-numeric:tabular-nums;text-align:center;font-size:15px}
+.qt th,.qt td{padding:7px 4px;border-bottom:1px solid var(--line)} .qt tr:last-child td,.qt tr:last-child th{border-bottom:0}
+.qt thead th{color:var(--muted);font-weight:600;font-size:13px;background:var(--soft)}
+.lead{font-size:18px;font-weight:600}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 8px;text-align:center}
+.kpi b{display:block;font-size:24px;color:var(--accent);font-variant-numeric:tabular-nums} .kpi span{font-size:13px;color:var(--muted);line-height:1.3;display:block}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+svg text{font-family:inherit}
+ul.flow{padding:0;list-style:none} ul.flow li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0}
+.tag{display:inline-block;font-weight:700;color:var(--accent);margin-right:6px}
+table.team{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;font-variant-numeric:tabular-nums;font-size:15px}
+table.team th,table.team td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right}
+table.team th[scope=row]{text-align:left;font-weight:500} table.team thead th{color:var(--muted);font-size:13px;background:var(--soft)}
+table.team tr:last-child>*{border-bottom:0}
+td.w,td.w2{font-weight:700;color:var(--accent)}
+.two{display:grid;gap:10px;margin-top:12px} @media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.good{border-left:4px solid var(--pos)} .bad{border-left:4px solid var(--neg)}
+.two h3{font-size:16px;margin-bottom:4px} .two ul{margin:0;padding-left:18px} .two li{margin:5px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.card header{display:flex;align-items:baseline;gap:8px} .card h3{flex:1} .num{color:var(--muted);font-size:14px}
+.pm{font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums} .pm.pos{color:var(--pos)} .pm.neg{color:var(--neg)}
+.stats{display:grid;grid-template-columns:repeat(7,1fr);margin:10px 0 6px;padding:8px 0;background:var(--soft);border-radius:10px;text-align:center}
+.stats div{min-width:0} .stats dd{margin:0;font-weight:700;font-size:15px;font-variant-numeric:tabular-nums} .stats dt{font-size:11px;color:var(--muted)}
+.min{font-size:13px;color:var(--muted);margin:0}
+ol.todo{counter-reset:n;list-style:none;padding:0}
+ol.todo li{counter-increment:n;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 52px;margin:10px 0;position:relative}
+ol.todo li::before{content:counter(n);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accentink);font-weight:700;display:grid;place-items:center;font-size:14px}
+.ppp{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:8px;font-variant-numeric:tabular-nums} .ppp b{color:var(--ink)}
+.sub{font-size:17px;margin:20px 0 4px}
+.five{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:8px 0}
+.five .who{font-weight:650;margin:0 0 8px;line-height:1.35}
+.fs{display:grid;grid-template-columns:1fr 1.4fr 1fr;background:var(--soft);border-radius:10px;padding:8px 0;text-align:center}
+.fs dd{margin:0;font-weight:700;font-size:16px;font-variant-numeric:tabular-nums} .fs dt{font-size:11px;color:var(--muted)}
+.fs dd.pos{color:var(--pos)} .fs dd.neg{color:var(--neg)}
+.five .note{margin:8px 0 0;font-size:15px;color:var(--muted)}
+.caveat{font-size:14px;color:var(--muted);border-left:3px solid var(--line);padding-left:10px}
+footer{color:var(--muted);font-size:13px;margin-top:36px}
+@media(max-width:380px){body{font-size:16px} h1{font-size:24px} .score .s{font-size:34px} .stats dd{font-size:14px}}
+.back{display:inline-block;margin:0 0 8px;font-size:15px;color:var(--accent);text-decoration:none}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 8px}
+.top .back{margin:0}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card);flex:none}
+.lang a{padding:5px 12px;font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;line-height:1.3}
+.lang a[aria-current]{background:var(--accent);color:var(--accentink)}</style></head><body>
+<nav aria-label="Contents"><div><a href="#summary">Summary</a><a href="#flow">Game flow</a><a href="#team">Team stats</a><a href="#lineups">Lineups</a><a href="#players">Players</a><a href="#opponent">Borås</a><a href="#next">Next game</a></div></nav>
+<main>
+<div class="top"><a class="back" href="../index.html">← All games</a><div class="lang" role="group" aria-label="Language / Språk"><a href="2026-10-09-bc-lulea-boras-basket.html" hreflang="sv" lang="sv">Svenska</a><a aria-current="page">English</a></div></div>
+<div class="kick">Game analysis · 9 October 2026 · away</div>
+<h1>BC Luleå won by 32 points away at Borås Basket</h1>
+<div class="score"><div><div class="t">Borås</div><div class="s">81</div></div><div class="mid">final</div><div class="r"><div class="t">Luleå</div><div class="s">113</div></div></div>
+<table class="qt"><thead><tr><th></th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr></thead>
+<tbody><tr><th>Borås</th><td>25</td><td>24</td><td>16</td><td>16</td></tr><tr><th>Luleå</th><td><b>26</b></td><td><b>25</b></td><td><b>22</b></td><td><b>40</b></td></tr></tbody></table>
+
+<h2 id="summary">Summary</h2>
+<p class="lead">The game was decided in the fourth quarter, which Luleå won 40–16. Luleå made 8 of 9 threes in the quarter, and Borås scored its first field goal with 1:17 left.</p>
+<div class="kpi"><div><b>1.43</b><span>points per possession, vs Borås 1.05</span></div><div><b>40–16</b><span>in Q4, from 73–65 to 113–81</span></div><div><b>6</b><span>turnovers in the whole game (8% of possessions)</span></div></div>
+<p>After three quarters Luleå led only 73–65. Borås led by as much as 7 (28–35) in the first half thanks to three-point shooting: 9 of 21 threes before the break. In the fourth quarter it turned completely. Borås shot 2 of 17 from the field and got 10 of its 16 points from the line, while Luleå scored 29 points in the first seven minutes of the quarter. Luleå led for 31:39 of 40 minutes and by as much as 34 (108–74). Borås took more offensive rebounds (14 vs 9) and scored 19 second-chance points; that kept them in the game until the fourth quarter.</p>
+
+<h2 id="flow">Game flow</h2>
+<div class="panel"><svg viewBox="0 0 340 190" width="100%" role="img" aria-label="Lead during the game" xmlns="http://www.w3.org/2000/svg" font-size="11.5"><defs><clipPath id="up"><rect x="0" y="0" width="340" height="136.1"/></clipPath><clipPath id="dn"><rect x="0" y="136.1" width="340" height="190"/></clipPath></defs><rect x="207.8" y="14" width="19.5" height="150" fill="var(--warnbg)"/><text x="217.6" y="25" text-anchor="middle" fill="var(--warn)" font-size="10">Drought</text><line x1="26" x2="332" y1="164.0" y2="164.0" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="167.0" text-anchor="end" fill="var(--muted)">-8</text><line x1="26" x2="332" y1="136.1" y2="136.1" stroke="var(--axis)" stroke-width="0.8"/><text x="22" y="139.1" text-anchor="end" fill="var(--muted)">0</text><line x1="26" x2="332" y1="108.2" y2="108.2" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="111.2" text-anchor="end" fill="var(--muted)">+8</text><line x1="26" x2="332" y1="80.3" y2="80.3" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="83.3" text-anchor="end" fill="var(--muted)">+16</text><line x1="26" x2="332" y1="52.4" y2="52.4" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="55.4" text-anchor="end" fill="var(--muted)">+24</text><line x1="26" x2="332" y1="24.5" y2="24.5" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="27.5" text-anchor="end" fill="var(--muted)">+32</text><line x1="102.5" x2="102.5" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="179.0" x2="179.0" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="255.5" x2="255.5" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><text x="64.2" y="177" text-anchor="middle" fill="var(--muted)">Q1</text><text x="140.8" y="177" text-anchor="middle" fill="var(--muted)">Q2</text><text x="217.2" y="177" text-anchor="middle" fill="var(--muted)">Q3</text><text x="293.8" y="177" text-anchor="middle" fill="var(--muted)">Q4</text><polygon points="26.0,136.1 26.0,136.1 28.1,136.1 28.1,129.1 31.7,129.1 31.7,122.1 34.6,122.1 34.6,129.1 36.7,129.1 36.7,122.1 38.2,122.1 38.2,129.1 40.5,129.1 40.5,118.7 42.4,118.7 42.4,129.1 49.2,129.1 49.2,122.1 54.1,122.1 54.1,111.7 56.8,111.7 56.8,108.2 61.6,108.2 61.6,101.2 63.3,101.2 63.3,111.7 68.3,111.7 68.3,118.7 70.1,118.7 70.1,115.2 70.1,115.2 70.1,111.7 72.7,111.7 72.7,122.1 76.0,122.1 76.0,132.6 80.5,132.6 80.5,143.1 85.4,143.1 85.4,132.6 88.3,132.6 88.3,136.1 88.3,136.1 88.3,139.6 92.9,139.6 92.9,132.6 95.6,132.6 95.6,139.6 101.3,139.6 101.3,132.6 104.2,132.6 104.2,136.1 104.2,136.1 104.2,139.6 107.1,139.6 107.1,150.0 110.2,150.0 110.2,157.0 112.4,157.0 112.4,150.0 114.0,150.0 114.0,160.5 123.0,160.5 123.0,153.5 124.5,153.5 124.5,150.0 124.5,150.0 124.5,146.6 129.7,146.6 129.7,139.6 134.0,139.6 134.0,132.6 136.9,132.6 136.9,129.1 136.9,129.1 136.9,125.6 140.4,125.6 140.4,136.1 142.1,136.1 142.1,132.6 142.1,132.6 142.1,129.1 154.4,129.1 154.4,136.1 156.6,136.1 156.6,129.1 159.3,129.1 159.3,132.6 159.3,132.6 159.3,136.1 159.3,136.1 159.3,132.6 160.9,132.6 160.9,136.1 163.9,136.1 163.9,125.6 163.9,125.6 163.9,129.1 163.9,129.1 163.9,132.6 167.5,132.6 167.5,125.6 168.5,125.6 168.5,136.1 170.8,136.1 170.8,129.1 172.4,129.1 172.4,136.1 178.4,136.1 178.4,129.1 181.5,129.1 181.5,122.1 185.3,122.1 185.3,111.7 195.2,111.7 195.2,115.2 199.7,115.2 199.7,108.2 202.6,108.2 202.6,101.2 204.6,101.2 204.6,108.2 205.8,108.2 205.8,101.2 207.8,101.2 207.8,97.7 207.8,97.7 207.8,94.2 211.0,94.2 211.0,104.7 217.2,104.7 217.2,111.7 227.3,111.7 227.3,104.7 231.6,104.7 231.6,115.2 236.8,115.2 236.8,125.6 238.1,125.6 238.1,118.7 242.7,118.7 242.7,108.2 246.2,108.2 246.2,101.2 248.4,101.2 248.4,108.2 260.6,108.2 260.6,104.7 265.6,104.7 265.6,97.7 269.0,97.7 269.0,87.3 270.6,87.3 270.6,90.7 270.6,90.7 270.6,94.2 279.8,94.2 279.8,87.3 282.7,87.3 282.7,83.8 282.7,83.8 282.7,80.3 284.0,80.3 284.0,69.8 285.2,69.8 285.2,66.3 288.8,66.3 288.8,69.8 288.8,69.8 288.8,73.3 290.3,73.3 290.3,66.3 295.4,66.3 295.4,62.8 295.4,62.8 295.4,59.3 298.0,59.3 298.0,48.9 302.4,48.9 302.4,38.4 304.1,38.4 304.1,41.9 305.6,41.9 305.6,34.9 308.1,34.9 308.1,24.5 310.8,24.5 310.8,28.0 314.4,28.0 314.4,17.5 316.7,17.5 316.7,21.0 318.6,21.0 318.6,24.5 318.6,24.5 318.6,28.0 319.8,28.0 319.8,17.5 322.2,17.5 322.2,28.0 324.0,28.0 324.0,24.5 324.0,24.5 324.0,21.0 326.3,21.0 326.3,31.4 327.6,31.4 327.6,21.0 330.1,21.0 330.1,24.5 332.0,24.5 332.0,24.5 332.0,136.1" fill="var(--accent)" opacity="0.18" clip-path="url(#up)"/><polygon points="26.0,136.1 26.0,136.1 28.1,136.1 28.1,129.1 31.7,129.1 31.7,122.1 34.6,122.1 34.6,129.1 36.7,129.1 36.7,122.1 38.2,122.1 38.2,129.1 40.5,129.1 40.5,118.7 42.4,118.7 42.4,129.1 49.2,129.1 49.2,122.1 54.1,122.1 54.1,111.7 56.8,111.7 56.8,108.2 61.6,108.2 61.6,101.2 63.3,101.2 63.3,111.7 68.3,111.7 68.3,118.7 70.1,118.7 70.1,115.2 70.1,115.2 70.1,111.7 72.7,111.7 72.7,122.1 76.0,122.1 76.0,132.6 80.5,132.6 80.5,143.1 85.4,143.1 85.4,132.6 88.3,132.6 88.3,136.1 88.3,136.1 88.3,139.6 92.9,139.6 92.9,132.6 95.6,132.6 95.6,139.6 101.3,139.6 101.3,132.6 104.2,132.6 104.2,136.1 104.2,136.1 104.2,139.6 107.1,139.6 107.1,150.0 110.2,150.0 110.2,157.0 112.4,157.0 112.4,150.0 114.0,150.0 114.0,160.5 123.0,160.5 123.0,153.5 124.5,153.5 124.5,150.0 124.5,150.0 124.5,146.6 129.7,146.6 129.7,139.6 134.0,139.6 134.0,132.6 136.9,132.6 136.9,129.1 136.9,129.1 136.9,125.6 140.4,125.6 140.4,136.1 142.1,136.1 142.1,132.6 142.1,132.6 142.1,129.1 154.4,129.1 154.4,136.1 156.6,136.1 156.6,129.1 159.3,129.1 159.3,132.6 159.3,132.6 159.3,136.1 159.3,136.1 159.3,132.6 160.9,132.6 160.9,136.1 163.9,136.1 163.9,125.6 163.9,125.6 163.9,129.1 163.9,129.1 163.9,132.6 167.5,132.6 167.5,125.6 168.5,125.6 168.5,136.1 170.8,136.1 170.8,129.1 172.4,129.1 172.4,136.1 178.4,136.1 178.4,129.1 181.5,129.1 181.5,122.1 185.3,122.1 185.3,111.7 195.2,111.7 195.2,115.2 199.7,115.2 199.7,108.2 202.6,108.2 202.6,101.2 204.6,101.2 204.6,108.2 205.8,108.2 205.8,101.2 207.8,101.2 207.8,97.7 207.8,97.7 207.8,94.2 211.0,94.2 211.0,104.7 217.2,104.7 217.2,111.7 227.3,111.7 227.3,104.7 231.6,104.7 231.6,115.2 236.8,115.2 236.8,125.6 238.1,125.6 238.1,118.7 242.7,118.7 242.7,108.2 246.2,108.2 246.2,101.2 248.4,101.2 248.4,108.2 260.6,108.2 260.6,104.7 265.6,104.7 265.6,97.7 269.0,97.7 269.0,87.3 270.6,87.3 270.6,90.7 270.6,90.7 270.6,94.2 279.8,94.2 279.8,87.3 282.7,87.3 282.7,83.8 282.7,83.8 282.7,80.3 284.0,80.3 284.0,69.8 285.2,69.8 285.2,66.3 288.8,66.3 288.8,69.8 288.8,69.8 288.8,73.3 290.3,73.3 290.3,66.3 295.4,66.3 295.4,62.8 295.4,62.8 295.4,59.3 298.0,59.3 298.0,48.9 302.4,48.9 302.4,38.4 304.1,38.4 304.1,41.9 305.6,41.9 305.6,34.9 308.1,34.9 308.1,24.5 310.8,24.5 310.8,28.0 314.4,28.0 314.4,17.5 316.7,17.5 316.7,21.0 318.6,21.0 318.6,24.5 318.6,24.5 318.6,28.0 319.8,28.0 319.8,17.5 322.2,17.5 322.2,28.0 324.0,28.0 324.0,24.5 324.0,24.5 324.0,21.0 326.3,21.0 326.3,31.4 327.6,31.4 327.6,21.0 330.1,21.0 330.1,24.5 332.0,24.5 332.0,24.5 332.0,136.1" fill="var(--neg)" opacity="0.22" clip-path="url(#dn)"/><polyline points="26.0,136.1 28.1,136.1 28.1,129.1 31.7,129.1 31.7,122.1 34.6,122.1 34.6,129.1 36.7,129.1 36.7,122.1 38.2,122.1 38.2,129.1 40.5,129.1 40.5,118.7 42.4,118.7 42.4,129.1 49.2,129.1 49.2,122.1 54.1,122.1 54.1,111.7 56.8,111.7 56.8,108.2 61.6,108.2 61.6,101.2 63.3,101.2 63.3,111.7 68.3,111.7 68.3,118.7 70.1,118.7 70.1,115.2 70.1,115.2 70.1,111.7 72.7,111.7 72.7,122.1 76.0,122.1 76.0,132.6 80.5,132.6 80.5,143.1 85.4,143.1 85.4,132.6 88.3,132.6 88.3,136.1 88.3,136.1 88.3,139.6 92.9,139.6 92.9,132.6 95.6,132.6 95.6,139.6 101.3,139.6 101.3,132.6 104.2,132.6 104.2,136.1 104.2,136.1 104.2,139.6 107.1,139.6 107.1,150.0 110.2,150.0 110.2,157.0 112.4,157.0 112.4,150.0 114.0,150.0 114.0,160.5 123.0,160.5 123.0,153.5 124.5,153.5 124.5,150.0 124.5,150.0 124.5,146.6 129.7,146.6 129.7,139.6 134.0,139.6 134.0,132.6 136.9,132.6 136.9,129.1 136.9,129.1 136.9,125.6 140.4,125.6 140.4,136.1 142.1,136.1 142.1,132.6 142.1,132.6 142.1,129.1 154.4,129.1 154.4,136.1 156.6,136.1 156.6,129.1 159.3,129.1 159.3,132.6 159.3,132.6 159.3,136.1 159.3,136.1 159.3,132.6 160.9,132.6 160.9,136.1 163.9,136.1 163.9,125.6 163.9,125.6 163.9,129.1 163.9,129.1 163.9,132.6 167.5,132.6 167.5,125.6 168.5,125.6 168.5,136.1 170.8,136.1 170.8,129.1 172.4,129.1 172.4,136.1 178.4,136.1 178.4,129.1 181.5,129.1 181.5,122.1 185.3,122.1 185.3,111.7 195.2,111.7 195.2,115.2 199.7,115.2 199.7,108.2 202.6,108.2 202.6,101.2 204.6,101.2 204.6,108.2 205.8,108.2 205.8,101.2 207.8,101.2 207.8,97.7 207.8,97.7 207.8,94.2 211.0,94.2 211.0,104.7 217.2,104.7 217.2,111.7 227.3,111.7 227.3,104.7 231.6,104.7 231.6,115.2 236.8,115.2 236.8,125.6 238.1,125.6 238.1,118.7 242.7,118.7 242.7,108.2 246.2,108.2 246.2,101.2 248.4,101.2 248.4,108.2 260.6,108.2 260.6,104.7 265.6,104.7 265.6,97.7 269.0,97.7 269.0,87.3 270.6,87.3 270.6,90.7 270.6,90.7 270.6,94.2 279.8,94.2 279.8,87.3 282.7,87.3 282.7,83.8 282.7,83.8 282.7,80.3 284.0,80.3 284.0,69.8 285.2,69.8 285.2,66.3 288.8,66.3 288.8,69.8 288.8,69.8 288.8,73.3 290.3,73.3 290.3,66.3 295.4,66.3 295.4,62.8 295.4,62.8 295.4,59.3 298.0,59.3 298.0,48.9 302.4,48.9 302.4,38.4 304.1,38.4 304.1,41.9 305.6,41.9 305.6,34.9 308.1,34.9 308.1,24.5 310.8,24.5 310.8,28.0 314.4,28.0 314.4,17.5 316.7,17.5 316.7,21.0 318.6,21.0 318.6,24.5 318.6,24.5 318.6,28.0 319.8,28.0 319.8,17.5 322.2,17.5 322.2,28.0 324.0,28.0 324.0,24.5 324.0,24.5 324.0,21.0 326.3,21.0 326.3,31.4 327.6,31.4 327.6,21.0 330.1,21.0 330.1,24.5 332.0,24.5 332.0,24.5" fill="none" stroke="var(--accent)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="314.4" cy="17.5" r="2.3" fill="var(--accent)"/><text x="310.4" y="12.5" text-anchor="end" fill="var(--accent)" font-weight="600" font-size="10.5">+34</text><circle cx="114.0" cy="160.5" r="2.3" fill="var(--neg)"/><text x="119.0" y="164.5" fill="var(--neg)" font-weight="600" font-size="10.5">-7</text><text x="179.0" y="188" text-anchor="middle" fill="var(--muted)" font-size="10.5">Lead in points during the game (above zero = Luleå leads)</text></svg></div>
+<ul class="flow">
+<li><span class="tag">Q1 26–25</span>The starting five opened 15–7 and Arvidsson made it 17–7 after 4:39. Borås answered with a 9–0 run in one minute (19–12 to 19–21): three threes, one by Andersson and two by Lipscomb. Arvidsson scored 11 points in the quarter, including the three for 22–21 and the basket for 26–25 with 9 seconds left.</li>
+<li><span class="tag">Q2 25–24</span>Borås opened 10–2 to 28–35, with two threes by Andersson. With Leach, Nilsson and Galette on the floor Luleå went on a 10–0 run to 38–35, Leach scoring 6. The rest of the quarter was even with five ties. Naivalurua's dunk off a Galette assist with 4 seconds left made it 51–49 at half-time.</li>
+<li><span class="tag">Q3 22–16</span>The starting five went from 51–49 to 62–52 in under four minutes: 11–3, including Galette's three and a tip-in after two of his own offensive rebounds. Borås came back to 66–63 with two straight threes by Guténius, the second right after Luleå's timeout. Holmes (dunk and jumper) and Galette (three) then answered with a 7–0 run to 73–63.</li>
+<li><span class="tag">Q4 40–16</span>Hansson scored 10 points in the first five minutes (two threes and two twos) as Luleå went from 73–65 to 89–69. Two Borås timeouts did not stop the run. Leach and Galette hit two threes each in 2:09, to 105–71. Borås' four turnovers in the quarter gave Luleå 6 points; Luleå lost the ball once.</li>
+</ul>
+
+<h2 id="team">Team stats</h2>
+<p class="lead">Luleå scored 1.43 points per possession to Borås' 1.05, on almost the same number of possessions (79 vs 77). The difference came from shooting and turnovers.</p>
+<div class="kpi"><div><b>1.43</b><span>pts/possession Luleå (≈ 79 possessions)</span></div><div><b>1.05</b><span>pts/possession Borås (≈ 77 possessions)</span></div><div><b>+0.38</b><span>difference per possession</span></div></div>
+<p>Of the four factors, Luleå won two clearly and lost two narrowly:</p>
+<table class="team"><thead><tr><th></th><th>Luleå</th><th>Borås</th></tr></thead><tbody>
+<tr><th scope="row">Effective FG%</th><td class="w">65.3%</td><td>45.6%</td></tr>
+<tr><th scope="row">Turnovers per possession</th><td class="w">8%</td><td>14%</td></tr>
+<tr><th scope="row">Offensive rebound rate</th><td>24%</td><td class="w2">28%</td></tr>
+<tr><th scope="row">Free throws per shot (FTM/FGA)</th><td>0.26</td><td class="w2">0.28</td></tr></tbody></table>
+<p class="caveat">Effective FG% counts a three as 1.5 shots. Possessions = field-goal attempts − offensive rebounds + turnovers + 0.44 × free-throw attempts (standard formula, an estimate).</p>
+<h3 class="sub">All stats</h3>
+<table class="team"><thead><tr><th></th><th>Luleå</th><th>Borås</th></tr></thead><tbody>
+<tr><th scope="row">Field goals</th><td class="w">40/72</td><td>24/68</td></tr>
+<tr><th scope="row">Two-pointers</th><td class="w">26/43</td><td>10/25</td></tr>
+<tr><th scope="row">Three-pointers</th><td class="w">14/29</td><td>14/43</td></tr>
+<tr><th scope="row">Free throws</th><td class="w">19/23</td><td>19/28</td></tr>
+<tr><th scope="row">Rebounds (off.)</th><td class="w">42 (9)</td><td>38 (14)</td></tr>
+<tr><th scope="row">Assists</th><td>16</td><td class="w2">23</td></tr>
+<tr><th scope="row">Turnovers</th><td class="w">6</td><td>11</td></tr>
+<tr><th scope="row">Steals</th><td class="w">6</td><td>2</td></tr>
+<tr><th scope="row">Fast-break points</th><td class="w">17</td><td>6</td></tr>
+<tr><th scope="row">Points off turnovers</th><td class="w">16</td><td>6</td></tr>
+<tr><th scope="row">Second-chance points</th><td>10</td><td class="w2">19</td></tr>
+<tr><th scope="row">Points in the paint</th><td class="w">40</td><td>18</td></tr>
+<tr><th scope="row">Bench points</th><td>23</td><td class="w2">37</td></tr></tbody></table>
+<div class="two">
+<div class="panel good"><h3>What worked</h3><ul><li><b>Shooting:</b> 65.3% effective FG%. 26 of 43 two-pointers (60%) and 14 of 29 threes (48%). In the fourth quarter 8 of 9 threes went in.</li><li><b>The paint:</b> 40–18 in points close to the basket. Naivalurua scored 12 and Holmes 8 there.</li><li><b>Ball security:</b> 6 turnovers, 8% of possessions. Borås got only 6 points off them.</li><li><b>Transition:</b> 17–6 in fast-break points and 16–6 in points off turnovers.</li></ul></div>
+<div class="panel bad"><h3>The problems</h3><ul><li><b>Defensive rebounding:</b> Borås took 14 offensive rebounds (28% of their misses) and scored 19 second-chance points to Luleå's 10. Graham alone had 6.</li><li><b>Borås threes in the first half:</b> 9 of 21 before the break. After it, 5 of 22.</li><li><b>Fouls in the paint:</b> Graham got 10 free throws and Borås 28 in total. Holmes picked up 5 fouls in 17 minutes and fouled out with 14 seconds left.</li></ul></div>
+</div>
+
+<h2 id="lineups">Lineups</h2>
+<p class="lead">The starting five won its 11:28 by 42–20 (+22). The team was +37 with Galette on the floor and −5 while he sat.</p>
+<div class="kpi"><div><b>+37</b><span>Galette on the floor (29:50)</span></div><div><b>+32</b><span>Arvidsson on the floor (28:02)</span></div><div><b>+22</b><span>starting five (11:28)</span></div></div>
+<table class="team"><thead><tr><th></th><th>Points for–against</th><th>Pts/poss. for</th><th>against</th></tr></thead><tbody>
+<tr><th scope="row">Galette on</th><td>88–51</td><td class="w">1.49</td><td class="w">0.90</td></tr>
+<tr><th scope="row">Galette off</th><td>25–30</td><td>1.25</td><td>1.46</td></tr>
+<tr><th scope="row">Arvidsson on</th><td>84–52</td><td class="w">1.55</td><td class="w">0.96</td></tr>
+<tr><th scope="row">Arvidsson off</th><td>29–29</td><td>1.17</td><td>1.25</td></tr></tbody></table>
+<p>All five starters were +21 or better. The best pair was Arvidsson and Galette: 78–39 (+39) in 23:33 together. Borås' two first-half runs (9–0 in Q1 and 10–2 at the start of Q2) came while two of the starters were on the bench at the same time.</p>
+<h3 class="sub">Best lineups</h3>
+<article class="five"><p class="who">Hansson · Arvidsson · Leach · Galette · Naivalurua</p><div class="fs"><div><dd>11:28</dd><dt>Minutes</dt></div><div><dd>42–20</dd><dt>Points for–against</dt></div><div><dd class="pos">+22</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 22 possessions</span><span>Pts/poss.: <b>1.94</b> for · <b>1.01</b> against</span></div><p class="note">The starting five. 15–7 in the opening, 17–10 from late Q2 into Q3 (45–42 to 62–52) and 8–0 in Q4 (89–69 to 97–69).</p></article>
+<article class="five"><p class="who">Arvidsson · Leach · Nilsson · Galette · Naivalurua</p><div class="fs"><div><dd>2:28</dd><dt>Minutes</dt></div><div><dd>10–0</dd><dt>Points for–against</dt></div><div><dd class="pos">+10</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 5 possessions</span><span>Pts/poss.: <b>1.74</b> for · <b>0.00</b> against</span></div><p class="note">The Q2 run from 28–35 to 38–35. Nilsson grabbed an offensive rebound and made both free throws for 32–35.</p></article>
+<article class="five"><p class="who">Hansson · Leach · Steinsen · Holmes · Naivalurua</p><div class="fs"><div><dd>3:10</dd><dt>Minutes</dt></div><div><dd>8–2</dd><dt>Points for–against</dt></div><div><dd class="pos">+6</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 8 possessions</span><span>Pts/poss.: <b>1.02</b> for · <b>0.29</b> against</span></div><p class="note">The start of Q4, from 73–65 to 81–67. Borås went 0 of 5 from the field; Hansson scored 5.</p></article>
+<h3 class="sub">Weakest lineups</h3>
+<article class="five"><p class="who">Hansson · Arvidsson · Ninkingira · Nilsson · Naivalurua</p><div class="fs"><div><dd>1:46</dd><dt>Minutes</dt></div><div><dd>2–8</dd><dt>Points for–against</dt></div><div><dd class="neg">−6</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 3 possessions</span><span>Pts/poss.: <b>1.00</b> for · <b>2.67</b> against</span></div><p class="note">Start of Q2 (26–27 to 28–35). Andersson hit two threes and Graham a two.</p></article>
+<article class="five"><p class="who">Hansson · Leach · Ninkingira · Holmes · Naivalurua</p><div class="fs"><div><dd>0:46</dd><dt>Minutes</dt></div><div><dd>0–6</dd><dt>Points for–against</dt></div><div><dd class="neg">−6</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 2 possessions</span><span>Pts/poss.: <b>0.00</b> for · <b>3.00</b> against</span></div><p class="note">Middle of Q1 (19–12 to 19–18): two Borås threes in 26 seconds. Part of the Borås 9–0 run.</p></article>
+<p>The pattern: Borås' runs came with several substitutes on the floor at once and almost always from three (5 of Borås' 6 baskets in the two runs). Galette and Naivalurua together were +31 in 20:47. With Galette on the floor Borås scored 0.90 points per possession, without him 1.46.</p>
+<p class="caveat">Possessions per lineup are estimated from minutes and the game's pace. Each lineup played only a few minutes, so +/- is heavily affected by single possessions and should not be used to judge an individual player. The numbers are computed from substitutions and scoring in the play-by-play and match the official +/- exactly for every player.</p>
+
+<h2 id="players">Players – BC Luleå</h2>
+<p>Five players scored 15 or more. Arvidsson was the most efficient, Galette had the best +/- and Hansson decided it in the fourth quarter.</p>
+<article class="card"><header><span class="num">#20</span><h3>Jonatan Arvidsson</h3><span class="pm pos">+32</span></header>
+<dl class="stats"><div><dd>21</dd><dt>Pts</dt></div><div><dd>6/10</dd><dt>FG</dt></div><div><dd>1/3</dd><dt>3P</dt></div><div><dd>8/8</dd><dt>FT</dt></div><div><dd>6</dd><dt>Reb</dt></div><div><dd>4</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>The game's top scorer with 21 points on 10 shots and 78% true shooting. Drew 5 fouls and made all 8 free throws. 11 points in Q1, including the three that ended Borås' 9–0 run (22–21). His only turnover was a travel late in Q3; 1 of 3 from three is the thing to improve.</p><p class="min">28:02 played</p></article>
+<article class="card"><header><span class="num">#3</span><h3>Jalen Leach</h3><span class="pm pos">+29</span></header>
+<dl class="stats"><div><dd>19</dd><dt>Pts</dt></div><div><dd>7/15</dd><dt>FG</dt></div><div><dd>3/6</dd><dt>3P</dt></div><div><dd>2/2</dd><dt>FT</dt></div><div><dd>6</dd><dt>Reb</dt></div><div><dd>3</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>0 turnovers in 30 minutes. 6 points in the 10–0 run in Q2 and 9 points on three threes in Q4, the last with 33 seconds left. The mid-range went worse: 4 of 9 two-pointers, with two straight misses in both Q2 and Q3.</p><p class="min">30:04 played</p></article>
+<article class="card"><header><span class="num">#13</span><h3>Tuburu Naivalurua</h3><span class="pm pos">+27</span></header>
+<dl class="stats"><div><dd>18</dd><dt>Pts</dt></div><div><dd>8/16</dd><dt>FG</dt></div><div><dd>1/3</dd><dt>3P</dt></div><div><dd>1/2</dd><dt>FT</dt></div><div><dd>6</dd><dt>Reb</dt></div><div><dd>2</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>Won the opening tip and scored the game's first basket on a tip-in. 12 points in the paint, the dunk for 51–49 at the half-time buzzer and the first basket of Q3. 2 steals and 2 blocks. 7 of 13 two-pointers; one of the misses was blocked.</p><p class="min">29:12 played</p></article>
+<article class="card"><header><span class="num">#44</span><h3>Nicolas Galette</h3><span class="pm pos">+37</span></header>
+<dl class="stats"><div><dd>17</dd><dt>Pts</dt></div><div><dd>6/11</dd><dt>FG</dt></div><div><dd>4/7</dd><dt>3P</dt></div><div><dd>1/2</dd><dt>FT</dt></div><div><dd>9</dd><dt>Reb</dt></div><div><dd>2</dd><dt>Ast</dt></div><div><dd>2</dd><dt>TO</dt></div></dl>
+<p>The team's best +/- and most rebounds (9). 4 of 7 threes and 72% true shooting, 2 steals and a block. Borås scored 0.90 points per possession with him on the floor and 1.46 without. 2 turnovers, one of them an offensive foul early in Q2.</p><p class="min">29:50 played</p></article>
+<article class="card"><header><span class="num">#6</span><h3>Daniel Hansson (C)</h3><span class="pm pos">+21</span></header>
+<dl class="stats"><div><dd>15</dd><dt>Pts</dt></div><div><dd>6/10</dd><dt>FG</dt></div><div><dd>3/6</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>4</dd><dt>Reb</dt></div><div><dd>3</dd><dt>Ast</dt></div><div><dd>2</dd><dt>TO</dt></div></dl>
+<p>Decided the fourth quarter with 10 points in five minutes, from 73–65 to 89–69. 75% true shooting and 3 assists. 2 turnovers and 3 fouls, all shooting fouls, which gave Borås six free throws. No free-throw attempts of his own.</p><p class="min">26:38 played</p></article>
+<article class="card"><header><span class="num">#0</span><h3>Robert Holmes</h3><span class="pm pos">+5</span></header>
+<dl class="stats"><div><dd>9</dd><dt>Pts</dt></div><div><dd>4/4</dd><dt>FG</dt></div><div><dd>–</dd><dt>3P</dt></div><div><dd>1/3</dd><dt>FT</dt></div><div><dd>1</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>4 of 4 from the field, two dunks, and 4 points in the 7–0 answer in Q3 (66–63 to 73–63). A steal early in Q4 that led to two free throws. 5 fouls in 17 minutes, all of them sending Borås to the line (8 points), and 1 of 3 at the line himself.</p><p class="min">17:12 played</p></article>
+<article class="card"><header><span class="num">#12</span><h3>Jonathan Ninkingira</h3><span class="pm neg">−6</span></header>
+<dl class="stats"><div><dd>7</dd><dt>Pts</dt></div><div><dd>2/3</dd><dt>FG</dt></div><div><dd>1/1</dd><dt>3P</dt></div><div><dd>2/2</dd><dt>FT</dt></div><div><dd>1</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>7 points on 3 shots (90% true shooting): the three for 45–42, the basket for 66–57 and two free throws after a steal in Q4. 0 turnovers. Was −10 in the first half, when Borås hit their threes, and +4 after the break. 3 fouls, two of them shooting fouls.</p><p class="min">16:00 played</p></article>
+<article class="card"><header><span class="num">#11</span><h3>Leo Steinsen</h3><span class="pm pos">+6</span></header>
+<dl class="stats"><div><dd>5</dd><dt>Pts</dt></div><div><dd>1/1</dd><dt>FG</dt></div><div><dd>1/1</dd><dt>3P</dt></div><div><dd>2/2</dd><dt>FT</dt></div><div><dd>1</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>0 turnovers in 11 minutes. The assist on Galette's three (71–63) in Q3, part of the lineup that opened Q4 8–2, and the three for 108–74. 2 fouls, one of them a shooting foul in Q2.</p><p class="min">11:28 played</p></article>
+<article class="card"><header><span class="num">#2</span><h3>Kembo Nilsson</h3><span class="pm pos">+6</span></header>
+<dl class="stats"><div><dd>2</dd><dt>Pts</dt></div><div><dd>0/1</dd><dt>FG</dt></div><div><dd>0/1</dd><dt>3P</dt></div><div><dd>2/2</dd><dt>FT</dt></div><div><dd>3</dd><dt>Reb</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>An offensive rebound and two free throws in the 10–0 run in Q2. The assist on Galette's three for 102–70. 0 of 1 from three.</p><p class="min">8:16 played</p></article>
+<article class="card"><header><span class="num">#8</span><h3>Elliot Enbom</h3><span class="pm pos">+3</span></header>
+<dl class="stats"><div><dd>0</dd><dt>Pts</dt></div><div><dd>0/1</dd><dt>FG</dt></div><div><dd>0/1</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>0</dd><dt>Reb</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Played the last 3:18 with the game decided. One missed three and one shooting foul.</p><p class="min">3:18 played</p></article>
+
+<h2 id="opponent">Borås Basket</h2>
+<ul class="flow">
+<li><b>Michael Graham</b> (center) was Borås' best: 13 rebounds including 6 offensive, 4 of 4 from the field and 10 free-throw attempts (5 made). He was behind several of Borås' 19 second-chance points.</li>
+<li><b>Jayden Martinez</b> scored the most, 17, but on 16 shots (2 of 8 from three). 3 turnovers, two of them steals.</li>
+<li><b>Jordan Ivy Curry</b> had 7 assists but went 3 of 15 from the field with 4 turnovers. In Q4 he missed all four of his shots.</li>
+<li><b>The bench</b> scored 37 points, mostly from three: Guténius 3 of 6, Lipscomb 3 of 8 and Andersson 3 of 8. Borås assisted 23 of 24 baskets, so they found open shots when they did not lose the ball.</li>
+</ul>
+
+<h2 id="next">For the next game</h2>
+<ol class="todo">
+<li><b>Box out.</b> 14 offensive rebounds and 19 second-chance points for Borås, Graham with 6. All five down on the rebound and a body on the center on every shot.</li>
+<li><b>Close out on the threes after rotation.</b> Borås hit 9 of 21 threes before the break and built both their runs (9–0 and 10–2) on threes. Quicker closeouts to the shooters in the corners.</li>
+<li><b>Fewer fouls near the basket.</b> Borås got 28 free-throw attempts and Holmes fouled out. Vertical defence in the paint.</li>
+<li><b>Keep the ball control.</b> 6 turnovers and 16–6 in points off turnovers. That is the level to keep, even when the opponent presses.</li>
+</ol>
+<footer>Game played 9 October 2026 in Borås. Source: official statistics and play-by-play (Genius Sports). Attendance: 1,280. Referees: Shaker Nasrollah, Charlie Lundgren and Ognjen Mandic.</footer>
+</main></body></html>
