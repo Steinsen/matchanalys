@@ -1,6 +1,45 @@
 {
   "matcher": [
     {
+      "datum": "2026-10-09",
+      "lag": "BC Luleå",
+      "motstandare": "Borås Basket",
+      "hemma": false,
+      "for": 113,
+      "emot": 81,
+      "url": "matcher/2026-10-09-bc-lulea-boras-basket.html",
+      "sammanfattning": "Jämnt i tre perioder (73–65), sedan 40–16 i period 4: Luleå träffade 8 av 9 treor och Borås gjorde sitt första fältmål med 1:17 kvar. 1,43 poäng per anfall och bara 6 bollförluster.",
+      "spelare": [
+        "Jonatan Arvidsson",
+        "Jalen Leach",
+        "Tuburu Naivalurua",
+        "Nicolas Galette",
+        "Daniel Hansson",
+        "Robert Holmes",
+        "Jonathan Ninkingira",
+        "Leo Steinsen",
+        "Kembo Nilsson",
+        "Elliot Enbom",
+        "Jayden Martinez",
+        "Michael Graham",
+        "William Guténius",
+        "Jordan Ivy Curry",
+        "Jaidon Lipscomb",
+        "Fredrik Andersson",
+        "Ludvig Johansson",
+        "Filip Larsson",
+        "Simon Maschmann",
+        "John Brändmark"
+      ],
+      "taggar": [
+        "seger",
+        "borta",
+        "trepoängsskytte",
+        "bollförluster",
+        "returer"
+      ]
+    },
+    {
       "datum": "2026-10-04",
       "lag": "BC Luleå Steelers",
       "motstandare": "Västerås Basket",
