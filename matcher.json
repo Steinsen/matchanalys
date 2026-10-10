@@ -1,6 +1,45 @@
 {
   "matcher": [
     {
+      "datum": "2026-10-10",
+      "lag": "BC Luleå",
+      "motstandare": "Kungsholmen",
+      "hemma": false,
+      "for": 93,
+      "emot": 76,
+      "url": "matcher/2026-10-10-bc-lulea-kungsholmen.html",
+      "sammanfattning": "42–43 i halvtid, sedan 38–13 i period 3 med ett 13–0-ryck. Luleå vann returerna 53–39 och straffförsöken 31–14 men sköt bara 4 av 26 treor.",
+      "spelare": [
+        "Calvin Jägare",
+        "Ville Kero",
+        "Elliot Enbom",
+        "Erik Persson",
+        "Leo Erlandsson",
+        "Franck Mugisha",
+        "Erik Forsman",
+        "James Aitomäki",
+        "Sandro Löwgren Madeira",
+        "Axel Curry",
+        "Gustav Ekstedt",
+        "Edrick Bise Silow",
+        "Benjamin Espinoza",
+        "Leo Theisz",
+        "Love Triumf",
+        "Samuel Emanuelsson",
+        "Jack Bergendahl",
+        "Sakarias Aldensand",
+        "Viggo Fredriksson",
+        "Christoffer Hulting"
+      ],
+      "taggar": [
+        "seger",
+        "borta",
+        "returer",
+        "trepoängsskytte",
+        "straffar"
+      ]
+    },
+    {
       "datum": "2026-10-09",
       "lag": "BC Luleå",
       "motstandare": "Borås Basket",
