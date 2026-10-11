@@ -2,13 +2,13 @@
   "matcher": [
     {
       "datum": "2026-10-11",
-      "lag": "BC Luleå",
+      "lag": "BC Luleå Steelers",
       "motstandare": "KFUM Lidingö",
       "hemma": false,
       "for": 92,
       "emot": 76,
-      "url": "matcher/2026-10-11-bc-lulea-kfum-lidingo.html",
-      "sammanfattning": "Luleå vann alla fyra perioder och ledde i 38 av 40 minuter. Enbom gjorde 26 poäng och 11 av 11 straffar; 1,22 poäng per anfall mot 0,98, men 8 bollförluster i period 4.",
+      "url": "matcher/2026-10-11-bc-lulea-steelers-kfum-lidingo.html",
+      "sammanfattning": "Steelers vann alla fyra perioder och ledde i 38 av 40 minuter. Enbom gjorde 26 poäng och 11 av 11 straffar; 1,22 poäng per anfall mot 0,98, men 8 bollförluster i period 4.",
       "spelare": [
         "Elliot Enbom",
         "Leo Erlandsson",
@@ -41,13 +41,13 @@
     },
     {
       "datum": "2026-10-10",
-      "lag": "BC Luleå",
+      "lag": "BC Luleå Steelers",
       "motstandare": "Kungsholmen",
       "hemma": false,
       "for": 93,
       "emot": 76,
-      "url": "matcher/2026-10-10-bc-lulea-kungsholmen.html",
-      "sammanfattning": "42–43 i halvtid, sedan 38–13 i period 3 med ett 13–0-ryck. Luleå vann returerna 53–39 och straffförsöken 31–14 men sköt bara 4 av 26 treor.",
+      "url": "matcher/2026-10-10-bc-lulea-steelers-kungsholmen.html",
+      "sammanfattning": "42–43 i halvtid, sedan 38–13 i period 3 med ett 13–0-ryck. Steelers vann returerna 53–39 och straffförsöken 31–14 men sköt bara 4 av 26 treor.",
       "spelare": [
         "Calvin Jägare",
         "Ville Kero",
