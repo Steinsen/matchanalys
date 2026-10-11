@@ -1,6 +1,45 @@
 {
   "matcher": [
     {
+      "datum": "2026-10-11",
+      "lag": "BC Luleå",
+      "motstandare": "KFUM Lidingö",
+      "hemma": false,
+      "for": 92,
+      "emot": 76,
+      "url": "matcher/2026-10-11-bc-lulea-kfum-lidingo.html",
+      "sammanfattning": "Luleå vann alla fyra perioder och ledde i 38 av 40 minuter. Enbom gjorde 26 poäng och 11 av 11 straffar; 1,22 poäng per anfall mot 0,98, men 8 bollförluster i period 4.",
+      "spelare": [
+        "Elliot Enbom",
+        "Leo Erlandsson",
+        "Ville Kero",
+        "Franck Mugisha",
+        "Calvin Jägare",
+        "Erik Forsman",
+        "Erik Persson",
+        "James Aitomäki",
+        "Axel Curry",
+        "Sandro Löwgren Madeira",
+        "Jonathan Johansson",
+        "Sokratis Pavlidis",
+        "Malte Colliander",
+        "Tom Göransson",
+        "Mille Fromin",
+        "Viktor Aullo",
+        "Kewin Hallquist Larsson",
+        "Mohamed Qooje",
+        "Felix Hofmann",
+        "Axel Leijon"
+      ],
+      "taggar": [
+        "seger",
+        "borta",
+        "straffar",
+        "returer",
+        "bollförluster"
+      ]
+    },
+    {
       "datum": "2026-10-10",
       "lag": "BC Luleå",
       "motstandare": "Kungsholmen",
