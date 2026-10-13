@@ -1,6 +1,46 @@
 {
   "matcher": [
     {
+      "datum": "2026-10-13",
+      "lag": "BC Luleå",
+      "motstandare": "Nässjö Basket",
+      "hemma": true,
+      "for": 91,
+      "emot": 74,
+      "url": "matcher/2026-10-13-bc-lulea-nassjo-basket.html",
+      "sammanfattning": "74–43 efter tre perioder: Luleå sköt 16 av 32 treor och Arvidsson gjorde 22 poäng på 8 skott. Nässjö vann period 4 med 31–17 och tog 40–22 i 3-sekundersområdet.",
+      "sammanfattning_en": "74–43 after three quarters: Luleå made 16 of 32 threes and Arvidsson scored 22 on 8 shots. Nässjö won Q4 31–17 and the paint 40–22.",
+      "spelare": [
+        "Jonatan Arvidsson",
+        "Jalen Leach",
+        "Nicolas Galette",
+        "Daniel Hansson",
+        "Robert Holmes",
+        "Tuburu Naivalurua",
+        "Jonathan Ninkingira",
+        "Kembo Nilsson",
+        "Leo Steinsen",
+        "Elliot Enbom",
+        "Abdou Medjedoub",
+        "Anton Johansson",
+        "Oliver Stefanovic",
+        "Rahsaan Edwards",
+        "Asthon Sherrel",
+        "Richard Mendes",
+        "Mio Hjalmarsson",
+        "Derreck Brooks Jr",
+        "Mass Jonsson Samateh",
+        "Malte Fredman"
+      ],
+      "taggar": [
+        "seger",
+        "hemma",
+        "trepoängsskytte",
+        "3-sekundersområdet",
+        "returer"
+      ]
+    },
+    {
       "datum": "2026-10-11",
       "lag": "BC Luleå Steelers",
       "motstandare": "KFUM Lidingö",
