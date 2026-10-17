@@ -1,6 +1,47 @@
 {
   "matcher": [
     {
+      "datum": "2026-10-17",
+      "lag": "BC Luleå Steelers",
+      "motstandare": "Uppsala Basket",
+      "hemma": true,
+      "for": 104,
+      "emot": 82,
+      "url": "matcher/2026-10-17-bc-lulea-steelers-uppsala-basket.html",
+      "sammanfattning": "Steelers ledde i 39 av 40 minuter och avgjorde med 30–14 i period 3, när Uppsala sköt 0 av 9 treor. Kero gjorde 28 poäng och 15 returer; 16 steals gav 32 poäng på bollförluster.",
+      "spelare": [
+        "Ville Kero",
+        "Calvin Jägare",
+        "Elliot Enbom",
+        "Sandro Löwgren Madeira",
+        "Erik Persson",
+        "Leo Erlandsson",
+        "Franck Mugisha",
+        "Lucas Jansson",
+        "Erik Forsman",
+        "Noah Olsson",
+        "David Hjertstedt",
+        "Jack Sundelin",
+        "Anton Salenstedt",
+        "Jakob Kinigi",
+        "Dante Häggkvist Sandell",
+        "Assar Colliander",
+        "Alex Suasa",
+        "Josh Rukokerwa Ishimwe",
+        "Teodor Manfredsson",
+        "Theodor Eriksson",
+        "Jonathan Eriksson",
+        "Hugo Tapanila"
+      ],
+      "taggar": [
+        "seger",
+        "hemma",
+        "bollförluster",
+        "returer",
+        "straffar"
+      ]
+    },
+    {
       "datum": "2026-10-16",
       "lag": "BC Luleå",
       "motstandare": "Södertälje BBK",
