@@ -1,6 +1,43 @@
 {
   "matcher": [
     {
+      "datum": "2026-10-18",
+      "lag": "Luleå Basket",
+      "motstandare": "Södertälje BBK",
+      "hemma": true,
+      "for": 63,
+      "emot": 64,
+      "url": "matcher/2026-10-18-lulea-basket-sodertalje-bbk.html",
+      "sammanfattning": "Luleå ledde 63–60 med 23 sekunder kvar men förlorade på Gustafssons trea och straff. Period 2 slutade 9–20 när laget sköt 2 av 21; 14–0 i period 3 vände matchen, men 4 av 33 treor och 11 offensiva returer emot räckte inte.",
+      "spelare": [
+        "Sofia Persson",
+        "Liv Nord",
+        "Sanna Ström",
+        "Merissah Russell",
+        "Fanny Wadling",
+        "Klara Almroth",
+        "Allison Day",
+        "Emma Lundgren",
+        "Dara Taylor",
+        "Frida Eldebrink",
+        "Edel Hjelle",
+        "Elin Eldebrink",
+        "Zuhayra Mohamed",
+        "Mikaela Gustafsson",
+        "Karla Vres",
+        "Patricia Elias",
+        "Iimani Waller Touray"
+      ],
+      "taggar": [
+        "förlust",
+        "hemma",
+        "SBL Dam",
+        "trepoängsskytte",
+        "returer",
+        "jämn match"
+      ]
+    },
+    {
       "datum": "2026-10-17",
       "lag": "BC Luleå Steelers",
       "motstandare": "Uppsala Basket",

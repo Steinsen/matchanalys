@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matchanalys: Luleå Basket 63–64 Södertälje BBK</title>
+<meta name="matchdatum" content="2026-10-18">
+<meta name="description" content="Matchanalys lag och spelare för spelare, Luleå Basket mot Södertälje BBK 63–64 i SBL Dam (hemma).">
+<meta property="og:title" content="Matchanalys: Luleå Basket 63–64 Södertälje BBK">
+<meta property="og:description" content="Lagstatistik, matchförlopp, femmor och spelare för spelare.">
+<style>:root{--bg:#f6f7fa;--card:#fff;--ink:#1b2130;--muted:#6b7385;--line:#e2e5ec;--accent:#1f5fae;--accentink:#fff;--pos:#1e8a4c;--neg:#c0392b;--grid:#e6e8ee;--axis:#a3a9b6;--warnbg:#f7e6c9;--warn:#9a6a1c;--soft:#eef2f8}
+@media (prefers-color-scheme:dark){:root{--bg:#12151c;--card:#1b2029;--ink:#e8ebf2;--muted:#9aa2b3;--line:#2c3340;--accent:#5b9bef;--accentink:#0d1420;--pos:#4cc585;--neg:#ef6b5d;--grid:#2a303c;--axis:#566072;--warnbg:#3a2f1c;--warn:#e0b060;--soft:#222935}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:680px;margin:0 auto;padding:20px 16px 48px}
+.kick{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-size:28px;line-height:1.15;margin:6px 0 16px}
+h2{font-size:21px;margin:36px 0 10px;scroll-margin-top:64px}
+h3{margin:0;font-size:18px}
+p{margin:8px 0}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+nav div{max-width:680px;margin:0 auto;padding:10px 16px;display:flex;gap:8px}
+nav a{flex:none;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:14px}
+.score{background:var(--accent);color:var(--accentink);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.score .t{font-size:14px;opacity:.9} .score .s{font-size:40px;font-weight:800;line-height:1.1} .score .r{text-align:right} .score .mid{font-size:13px;opacity:.85;text-align:center}
+.qt{width:100%;border-collapse:collapse;margin-top:10px;background:var(--card);border-radius:12px;overflow:hidden;font-variant-numeric:tabular-nums;text-align:center;font-size:15px}
+.qt th,.qt td{padding:7px 4px;border-bottom:1px solid var(--line)} .qt tr:last-child td,.qt tr:last-child th{border-bottom:0}
+.qt thead th{color:var(--muted);font-weight:600;font-size:13px;background:var(--soft)}
+.lead{font-size:18px;font-weight:600}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 8px;text-align:center}
+.kpi b{display:block;font-size:24px;color:var(--accent);font-variant-numeric:tabular-nums} .kpi span{font-size:13px;color:var(--muted);line-height:1.3;display:block}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+svg text{font-family:inherit}
+ul.flow{padding:0;list-style:none} ul.flow li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0}
+.tag{display:inline-block;font-weight:700;color:var(--accent);margin-right:6px}
+table.team{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;font-variant-numeric:tabular-nums;font-size:15px}
+table.team th,table.team td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right}
+table.team th[scope=row]{text-align:left;font-weight:500} table.team thead th{color:var(--muted);font-size:13px;background:var(--soft)}
+table.team tr:last-child>*{border-bottom:0}
+td.w,td.w2{font-weight:700;color:var(--accent)}
+.two{display:grid;gap:10px;margin-top:12px} @media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.good{border-left:4px solid var(--pos)} .bad{border-left:4px solid var(--neg)}
+.two h3{font-size:16px;margin-bottom:4px} .two ul{margin:0;padding-left:18px} .two li{margin:5px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.card header{display:flex;align-items:baseline;gap:8px} .card h3{flex:1} .num{color:var(--muted);font-size:14px}
+.pm{font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums} .pm.pos{color:var(--pos)} .pm.neg{color:var(--neg)}
+.stats{display:grid;grid-template-columns:repeat(7,1fr);margin:10px 0 6px;padding:8px 0;background:var(--soft);border-radius:10px;text-align:center}
+.stats div{min-width:0} .stats dd{margin:0;font-weight:700;font-size:15px;font-variant-numeric:tabular-nums} .stats dt{font-size:11px;color:var(--muted)}
+.min{font-size:13px;color:var(--muted);margin:0}
+ol.todo{counter-reset:n;list-style:none;padding:0}
+ol.todo li{counter-increment:n;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 52px;margin:10px 0;position:relative}
+ol.todo li::before{content:counter(n);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accentink);font-weight:700;display:grid;place-items:center;font-size:14px}
+.ppp{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:8px;font-variant-numeric:tabular-nums} .ppp b{color:var(--ink)}
+.sub{font-size:17px;margin:20px 0 4px}
+.five{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:8px 0}
+.five .who{font-weight:650;margin:0 0 8px;line-height:1.35}
+.fs{display:grid;grid-template-columns:1fr 1.4fr 1fr;background:var(--soft);border-radius:10px;padding:8px 0;text-align:center}
+.fs dd{margin:0;font-weight:700;font-size:16px;font-variant-numeric:tabular-nums} .fs dt{font-size:11px;color:var(--muted)}
+.fs dd.pos{color:var(--pos)} .fs dd.neg{color:var(--neg)}
+.five .note{margin:8px 0 0;font-size:15px;color:var(--muted)}
+.caveat{font-size:14px;color:var(--muted);border-left:3px solid var(--line);padding-left:10px}
+footer{color:var(--muted);font-size:13px;margin-top:36px}
+@media(max-width:380px){body{font-size:16px} h1{font-size:24px} .score .s{font-size:34px} .stats dd{font-size:14px}}
+.back{display:inline-block;margin:0 0 8px;font-size:15px;color:var(--accent);text-decoration:none}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 8px}
+.top .back{margin:0}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card);flex:none}
+.lang a{padding:5px 12px;font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;line-height:1.3}
+.lang a[aria-current]{background:var(--accent);color:var(--accentink)}</style></head><body>
+<nav aria-label="Innehåll"><div><a href="#sammanfattning">Sammanfattning</a><a href="#forlopp">Förlopp</a><a href="#lag">Lagstatistik</a><a href="#femmor">Femmor</a><a href="#spelare">Spelare</a><a href="#motstandare">Södertälje</a><a href="#nasta">Nästa match</a></div></nav>
+<main>
+<a class="back" href="../index.html">← Alla matcher</a>
+<div class="kick">Matchanalys · 18 oktober 2026 · SBL Dam · hemma</div>
+<h1>Luleå Basket förlorade med ett poäng hemma mot Södertälje BBK</h1>
+<div class="score"><div><div class="t">Luleå</div><div class="s">63</div></div><div class="mid">slut</div><div class="r"><div class="t">Södertälje</div><div class="s">64</div></div></div>
+<table class="qt"><thead><tr><th></th><th>P1</th><th>P2</th><th>P3</th><th>P4</th></tr></thead>
+<tbody><tr><th>Luleå</th><td>11</td><td>9</td><td><b>23</b></td><td><b>20</b></td></tr><tr><th>Södertälje</th><td><b>16</b></td><td><b>20</b></td><td>16</td><td>18</td></tr></tbody></table>
+
+<h2 id="sammanfattning">Sammanfattning</h2>
+<p class="lead">Luleå ledde 63–60 med 23 sekunder kvar men förlorade 63–64. Mikaela Gustafssons trea med 5 sekunder kvar kvitterade, hon satte en straff med 3 sekunder kvar, och Fanny Wadlings sista skott gick inte i.</p>
+<div class="kpi"><div><b>4/33</b><span>treor Luleå (12 %), mot Södertäljes 7/32</span></div><div><b>2/21</b><span>från fältet i period 2, som slutade 9–20</span></div><div><b>17–5</b><span>poäng på bollförluster, Luleå–Södertälje</span></div></div>
+<p>Skillnaden byggdes i period 2. Luleå gick 5:31 utan poäng (13–16 till 15–25) och låg under med 13 poäng, 20–33, efter första anfallet i period 3. Laget svarade med 14–0 och vann andra halvlek 43–34, med 7 av 8 tvåpoängare i period 3 och 17 bollförluster från Södertälje under matchen. Men Luleå sköt 4 av 33 treor och tog bara 15 % av sina egna missar, och det räckte inte för att vända helt. Luleå ledde 12:15 av matchen, Södertälje 25:59.</p>
+
+<h2 id="forlopp">Matchförlopp</h2>
+<div class="panel"><svg viewBox="0 0 340 190" width="100%" role="img" aria-label="Ledningen under matchen" xmlns="http://www.w3.org/2000/svg" font-size="11.5"><defs><clipPath id="up"><rect x="0" y="0" width="340" height="83.2"/></clipPath><clipPath id="dn"><rect x="0" y="83.2" width="340" height="190"/></clipPath></defs><rect x="108.6" y="14" width="42.2" height="150" fill="var(--warnbg)"/><text x="129.7" y="25" text-anchor="middle" fill="var(--warn)" font-size="10">Torka</text><line x1="26" x2="332" y1="129.4" y2="129.4" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="132.4" text-anchor="end" fill="var(--muted)">-8</text><line x1="26" x2="332" y1="83.2" y2="83.2" stroke="var(--axis)" stroke-width="0.8"/><text x="22" y="86.2" text-anchor="end" fill="var(--muted)">0</text><line x1="26" x2="332" y1="37.1" y2="37.1" stroke="var(--grid)" stroke-width="0.5"/><text x="22" y="40.1" text-anchor="end" fill="var(--muted)">+8</text><line x1="102.5" x2="102.5" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="179.0" x2="179.0" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><line x1="255.5" x2="255.5" y1="14" y2="164" stroke="var(--axis)" stroke-dasharray="2 2" stroke-width="0.6"/><text x="64.2" y="177" text-anchor="middle" fill="var(--muted)">P1</text><text x="140.8" y="177" text-anchor="middle" fill="var(--muted)">P2</text><text x="217.2" y="177" text-anchor="middle" fill="var(--muted)">P3</text><text x="293.8" y="177" text-anchor="middle" fill="var(--muted)">P4</text><polygon points="26.0,83.2 26.0,83.2 29.4,83.2 29.4,100.5 39.6,100.5 39.6,94.8 39.6,94.8 39.6,89.0 42.6,89.0 42.6,77.5 57.4,77.5 57.4,65.9 64.2,65.9 64.2,77.5 68.1,77.5 68.1,94.8 77.5,94.8 77.5,100.5 77.5,100.5 77.5,106.3 81.8,106.3 81.8,117.8 87.8,117.8 87.8,100.5 94.7,100.5 94.7,89.0 96.0,89.0 96.0,94.8 96.0,94.8 96.0,100.5 100.1,100.5 100.1,112.1 108.6,112.1 108.6,106.3 108.6,106.3 108.6,100.5 116.1,100.5 116.1,112.1 118.6,112.1 118.6,117.8 123.5,117.8 123.5,129.4 126.6,129.4 126.6,140.9 136.8,140.9 136.8,152.5 150.8,152.5 150.8,140.9 163.9,140.9 163.9,135.2 163.9,135.2 163.9,129.4 164.1,129.4 164.1,146.7 167.1,146.7 167.1,140.9 169.4,140.9 169.4,146.7 169.4,146.7 169.4,152.5 173.3,152.5 173.3,140.9 181.1,140.9 181.1,158.2 183.6,158.2 183.6,140.9 187.6,140.9 187.6,129.4 201.3,129.4 201.3,112.1 206.3,112.1 206.3,100.5 213.6,100.5 213.6,89.0 217.6,89.0 217.6,77.5 220.5,77.5 220.5,94.8 221.8,94.8 221.8,83.2 224.9,83.2 224.9,94.8 226.6,94.8 226.6,89.0 226.6,89.0 226.6,83.2 229.9,83.2 229.9,77.5 233.5,77.5 233.5,65.9 238.9,65.9 238.9,54.4 243.9,54.4 243.9,65.9 249.2,65.9 249.2,77.5 252.0,77.5 252.0,83.2 255.5,83.2 255.5,100.5 259.9,100.5 259.9,89.0 259.9,89.0 259.9,100.5 265.8,100.5 265.8,112.1 267.4,112.1 267.4,100.5 273.2,100.5 273.2,112.1 275.6,112.1 275.6,106.3 275.6,106.3 275.6,100.5 281.4,100.5 281.4,89.0 285.0,89.0 285.0,83.2 285.0,83.2 285.0,77.5 285.5,77.5 285.5,60.2 299.7,60.2 299.7,65.9 299.7,65.9 299.7,71.7 305.0,71.7 305.0,60.2 308.1,60.2 308.1,71.7 314.2,71.7 314.2,65.9 317.2,65.9 317.2,77.5 322.3,77.5 322.3,89.0 325.4,89.0 325.4,83.2 325.4,83.2 325.4,77.5 329.0,77.5 329.0,71.7 329.0,71.7 329.0,65.9 331.3,65.9 331.3,83.2 331.6,83.2 331.6,89.0 332.0,89.0 332.0,89.0 332.0,83.2" fill="var(--accent)" opacity="0.18" clip-path="url(#up)"/><polygon points="26.0,83.2 26.0,83.2 29.4,83.2 29.4,100.5 39.6,100.5 39.6,94.8 39.6,94.8 39.6,89.0 42.6,89.0 42.6,77.5 57.4,77.5 57.4,65.9 64.2,65.9 64.2,77.5 68.1,77.5 68.1,94.8 77.5,94.8 77.5,100.5 77.5,100.5 77.5,106.3 81.8,106.3 81.8,117.8 87.8,117.8 87.8,100.5 94.7,100.5 94.7,89.0 96.0,89.0 96.0,94.8 96.0,94.8 96.0,100.5 100.1,100.5 100.1,112.1 108.6,112.1 108.6,106.3 108.6,106.3 108.6,100.5 116.1,100.5 116.1,112.1 118.6,112.1 118.6,117.8 123.5,117.8 123.5,129.4 126.6,129.4 126.6,140.9 136.8,140.9 136.8,152.5 150.8,152.5 150.8,140.9 163.9,140.9 163.9,135.2 163.9,135.2 163.9,129.4 164.1,129.4 164.1,146.7 167.1,146.7 167.1,140.9 169.4,140.9 169.4,146.7 169.4,146.7 169.4,152.5 173.3,152.5 173.3,140.9 181.1,140.9 181.1,158.2 183.6,158.2 183.6,140.9 187.6,140.9 187.6,129.4 201.3,129.4 201.3,112.1 206.3,112.1 206.3,100.5 213.6,100.5 213.6,89.0 217.6,89.0 217.6,77.5 220.5,77.5 220.5,94.8 221.8,94.8 221.8,83.2 224.9,83.2 224.9,94.8 226.6,94.8 226.6,89.0 226.6,89.0 226.6,83.2 229.9,83.2 229.9,77.5 233.5,77.5 233.5,65.9 238.9,65.9 238.9,54.4 243.9,54.4 243.9,65.9 249.2,65.9 249.2,77.5 252.0,77.5 252.0,83.2 255.5,83.2 255.5,100.5 259.9,100.5 259.9,89.0 259.9,89.0 259.9,100.5 265.8,100.5 265.8,112.1 267.4,112.1 267.4,100.5 273.2,100.5 273.2,112.1 275.6,112.1 275.6,106.3 275.6,106.3 275.6,100.5 281.4,100.5 281.4,89.0 285.0,89.0 285.0,83.2 285.0,83.2 285.0,77.5 285.5,77.5 285.5,60.2 299.7,60.2 299.7,65.9 299.7,65.9 299.7,71.7 305.0,71.7 305.0,60.2 308.1,60.2 308.1,71.7 314.2,71.7 314.2,65.9 317.2,65.9 317.2,77.5 322.3,77.5 322.3,89.0 325.4,89.0 325.4,83.2 325.4,83.2 325.4,77.5 329.0,77.5 329.0,71.7 329.0,71.7 329.0,65.9 331.3,65.9 331.3,83.2 331.6,83.2 331.6,89.0 332.0,89.0 332.0,89.0 332.0,83.2" fill="var(--neg)" opacity="0.22" clip-path="url(#dn)"/><polyline points="26.0,83.2 29.4,83.2 29.4,100.5 39.6,100.5 39.6,94.8 39.6,94.8 39.6,89.0 42.6,89.0 42.6,77.5 57.4,77.5 57.4,65.9 64.2,65.9 64.2,77.5 68.1,77.5 68.1,94.8 77.5,94.8 77.5,100.5 77.5,100.5 77.5,106.3 81.8,106.3 81.8,117.8 87.8,117.8 87.8,100.5 94.7,100.5 94.7,89.0 96.0,89.0 96.0,94.8 96.0,94.8 96.0,100.5 100.1,100.5 100.1,112.1 108.6,112.1 108.6,106.3 108.6,106.3 108.6,100.5 116.1,100.5 116.1,112.1 118.6,112.1 118.6,117.8 123.5,117.8 123.5,129.4 126.6,129.4 126.6,140.9 136.8,140.9 136.8,152.5 150.8,152.5 150.8,140.9 163.9,140.9 163.9,135.2 163.9,135.2 163.9,129.4 164.1,129.4 164.1,146.7 167.1,146.7 167.1,140.9 169.4,140.9 169.4,146.7 169.4,146.7 169.4,152.5 173.3,152.5 173.3,140.9 181.1,140.9 181.1,158.2 183.6,158.2 183.6,140.9 187.6,140.9 187.6,129.4 201.3,129.4 201.3,112.1 206.3,112.1 206.3,100.5 213.6,100.5 213.6,89.0 217.6,89.0 217.6,77.5 220.5,77.5 220.5,94.8 221.8,94.8 221.8,83.2 224.9,83.2 224.9,94.8 226.6,94.8 226.6,89.0 226.6,89.0 226.6,83.2 229.9,83.2 229.9,77.5 233.5,77.5 233.5,65.9 238.9,65.9 238.9,54.4 243.9,54.4 243.9,65.9 249.2,65.9 249.2,77.5 252.0,77.5 252.0,83.2 255.5,83.2 255.5,100.5 259.9,100.5 259.9,89.0 259.9,89.0 259.9,100.5 265.8,100.5 265.8,112.1 267.4,112.1 267.4,100.5 273.2,100.5 273.2,112.1 275.6,112.1 275.6,106.3 275.6,106.3 275.6,100.5 281.4,100.5 281.4,89.0 285.0,89.0 285.0,83.2 285.0,83.2 285.0,77.5 285.5,77.5 285.5,60.2 299.7,60.2 299.7,65.9 299.7,65.9 299.7,71.7 305.0,71.7 305.0,60.2 308.1,60.2 308.1,71.7 314.2,71.7 314.2,65.9 317.2,65.9 317.2,77.5 322.3,77.5 322.3,89.0 325.4,89.0 325.4,83.2 325.4,83.2 325.4,77.5 329.0,77.5 329.0,71.7 329.0,71.7 329.0,65.9 331.3,65.9 331.3,83.2 331.6,83.2 331.6,89.0 332.0,89.0 332.0,89.0" fill="none" stroke="var(--accent)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="238.9" cy="54.4" r="2.3" fill="var(--accent)"/><text x="234.9" y="49.4" text-anchor="end" fill="var(--accent)" font-weight="600" font-size="10.5">+5</text><circle cx="181.1" cy="158.2" r="2.3" fill="var(--neg)"/><text x="186.1" y="162.2" fill="var(--neg)" font-weight="600" font-size="10.5">-13</text><text x="179.0" y="188" text-anchor="middle" fill="var(--muted)" font-size="10.5">Ledning i poäng under matchen (över noll = vi leder)</text></svg></div>
+<ul class="flow">
+<li><span class="tag">P1 11–16</span>Wadlings lay-up efter egen steal gav 4–3, och 6–3 efter 4:06. Sedan gjorde Södertälje 9–0 till 6–12 på 2:18, med Zuhayra Mohameds trea och två bollförluster som blev poäng. Luleå satte 1 av 10 treor och gjorde 4 bollförluster i perioden. Almroths trea och lay-up på snabba anfall tog laget till 11–12, men Elin Eldebrink gjorde 11–16 på en andra chans.</li>
+<li><span class="tag">P2 9–20</span>Luleå sköt 2 av 21 från fältet och 0 av 9 treor. Trots 6 offensiva returer i perioden kom, efter Perssons straffar till 13–16 inga poäng på 5:31. Södertälje gjorde 9–0 till 13–25, med två korgar efter offensiva returer. Russell gjorde 4 av lagets 9 poäng, och Days lay-up gav 20–30 i halvtid.</li>
+<li><span class="tag">P3 23–16</span>Frida Eldebrinks trea gav 20–33. Därefter gjorde Luleå 14–0 på 4:27: Russells trea och drivning, Ströms trea och jumper och Wadlings två lay-ups, den sista till 34–33. Nords drivning och jumper gav 43–38, matchens största ledning (+5). De sista 2:10 gjorde Södertälje 8–0, och Frida Eldebrinks trea på perioden slut gav 43–46.</li>
+<li><span class="tag">P4 20–18</span>Från 47–52 gjorde Luleå 9–0 på 1:17: Perssons och Wadlings straffar, Russells lay-up och Wadlings trea till 56–52. Södertälje kom tillbaka till 58–56 och, efter Wadlings straff till 59–56, till 59–60 på Karla Vres jumper och Dara Taylors drivning med 1:16 kvar. Russell (efter Almroths offensiva retur) och Persson satte fyra raka straffar till 63–60. Gustafsson satte 63–63 med 5 sekunder kvar, och efter Lundgrens femte foul gjorde hon 63–64 från strafflinjen.</li>
+</ul>
+
+<h2 id="lag">Lagstatistik</h2>
+<p class="lead">Luleå gjorde 0,83 poäng per anfall mot Södertäljes 0,85, på lika många anfall (≈ 75 vardera). Luleå vann bollförlusterna och straffarna, Södertälje skotten och returerna.</p>
+<div class="kpi"><div><b>0,83</b><span>poäng/anfall Luleå (≈ 76 anfall)</span></div><div><b>0,85</b><span>poäng/anfall Södertälje (≈ 75 anfall)</span></div><div><b>−0,02</b><span>skillnad per anfall</span></div></div>
+<p>Faktorerna delades två–två. Bollförlusterna och straffarna gav Luleå ungefär lika mycket som trepoängsskyttet och returerna kostade:</p>
+<table class="team"><thead><tr><th></th><th>Luleå</th><th>Södertälje</th></tr></thead><tbody>
+<tr><th scope="row">Effektiv FG%</th><td>33,3 %</td><td class="w2">42,1 %</td></tr>
+<tr><th scope="row">Bollförlust per anfall</th><td class="w">11 %</td><td>23 %</td></tr>
+<tr><th scope="row">Offensiv returandel</th><td>15 %</td><td class="w2">25 %</td></tr>
+<tr><th scope="row">Straffar per skott (FTM/FGA)</th><td class="w">0,29</td><td>0,17</td></tr></tbody></table>
+<p class="caveat">Effektiv FG% räknar en trea som 1,5 skott. Anfall = skottförsök − offensiva returer + bollförluster + 0,44 × straffförsök (standardformel, uppskattning).</p>
+<h3 class="sub">All statistik</h3>
+<table class="team"><thead><tr><th></th><th>Luleå</th><th>Södertälje</th></tr></thead><tbody>
+<tr><th scope="row">Skott från fältet</th><td>20/66</td><td class="w2">23/63</td></tr>
+<tr><th scope="row">Tvåpoängare</th><td>16/33</td><td class="w2">16/31</td></tr>
+<tr><th scope="row">Trepoängare</th><td>4/33</td><td class="w2">7/32</td></tr>
+<tr><th scope="row">Straffar</th><td class="w">19/22</td><td>11/14</td></tr>
+<tr><th scope="row">Returer (off.)</th><td>39 (8)</td><td class="w2">49 (11)</td></tr>
+<tr><th scope="row">Assist</th><td>13</td><td class="w2">15</td></tr>
+<tr><th scope="row">Bollförluster</th><td class="w">8</td><td>17</td></tr>
+<tr><th scope="row">Steals</th><td class="w">12</td><td>5</td></tr>
+<tr><th scope="row">Poäng snabba anfall</th><td class="w">12</td><td>3</td></tr>
+<tr><th scope="row">Poäng på bollförluster</th><td class="w">17</td><td>5</td></tr>
+<tr><th scope="row">Andrachanspoäng</th><td>6</td><td class="w2">10</td></tr>
+<tr><th scope="row">Poäng i 3-sek.-området</th><td class="w">28</td><td>18</td></tr>
+<tr><th scope="row">Bänkpoäng</th><td>14</td><td class="w2">16</td></tr></tbody></table>
+<div class="two">
+<div class="panel good"><h3>Det som fungerade</h3><ul><li><b>Bollvinsterna:</b> 12 steals mot 5 och 17–5 i poäng på bollförluster. Nord hade 3 steals på 14 minuter.</li><li><b>Bollen i egna händer:</b> 8 bollförluster på ≈ 76 anfall (11 %), hälften så många som Södertälje.</li><li><b>Straffarna:</b> 19 av 22 (86 %). Persson satte 9 av 10, Russell 6 av 6, och de fyra sista vände 59–60 till 63–60.</li><li><b>Period 3:</b> 7 av 8 tvåpoängare och 14–0 från 20–33 till 34–33.</li></ul></div>
+<div class="panel bad"><h3>Problemen</h3><ul><li><b>Trepoängsskyttet:</b> 4 av 33. Hälften av lagets skott var treor och gav 12 poäng; tvåpoängarna gick in i 48 %.</li><li><b>Period 2:</b> 2 av 21 från fältet, 0 av 9 treor och 5:31 utan poäng.</li><li><b>Defensiva returer:</b> Södertälje tog 11 offensiva returer (25 % av sina missar) och vann andrachanspoängen 10–6. Gustafsson och Hjelle tog 3 var.</li><li><b>Slutet av period 3:</b> 43–38 blev 43–46 på 2:10, när varken Russell eller Wadling var på plan.</li></ul></div>
+</div>
+
+<h2 id="femmor">Femmor</h2>
+<p class="lead">Laget vann de 26:02 med Merissah Russell på plan med 52–36 (+16) och förlorade de 13:58 utan henne med 11–28 (−17).</p>
+<div class="kpi"><div><b>+16</b><span>Russell på plan (26:02, 52–36)</span></div><div><b>−17</b><span>Russell på bänken (13:58, 11–28)</span></div><div><b>+16</b><span>Russell och Wadling tillsammans (22:44, 45–29)</span></div></div>
+<table class="team"><thead><tr><th></th><th>Poäng för–emot</th><th>Poäng/anfall för</th><th>emot</th></tr></thead><tbody>
+<tr><th scope="row">Russell på plan</th><td>52–36</td><td class="w">1,06</td><td class="w">0,78</td></tr>
+<tr><th scope="row">Russell på bänken</th><td>11–28</td><td>0,41</td><td>0,97</td></tr>
+<tr><th scope="row">Wadling på plan</th><td>54–47</td><td class="w">0,87</td><td class="w">0,77</td></tr>
+<tr><th scope="row">Wadling på bänken</th><td>9–17</td><td>0,66</td><td>1,20</td></tr></tbody></table>
+<p>Utan Russell gjorde laget 0,41 poäng per anfall. De två perioderna när Södertälje drog ifrån, 6–3 till 6–12 i period 1 och 13–18 till 13–25 i period 2, satt Russell på bänken. Det bästa paret var Russell och Wadling (45–29 på 22:44), följt av Persson och Russell (48–36 på 23:08).</p>
+<h3 class="sub">Bästa femmorna</h3>
+<article class="five"><p class="who">Persson · Russell · Wadling · Day · Ström</p><div class="fs"><div><dd>11:35</dd><dt>Speltid</dt></div><div><dd>20–11</dd><dt>Poäng för–emot</dt></div><div><dd class="pos">+9</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 22 anfall</span><span>Poäng/anfall: <b>0,91</b> för · <b>0,50</b> emot</span></div><p class="note">Spelade fem gånger. Den viktigaste var början av period 3, 12–3 på 4:50 från 20–30 till 32–33, med 14–0-rycket. Släppte 0,50 poäng per anfall.</p></article>
+<article class="five"><p class="who">Persson · Russell · Wadling · Almroth · Lundgren</p><div class="fs"><div><dd>5:18</dd><dt>Speltid</dt></div><div><dd>15–12</dd><dt>Poäng för–emot</dt></div><div><dd class="pos">+3</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 9 anfall</span><span>Poäng/anfall: <b>1,74</b> för · <b>1,50</b> emot</span></div><p class="note">Avslutningsfemman: från 2:20 kvar i period 4 och 58–56 till 63–63, med 5 av 6 straffar. Wadlings trea till 56–52 kom också med den här femman.</p></article>
+<article class="five"><p class="who">Persson · Wadling · Almroth · Day · Russell</p><div class="fs"><div><dd>1:42</dd><dt>Speltid</dt></div><div><dd>6–3</dd><dt>Poäng för–emot</dt></div><div><dd class="pos">+3</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 4 anfall</span><span>Poäng/anfall: <b>1,60</b> för · <b>0,87</b> emot</span></div><p class="note">Period 4 från 7:48 till 6:09, från 47–50 till 53–52. Början på 9–0-rycket, med Perssons straffar, Russells lay-up och Wadlings straffar. Femman var också på plan de sista 3 sekunderna (0–1).</p></article>
+<h3 class="sub">Svagaste femmorna</h3>
+<article class="five"><p class="who">Wadling · Almroth · Lundgren · Nord · Ström</p><div class="fs"><div><dd>2:11</dd><dt>Speltid</dt></div><div><dd>0–5</dd><dt>Poäng för–emot</dt></div><div><dd class="neg">−5</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 4 anfall</span><span>Poäng/anfall: <b>0,00</b> för · <b>1,25</b> emot</span></div><p class="note">Period 1 från 5:42 till 3:31, från 6–3 till 6–8. Tre missade treor och en bollförlust.</p></article>
+<article class="five"><p class="who">Persson · Wadling · Day · Nord · Ström</p><div class="fs"><div><dd>2:13</dd><dt>Speltid</dt></div><div><dd>0–5</dd><dt>Poäng för–emot</dt></div><div><dd class="neg">−5</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 5 anfall</span><span>Poäng/anfall: <b>0,00</b> för · <b>1,02</b> emot</span></div><p class="note">Period 2 från 7:54 till 5:41, från 13–18 till 13–23, mitt i poängtorkan. Fem missade skott.</p></article>
+<article class="five"><p class="who">Persson · Day · Almroth · Lundgren · Nord</p><div class="fs"><div><dd>1:40</dd><dt>Speltid</dt></div><div><dd>0–4</dd><dt>Poäng för–emot</dt></div><div><dd class="neg">−4</dd><dt>+/-</dt></div></div><div class="ppp"><span>≈ 3 anfall</span><span>Poäng/anfall: <b>0,00</b> för · <b>1,33</b> emot</span></div><p class="note">Slutet av period 3 från 2:07 till 0:27, från 43–38 till 43–42. Två missade treor och en bollförlust.</p></article>
+<p>Mönstret: laget gjorde poäng när Russell och Wadling spelade, och tappade när båda eller en av dem vilade samtidigt som Nord och Ström var på plan. Nord och Ström tillsammans gick 4–18 på 7:37. Från 2:07 kvar i period 3 till 9:13 kvar i period 4 vilade både Russell och Wadling, och 43–38 blev 45–48. Laget använde 16 olika femmor.</p>
+<p class="caveat">Antal anfall per femma är uppskattat från skott, returer, bollförluster och straffar under femmans speltid. Femmorna spelade bara några minuter var, så +/- påverkas mycket av enstaka anfall och ska inte användas för att döma en enskild spelare. Siffrorna är räknade från byten och poäng i play-by-play och stämmer exakt med den officiella +/- för alla spelare.</p>
+
+<h2 id="spelare">Spelare – Luleå Basket</h2>
+<p>Russell, Wadling och Persson gjorde 44 av lagets 63 poäng. Övriga fem spelare gjorde 19 poäng på 28 skott.</p>
+<article class="card"><header><span class="num">#13</span><h3>Merissah Russell</h3><span class="pm pos">+16</span></header>
+<dl class="stats"><div><dd>19</dd><dt>Poäng</dt></div><div><dd>6/16</dd><dt>FG</dt></div><div><dd>1/6</dd><dt>3P</dt></div><div><dd>6/6</dd><dt>FT</dt></div><div><dd>8</dd><dt>Ret</dt></div><div><dd>3</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>Lagets poängledare och bästa +/-: 19 poäng, 8 returer, 0 bollförluster och 6 framtvingade fouls. 13 poäng i andra halvlek, bland annat trean som startade 14–0-rycket och lay-upen till 51–52. 6 av 6 på straff, de två sista till 61–60. 5 av 10 tvåpoängare men 1 av 6 treor; drivningarna gav mer än skotten utifrån.</p><p class="min">26:02 speltid</p></article>
+<article class="card"><header><span class="num">#15</span><h3>Fanny Wadling (K)</h3><span class="pm pos">+7</span></header>
+<dl class="stats"><div><dd>14</dd><dt>Poäng</dt></div><div><dd>5/14</dd><dt>FG</dt></div><div><dd>1/9</dd><dt>3P</dt></div><div><dd>3/4</dd><dt>FT</dt></div><div><dd>14</dd><dt>Ret</dt></div><div><dd>4</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>14 defensiva returer, flest i laget, 4 assist och 2 steals. 4 av 5 tvåpoängare, två lay-ups i 14–0-rycket och trean till 56–52 i period 4. Fick sista skottet med 0,1 sekunder kvar. 1 av 9 treor; fler drivningar och färre treor hade passat hennes skottbild i den här matchen.</p><p class="min">33:48 speltid</p></article>
+<article class="card"><header><span class="num">#2</span><h3>Sofia Persson</h3><span class="pm pos">+1</span></header>
+<dl class="stats"><div><dd>11</dd><dt>Poäng</dt></div><div><dd>1/8</dd><dt>FG</dt></div><div><dd>0/3</dd><dt>3P</dt></div><div><dd>9/10</dd><dt>FT</dt></div><div><dd>3</dd><dt>Ret</dt></div><div><dd>4</dd><dt>Ast</dt></div><div><dd>2</dd><dt>TO</dt></div></dl>
+<p>Tog sig till strafflinjen: 5 framtvingade fouls och 9 av 10 straffar, de två sista till 63–60 med 23 sekunder kvar. 4 assist och 2 steals på 34:41. 1 av 8 från fältet; lay-upen till 47–50 var hennes enda korg.</p><p class="min">34:41 speltid</p></article>
+<article class="card"><header><span class="num">#17</span><h3>Klara Almroth</h3><span class="pm pos">+1</span></header>
+<dl class="stats"><div><dd>5</dd><dt>Poäng</dt></div><div><dd>2/7</dd><dt>FG</dt></div><div><dd>1/5</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>2</dd><dt>Ret</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>2</dd><dt>TO</dt></div></dl>
+<p>Alla 5 poäng på snabba anfall i period 1: en trea och en lay-up efter egen steal, till 11–12. Hennes offensiva retur med 58 sekunder kvar gav Russells straffar till 61–60. 1 av 5 treor och 2 bollförluster.</p><p class="min">21:58 speltid</p></article>
+<article class="card"><header><span class="num">#11</span><h3>Sanna Ström</h3><span class="pm neg">−5</span></header>
+<dl class="stats"><div><dd>5</dd><dt>Poäng</dt></div><div><dd>2/5</dd><dt>FG</dt></div><div><dd>1/3</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>3</dd><dt>Ret</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>Trean till 28–33 och jumpern till 32–33 i 14–0-rycket, båda på passningar från Wadling. 3 returer och en bollförlust. 2 av 5 från fältet. +/- se Femmor.</p><p class="min">21:58 speltid</p></article>
+<article class="card"><header><span class="num">#21</span><h3>Allison Day</h3><span class="pm neg">−2</span></header>
+<dl class="stats"><div><dd>5</dd><dt>Poäng</dt></div><div><dd>2/8</dd><dt>FG</dt></div><div><dd>0/3</dd><dt>3P</dt></div><div><dd>1/2</dd><dt>FT</dt></div><div><dd>3</dd><dt>Ret</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>2 steals och korgen på snabbt anfall till 45–46 efter Perssons steal i början av period 4. Vann hoppet. 2 av 8 från fältet, 0 av 3 treor och 3 fouls.</p><p class="min">24:51 speltid</p></article>
+<article class="card"><header><span class="num">#22</span><h3>Emma Lundgren</h3><span class="pm neg">−10</span></header>
+<dl class="stats"><div><dd>0</dd><dt>Poäng</dt></div><div><dd>0/3</dd><dt>FG</dt></div><div><dd>0/3</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>1</dd><dt>Ret</dt></div><div><dd>1</dd><dt>Ast</dt></div><div><dd>1</dd><dt>TO</dt></div></dl>
+<p>Med i avslutningsfemman som gick 15–12 från 2:20 kvar. I övrigt en tung kväll: 0 av 3 treor och 1 retur (snitt 9,5), och 5 fouls, tre av dem i period 4. Att komma in i spelet närmare korgen är det som kan bli bättre. +/- se Femmor.</p><p class="min">22:36 speltid</p></article>
+<article class="card"><header><span class="num">#8</span><h3>Liv Nord</h3><span class="pm neg">−13</span></header>
+<dl class="stats"><div><dd>4</dd><dt>Poäng</dt></div><div><dd>2/5</dd><dt>FG</dt></div><div><dd>0/1</dd><dt>3P</dt></div><div><dd>–</dd><dt>FT</dt></div><div><dd>0</dd><dt>Ret</dt></div><div><dd>0</dd><dt>Ast</dt></div><div><dd>0</dd><dt>TO</dt></div></dl>
+<p>3 steals på 14 minuter, flest i laget, och 0 bollförluster. Drivningen och jumpern i period 3 gav 41–38 och 43–38. 0 returer och 2 fouls. Hennes minuter föll ofta samman med lagets svagaste perioder, se Femmor.</p><p class="min">14:06 speltid</p></article>
+
+<h2 id="motstandare">Södertälje BBK</h2>
+<ul class="flow">
+<li><b>Frida Eldebrink</b> gjorde 19 poäng med 5 av 11 treor, bland annat 20–33 och 43–46 på periodsluten i period 3. 8 returer och 5 assist, men också 4 bollförluster.</li>
+<li><b>Mikaela Gustafsson</b> tog 15 returer (snitt 5,5), 3 av dem offensiva, och spelade 36:41. Hon satte 1 av 7 treor, men den enda var 63–63 med 5 sekunder kvar, och straffen efter avgjorde.</li>
+<li><b>Dara Taylor</b> gjorde 12 poäng på 10 skott, främst drivningar och mellandistans. Hennes drivning med 1:16 kvar gav 59–60. 3 bollförluster.</li>
+<li><b>Edel Hjelle</b> tog 3 offensiva returer på 21 minuter, och laget som helhet 11. Södertälje gjorde 17 bollförluster och sköt 7 av 32 treor.</li>
+</ul>
+
+<h2 id="nasta">Till nästa match</h2>
+<ol class="todo">
+<li><b>Färre treor, fler drivningar.</b> 4 av 33 treor gav 12 poäng, medan tvåpoängarna gick in i 48 % och period 3 gav 7 av 8. Laget vann poängen i 3-sekundersområdet 28–18.</li>
+<li><b>Boxa ut.</b> Södertälje tog 11 offensiva returer och 10 andrachanspoäng; en returskillnad på 39–49 i en match som avgjordes med ett poäng.</li>
+<li><b>Planera vilan för Russell och Wadling.</b> Utan Russell gick laget 11–28, och när båda vilade i slutet av period 3 blev 43–38 till 45–48.</li>
+<li><b>Stäng trepoängslinjen på slutet.</b> Med 63–60 och 23 sekunder kvar kom Södertäljes kvittering på en trea. I det läget är ett tvåpoängsskott okej, en trea inte.</li>
+</ol>
+<footer>Match spelad 18 oktober 2026 i Luleå Energi Arena, SBL Dam. Källa: officiell statistik och play-by-play (Genius Sports). Domare: Alexander Sesevic, Selin Candemir och Ahmet Erzurum. Publik: 879.</footer>
+</main></body></html>
