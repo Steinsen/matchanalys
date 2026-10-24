@@ -1,6 +1,46 @@
 {
   "matcher": [
     {
+      "datum": "2026-10-23",
+      "lag": "BC Luleå",
+      "motstandare": "Högsbo Lions",
+      "hemma": true,
+      "for": 108,
+      "emot": 71,
+      "url": "matcher/2026-10-23-bc-lulea-hogsbo-lions.html",
+      "sammanfattning": "Luleå ledde hela matchen och var uppe i 49 poäng. Högsbo gjorde 19 bollförluster som gav Luleå 26 poäng, och 13 offensiva returer gav 23 andrachanspoäng mot 6. Period 3 slutade 37–17.",
+      "sammanfattning_en": "Luleå led the whole game and were up by as much as 49. Högsbo's 19 turnovers gave Luleå 26 points, and 13 offensive rebounds gave 23 second-chance points to 6. The third quarter ended 37–17.",
+      "spelare": [
+        "Tuburu Naivalurua",
+        "Daniel Hansson",
+        "Nicolas Galette",
+        "Leo Steinsen",
+        "Jonathan Ninkingira",
+        "Jonatan Arvidsson",
+        "Jalen Leach",
+        "Robert Holmes",
+        "Kembo Nilsson",
+        "Elliot Enbom",
+        "Charles Barton",
+        "Stanley Onyekachukwu",
+        "Isaiah Hill",
+        "Lojong Andarea Ladu",
+        "Anes Zekovic",
+        "Jesper Hallberg",
+        "Alexander Karras",
+        "Tomas Atli Bjarkason",
+        "Oliver Cupan",
+        "Ephraim Bahati"
+      ],
+      "taggar": [
+        "seger",
+        "hemma",
+        "bollförluster",
+        "returer",
+        "femmor"
+      ]
+    },
+    {
       "datum": "2026-10-18",
       "lag": "Luleå Basket",
       "motstandare": "Södertälje BBK",
