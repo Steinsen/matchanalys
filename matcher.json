@@ -660,6 +660,47 @@
         "poängtorka",
         "femmor"
       ]
+    },
+    {
+      "datum": "2026-10-24",
+      "lag": "BC Luleå Steelers",
+      "motstandare": "Uppsala Basket",
+      "hemma": false,
+      "for": 96,
+      "emot": 95,
+      "url": "matcher/2026-10-24-bc-lulea-steelers-uppsala-basket.html",
+      "sammanfattning": "Steelers ledde i 39 minuter, som mest med 19, men höll undan med en poäng. 15 treor mot 6 vägde upp Uppsalas 16 offensiva returer, 60–30 i 3-sekundersområdet och Steelers 11 av 21 straffar.",
+      "sammanfattning_en": "Steelers led for 39 minutes, by as many as 19, but held on by one point. 15 threes to 6 outweighed Uppsala's 16 offensive rebounds, a 60–30 edge in the paint and Steelers' 11 of 21 free throws.",
+      "spelare": [
+        "Ville Kero",
+        "Calvin Jägare",
+        "Elliot Enbom",
+        "Erik Persson",
+        "Leo Erlandsson",
+        "Erik Forsman",
+        "James Aitomäki",
+        "David Hjertstedt",
+        "Noah Olsson",
+        "Jack Sundelin",
+        "Axel Curry",
+        "Anton Salenstedt",
+        "Jakob Kinigi",
+        "Theodor Eriksson",
+        "Dante Häggkvist Sandell",
+        "Filip Persson",
+        "Gabriel Trygg",
+        "Jonathan Eriksson",
+        "Ethan Olowu",
+        "Hugo Tapanila",
+        "Lukas Kyller"
+      ],
+      "taggar": [
+        "seger",
+        "borta",
+        "returer",
+        "straffar",
+        "slutminuter"
+      ]
     }
   ]
 }
