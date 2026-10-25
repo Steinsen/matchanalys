@@ -701,6 +701,47 @@
         "straffar",
         "slutminuter"
       ]
+    },
+    {
+      "datum": "2026-10-25",
+      "lag": "BC Luleå Steelers",
+      "motstandare": "Hammarby",
+      "hemma": false,
+      "for": 85,
+      "emot": 97,
+      "url": "matcher/2026-10-25-bc-lulea-steelers-hammarby.html",
+      "sammanfattning": "Hammarby vann period 3 med 29–8 när Steelers satte 2 av 20 skott, och ledde som mest med 28. 24 bollförluster gav Hammarby 29 poäng, och Steelers satte 16 av 32 straffar. Period 4 slutade 29–15.",
+      "spelare": [
+        "Calvin Jägare",
+        "Ville Kero",
+        "Leo Erlandsson",
+        "Axel Curry",
+        "Noah Olsson",
+        "Elliot Enbom",
+        "James Aitomäki",
+        "Erik Persson",
+        "Jack Sundelin",
+        "Erik Forsman",
+        "Aleksandar Cigoja",
+        "Vince Preston",
+        "Hannes Kodu",
+        "Rio Mårtensson",
+        "Rinaldo Causevic",
+        "Yafet Taher",
+        "Eddie Brokvist",
+        "Folke Sunnebo",
+        "Elliot Lidberg",
+        "Erik Karlsson Bojstedt",
+        "Buster Wijkmark Birnick",
+        "Leandro Karlsson Santos"
+      ],
+      "taggar": [
+        "förlust",
+        "borta",
+        "bollförluster",
+        "straffar",
+        "poängtorka"
+      ]
     }
   ]
 }
