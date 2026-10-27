@@ -742,6 +742,45 @@
         "straffar",
         "poängtorka"
       ]
+    },
+    {
+      "datum": "2026-10-27",
+      "lag": "BC Luleå",
+      "motstandare": "Umeå Basket",
+      "hemma": false,
+      "for": 96,
+      "emot": 93,
+      "url": "matcher/2026-10-27-bc-lulea-umea-basket.html",
+      "sammanfattning": "Luleå vann efter förlängning trots att Umeå ledde i 35 av 45 minuter. Galettes trea med 24 sekunder kvar gav 81–81, och ett 8–0-ryck i förlängningen avgjorde. 11 bollförluster mot 20 och 29 av 34 straffar vägde upp Umeås 14 offensiva returer och 56–34 i 3-sekundersområdet.",
+      "sammanfattning_en": "Luleå won in overtime although Umeå led for 35 of 45 minutes. Galette's three with 24 seconds left tied it 81–81, and an 8–0 run in overtime decided it. 11 turnovers to 20 and 29 of 34 free throws outweighed Umeå's 14 offensive rebounds and a 56–34 edge in the paint.",
+      "spelare": [
+        "Jalen Leach",
+        "Tuburu Naivalurua",
+        "Jonatan Arvidsson",
+        "Daniel Hansson",
+        "Nicolas Galette",
+        "Robert Holmes",
+        "Jonathan Ninkingira",
+        "Kembo Nilsson",
+        "Leo Steinsen",
+        "Oliver Gehrke",
+        "William Christopher Dunston Jr",
+        "Felix Wollberg",
+        "Adam Rask",
+        "Isak Andersson",
+        "Alexander Yemane",
+        "Bj Symons",
+        "Basem Abdulkader",
+        "Emanuel Lundmark"
+      ],
+      "taggar": [
+        "seger",
+        "borta",
+        "förlängning",
+        "bollförluster",
+        "straffar",
+        "returer"
+      ]
     }
   ]
 }
