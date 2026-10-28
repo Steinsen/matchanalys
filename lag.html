@@ -75,11 +75,14 @@ const MET=[
  {g:'Bollen',k:'ast_andel',n:'Assist per korg',f:'p',b:1},
  {g:'Poäng',k:'p_mal',n:'Poäng i målområdet',o:'p_mal_emot',f:'i',b:1},
  {g:'Poäng',k:'p_snabb',n:'Poäng på snabba anfall',o:'p_snabb_emot',f:'i',b:1},
- {g:'Poäng',k:'p_bank',n:'Bänkpoäng',f:'i',b:1},
+ {g:'Bänken',k:'bank_min',n:'Bänkminuter',o:'bank_min_emot',f:'i',b:0},
+ {g:'Bänken',k:'bank_andel',n:'Bänkens andel av speltiden',o:'bank_andel_emot',f:'p',b:0},
+ {g:'Bänken',k:'p_bank',n:'Bänkpoäng',o:'p_bank_emot',f:'i',b:1},
+ {g:'Bänken',k:'spelare',n:'Spelare med speltid',f:'i',b:0},
 ];
 const BYK=Object.fromEntries(MET.map(m=>[m.k,m]));
-const HEAT=['ppa','ppa_emot','efg','p3','ft','oreb_andel','dreb_andel','to_andel','ast','anfall'];
-const SHORT={ppa:'P/anf',ppa_emot:'P/anf emot',efg:'eFG%',p3:'3P%',ft:'Str%',oreb_andel:'Off ret%',dreb_andel:'Def ret%',to_andel:'Bollf/anf',ast:'Ast',anfall:'Anfall'};
+const HEAT=['ppa','ppa_emot','efg','p3','ft','oreb_andel','dreb_andel','to_andel','ast','bank_min','anfall'];
+const SHORT={ppa:'P/anf',ppa_emot:'P/anf emot',efg:'eFG%',p3:'3P%',ft:'Str%',oreb_andel:'Off ret%',dreb_andel:'Def ret%',to_andel:'Bollf/anf',ast:'Ast',bank_min:'Bänkmin',anfall:'Anfall'};
 const fmtv=(v,f)=>v==null?'–':f==='p'?Math.round(v*100)+'%':f==='d2'?v.toFixed(2).replace('.',','):f==='d1'?v.toFixed(1).replace('.',','):String(Math.round(v));
 const fmtd=(v,f)=>(v>0?'+':v<0?'−':'±')+(f==='p'?Math.abs(Math.round(v*100))+' %-enh.':f==='d2'?Math.abs(v).toFixed(2).replace('.',','):Math.abs(v).toFixed(1).replace('.',','));
 const mean=a=>{a=a.filter(x=>x!=null);return a.length?a.reduce((s,x)=>s+x,0)/a.length:null};
@@ -149,7 +152,7 @@ function trendChart(ms,M){
 function winLoss(ms,name){
   const V=ms.filter(won),F=ms.filter(m=>!won(m));
   if(!V.length||!F.length)return `<p class="hint">Jämförelsen kräver minst en vinst och en förlust (${V.length} V, ${F.length} F hittills).</p>`;
-  const rows=MET.filter(M=>M.b!==0).map(M=>{
+  const rows=MET.filter(M=>M.b!==0||M.g==='Bänken').map(M=>{
     const a=mean(V.map(m=>m[M.k])),b=mean(F.map(m=>m[M.k])),s_=sd(ms.map(m=>m[M.k]));
     const vals=ms.map(m=>m[M.k]).filter(v=>v!=null);
     return {M,a,b,eff:s_?(a-b)/s_:0,lo:Math.min(...vals),hi:Math.max(...vals)};
@@ -157,12 +160,13 @@ function winLoss(ms,name){
   const bar=r=>{const W=120,H=16,span=r.hi-r.lo||1,X=v=>6+(v-r.lo)/span*(W-12);
     const xa=X(r.a),xb=X(r.b);
     return `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" aria-hidden="true"><line x1="6" x2="${W-6}" y1="8" y2="8" stroke="var(--grid)" stroke-width="2" stroke-linecap="round"/><line x1="${Math.min(xa,xb)}" x2="${Math.max(xa,xb)}" y1="8" y2="8" stroke="var(--axis)" stroke-width="2"/><rect x="${xb-4}" y="4" width="8" height="8" rx="1.5" fill="var(--neg)" stroke="var(--card)" stroke-width="1.5"/><circle cx="${xa}" cy="8" r="4.5" fill="var(--pos)" stroke="var(--card)" stroke-width="1.5"/></svg>`};
-  const top=rows.slice(0,3).map(r=>{const better=Math.sign(r.a-r.b)===r.M.b;
+  const top=rows.slice(0,3).map(r=>{const better=!r.M.b||Math.sign(r.a-r.b)===r.M.b;
     return `<li><b>${esc(r.M.n)}:</b> ${fmtv(r.a,r.M.f)} i segrarna mot ${fmtv(r.b,r.M.f)} i förlusterna${better?'':' – <i>bättre i förlusterna</i>'}.</li>`}).join('');
   return `<div class="legend"><span><i class="sw v"></i>Snitt i segrar (${V.length})</span><span><i class="sw f"></i>Snitt i förluster (${F.length})</span></div>
   <table class="vs"><thead><tr><th>Nyckeltal</th><th style="text-align:right">V</th><th style="text-align:right">F</th><th></th></tr></thead><tbody>${rows.map(r=>
    `<tr><th scope="row">${esc(r.M.n)}</th><td class="n v">${fmtv(r.a,r.M.f)}</td><td class="n f">${fmtv(r.b,r.M.f)}</td><td class="bar">${bar(r)}</td></tr>`).join('')}</tbody></table>
   <p class="hint" style="margin-top:10px">Sorterat efter hur stor skillnaden är jämfört med hur mycket värdet brukar variera. Strecket visar lagets spann från sämsta till bästa match.</p>
+  ${(()=>{const b=rows.find(r=>r.M.k==='bank_min');return b?`<p class="caveat">Bänkminuter: ${fmtv(b.a,'i')} min i segrarna mot ${fmtv(b.b,'i')} i förlusterna. Tänk på att det kan vara en följd av resultatet lika gärna som en orsak – i avgjorda matcher får bänken ofta spela slutminuterna, och när startfemman inte fungerar byts det mer.</p>`:''})()}
   <h3 class="sub">Det som skiljer mest</h3><ul class="insight">${top}</ul>
   ${ms.length<6?'<p class="caveat">Få matcher än – se skillnaderna som riktning, inte som säkra samband.</p>':''}`;
 }
@@ -178,7 +182,7 @@ function heat(ms){
   return `<div class="legend"><span><i class="sw up"></i>Bättre än lagets snitt</span><span><i class="sw dn"></i>Sämre än lagets snitt</span><span>Starkare färg = större avvikelse</span></div>
   <div class="scroll"><table class="heat"><thead><tr><th style="text-align:left">Match</th>${HEAT.map(k=>`<th title="${esc(BYK[k].n)}">${SHORT[k]}</th>`).join('')}</tr></thead><tbody>${rows}</tbody>
   <tfoot><tr><th scope="row">Snitt</th>${HEAT.map(k=>`<td>${fmtv(st[k].m,BYK[k].f)}</td>`).join('')}</tr></tfoot></table></div>
-  <p class="hint" style="margin-top:8px">Tempo (anfall) färgas inte – fler anfall är varken bra eller dåligt i sig. Matcher med förlängning har fler anfall.</p>`;
+  <p class="hint" style="margin-top:8px">Bänkminuter och tempo färgas inte – de är varken bra eller dåliga i sig. Matcher med förlängning har fler anfall.</p>`;
 }
 
 function render(){
@@ -219,7 +223,7 @@ function render(){
 function drawTrend(ms){
   const M=BYK[metric],p=document.getElementById('trendp'),c=trendChart(ms,M);
   p.innerHTML=`<div class="legend"><span><i class="sw line"></i>${esc(cur)}</span>${M.o?'<span><i class="sw dash"></i>Motståndaren</span>':''}<span><i class="sw v"></i>Vinst</span><span><i class="sw f"></i>Förlust</span></div>${c.svg}<div class="tip"></div>
-  <p class="hint" style="margin:6px 0 0">${M.b===1?'Högre är bättre.':M.b===-1?'Lägre är bättre.':'Varken bra eller dåligt i sig – visar spelstil.'}</p>`;
+  <p class="hint" style="margin:6px 0 0">${M.b===1?'Högre är bättre.':M.b===-1?'Lägre är bättre.':(M.g==='Bänken'?'Varken bra eller dåligt i sig – jämför vinster (grönt) med förluster (rött).':'Varken bra eller dåligt i sig – visar spelstil.')}</p>`;
   const svg=p.querySelector('svg'),hit=p.querySelector('.hit'),cross=p.querySelector('.cross');
   const move=e=>{const r=svg.getBoundingClientRect(),sx=(e.clientX-r.left)/r.width*c.W;
     let bi=0,bd=1e9;ms.forEach((_,i)=>{const d=Math.abs(c.X(i)-sx);if(d<bd){bd=d;bi=i}});

@@ -5,7 +5,7 @@ Statisk sajt med matchanalyser, publicerad via Cloudflare Workers (static assets
 ## Struktur
 - `index.html` – startsida med sök (läser `matcher.json`)
 - `matcher.json` – en post per analyserad match
-- `lag.html` + `lag.json` – lagpanel: nyckeltal match för match per lag (form, trender, vinst mot förlust, matchtabell)
+- `lag.html` + `lag.json` – lagpanel: nyckeltal match för match per lag (form, trender, vinst mot förlust, bänkminuter, matchtabell)
 - `matcher/ÅÅÅÅ-MM-DD-lag-motstandare.html` – en fristående analyssida per match
 - `matcher/…-en.html` – engelsk version (valfri). Båda sidorna har språkväljaren `.lang` (Svenska/English) som länkar till varandra
 - `assets/matchanalys.css` – gemensam stil (kopieras inline i varje matchsida så att sidan även fungerar som lös fil)
