@@ -19,6 +19,17 @@ ROT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def pct(a, b, n=3):
     return r(a / b, n) if b else None
 
+def minuter(pl):
+    """Spelminuter för startfemman och bänken, plus antal spelare som fick speltid."""
+    sek = {True: 0, False: 0}; anv = 0
+    for p in pl.values():
+        mm, ss = (p.get("sMinutes") or "0:00").split(":")[:2]
+        t = int(mm) * 60 + int(ss)
+        sek[p.get("starter", 0) == 1] += t
+        anv += t > 0
+    tot = sek[True] + sek[False]
+    return r(sek[False] / 60, 1), pct(sek[False], tot), anv
+
 def nyckeltal(T, us, them):
     s, o = T[us], T[them]
     def g(t, k): return t.get("tot_s" + k, 0) or 0
@@ -29,6 +40,7 @@ def nyckeltal(T, us, them):
     o_fga, o_fgm = g(o, "FieldGoalsAttempted"), g(o, "FieldGoalsMade")
     o_tpm, o_fta = g(o, "ThreePointersMade"), g(o, "FreeThrowsAttempted")
     o_oreb, o_dreb, o_to = g(o, "ReboundsOffensive"), g(o, "ReboundsDefensive"), g(o, "Turnovers")
+    bm, ba, anv = minuter(s["pl"]); o_bm, o_ba, _ = minuter(o["pl"])
     p_vi, p_de = poss(fga, oreb, to, fta), poss(o_fga, o_oreb, o_to, o_fta)
     return {
         "anfall": r((p_vi + p_de) / 2, 1),
@@ -48,7 +60,8 @@ def nyckeltal(T, us, them):
         "p_andra": g(s, "PointsSecondChance"), "p_andra_emot": g(o, "PointsSecondChance"),
         "p_snabb": g(s, "PointsFastBreak"), "p_snabb_emot": g(o, "PointsFastBreak"),
         "p_mal": g(s, "PointsInThePaint"), "p_mal_emot": g(o, "PointsInThePaint"),
-        "p_bank": g(s, "BenchPoints"),
+        "p_bank": g(s, "BenchPoints"), "p_bank_emot": g(o, "BenchPoints"),
+        "bank_min": bm, "bank_min_emot": o_bm, "bank_andel": ba, "bank_andel_emot": o_ba, "spelare": anv,
         "storsta_ledning": g(s, "BiggestLead"), "storsta_ledning_emot": g(o, "BiggestLead"),
     }
 
