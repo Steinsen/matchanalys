@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lag över tid</title>
+<meta name="description" content="Lagpanel: nyckeltal match för match – skytte, returer, bollförluster och tempo, färgat efter vinst och förlust.">
+<link rel="stylesheet" href="assets/matchanalys.css">
+<style>
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 2px}
+.chips button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 11px;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--accent);color:var(--accentink);border-color:var(--accent)}
+.kpi b.pos{color:var(--pos)} .kpi b.neg{color:var(--neg)}
+.panel{position:relative}
+.hint{font-size:14px;color:var(--muted);margin:2px 0 10px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;color:var(--muted);margin:0 0 6px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.sw{display:inline-block;width:10px;height:10px;border-radius:50%}
+.sw.v{background:var(--pos)} .sw.f{background:var(--neg);border-radius:2px}
+.sw.line{width:16px;height:2px;border-radius:1px;background:var(--accent)}
+.sw.dash{width:16px;height:0;border-top:2px dashed var(--muted);border-radius:0}
+.sw.up{background:color-mix(in srgb,var(--accent) 45%,var(--card));border-radius:3px}
+.sw.dn{background:color-mix(in srgb,var(--warn) 45%,var(--card));border-radius:3px}
+select{font:inherit;font-size:15px;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);width:100%;margin:0 0 10px}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font-size:13px;line-height:1.4;padding:7px 9px;border-radius:8px;white-space:nowrap;opacity:0;transition:opacity .1s;z-index:3;font-variant-numeric:tabular-nums}
+.tip.on{opacity:1}
+.tip b{font-weight:700}
+.vs{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:14px}
+.vs td,.vs th{padding:7px 4px;border-bottom:1px solid var(--line)} .vs tr:last-child>*{border-bottom:0}
+.vs th{text-align:left;font-weight:500} .vs thead th{color:var(--muted);font-size:12px;font-weight:600}
+.vs td.n{text-align:right;white-space:nowrap;width:52px} .vs td.bar{width:42%;padding:0 6px}
+.vs td.n.v{color:var(--pos);font-weight:700} .vs td.n.f{color:var(--neg);font-weight:700}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid var(--line);background:var(--card)}
+table.heat{border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:13.5px;min-width:100%}
+table.heat th,table.heat td{padding:7px 7px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}
+table.heat thead th{position:sticky;top:0;background:var(--soft);color:var(--muted);font-size:12px;font-weight:600}
+table.heat tbody tr:last-child>*{border-bottom:0}
+table.heat th[scope=row]{text-align:left;font-weight:500;position:sticky;left:0;background:var(--card);z-index:1}
+table.heat th[scope=row] a{color:inherit;text-decoration:none}
+table.heat th[scope=row] small{display:block;color:var(--muted);font-size:11.5px}
+table.heat tfoot td,table.heat tfoot th{background:var(--soft);font-weight:700;border-top:1px solid var(--line)}
+.res{display:inline-block;min-width:20px;text-align:center;font-size:11px;font-weight:800;border-radius:6px;padding:1px 5px;margin-right:6px;color:var(--bg)}
+.res.v{background:var(--pos)} .res.f{background:var(--neg)}
+.insight{margin:10px 0 0;padding-left:18px} .insight li{margin:5px 0}
+.empty{color:var(--muted);text-align:center;padding:30px 0}
+</style></head><body><main>
+<div class="top"><a class="back" href="index.html">← Alla matcher</a></div>
+<div class="kick">Lag över tid</div>
+<h1 id="rubrik">Lagpanel</h1>
+<div class="chips" id="lagchips" aria-label="Välj lag"></div>
+<div id="app"><p class="empty">Laddar…</p></div>
+<footer>Källa: officiell statistik (Genius Sports), en rad per analyserad match. Anfall = skottförsök − offensiva returer + bollförluster + 0,44 × straffförsök. eFG% väger treor som 1,5 korg.</footer>
+</main>
+<script>
+const esc=s=>(s??'').toString().replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const dm=d=>{const [,m,dd]=d.split('-');return `${+dd}/${+m}`};
+// better: 1 = högre är bättre, -1 = lägre är bättre, 0 = neutralt
+const MET=[
+ {g:'Effektivitet',k:'ppa',n:'Poäng per anfall',o:'ppa_emot',f:'d2',b:1},
+ {g:'Effektivitet',k:'ppa_emot',n:'Poäng per anfall emot',f:'d2',b:-1},
+ {g:'Effektivitet',k:'anfall',n:'Anfall per match (tempo)',f:'d1',b:0},
+ {g:'Skytte',k:'efg',n:'eFG%',o:'efg_emot',f:'p',b:1},
+ {g:'Skytte',k:'ts',n:'True shooting %',f:'p',b:1},
+ {g:'Skytte',k:'p2',n:'2-poäng %',f:'p',b:1},
+ {g:'Skytte',k:'p3',n:'3-poäng %',f:'p',b:1},
+ {g:'Skytte',k:'tre_andel',n:'Andel skott som är treor',f:'p',b:0},
+ {g:'Skytte',k:'ft',n:'Straff %',f:'p',b:1},
+ {g:'Skytte',k:'ft_rate',n:'Straffförsök per skott',f:'p',b:1},
+ {g:'Returer',k:'oreb_andel',n:'Offensiv returandel',f:'p',b:1},
+ {g:'Returer',k:'dreb_andel',n:'Defensiv returandel',f:'p',b:1},
+ {g:'Returer',k:'ret',n:'Returer',o:'ret_emot',f:'i',b:1},
+ {g:'Returer',k:'p_andra',n:'Andrachanspoäng',o:'p_andra_emot',f:'i',b:1},
+ {g:'Bollen',k:'to_andel',n:'Bollförluster per anfall',o:'to_andel_emot',f:'p',b:-1},
+ {g:'Bollen',k:'to_andel_emot',n:'Framtvingade bollförluster per anfall',f:'p',b:1},
+ {g:'Bollen',k:'p_bollf',n:'Poäng på bollförluster',o:'p_bollf_emot',f:'i',b:1},
+ {g:'Bollen',k:'ast',n:'Assist',f:'i',b:1},
+ {g:'Bollen',k:'ast_andel',n:'Assist per korg',f:'p',b:1},
+ {g:'Poäng',k:'p_mal',n:'Poäng i målområdet',o:'p_mal_emot',f:'i',b:1},
+ {g:'Poäng',k:'p_snabb',n:'Poäng på snabba anfall',o:'p_snabb_emot',f:'i',b:1},
+ {g:'Poäng',k:'p_bank',n:'Bänkpoäng',f:'i',b:1},
+];
+const BYK=Object.fromEntries(MET.map(m=>[m.k,m]));
+const HEAT=['ppa','ppa_emot','efg','p3','ft','oreb_andel','dreb_andel','to_andel','ast','anfall'];
+const SHORT={ppa:'P/anf',ppa_emot:'P/anf emot',efg:'eFG%',p3:'3P%',ft:'Str%',oreb_andel:'Off ret%',dreb_andel:'Def ret%',to_andel:'Bollf/anf',ast:'Ast',anfall:'Anfall'};
+const fmtv=(v,f)=>v==null?'–':f==='p'?Math.round(v*100)+'%':f==='d2'?v.toFixed(2).replace('.',','):f==='d1'?v.toFixed(1).replace('.',','):String(Math.round(v));
+const fmtd=(v,f)=>(v>0?'+':v<0?'−':'±')+(f==='p'?Math.abs(Math.round(v*100))+' %-enh.':f==='d2'?Math.abs(v).toFixed(2).replace('.',','):Math.abs(v).toFixed(1).replace('.',','));
+const mean=a=>{a=a.filter(x=>x!=null);return a.length?a.reduce((s,x)=>s+x,0)/a.length:null};
+const sd=a=>{a=a.filter(x=>x!=null);const m=mean(a);return a.length>1?Math.sqrt(a.reduce((s,x)=>s+(x-m)**2,0)/(a.length-1)):0};
+const won=m=>m.for>m.emot;
+const opp=m=>(m.hemma?'':'@ ')+m.motstandare;
+const resTxt=m=>`${m.for}–${m.emot}${m.fl?' (FL)':''}`;
+
+let LAG=[],cur=null,metric='efg';
+try{const s=sessionStorage.getItem('lagpanel_metric');if(s&&BYK[s])metric=s}catch(e){}
+
+function tipAt(panel,html,x,y){
+  const t=panel.querySelector('.tip');t.innerHTML=html;t.classList.add('on');
+  const pw=panel.clientWidth,tw=t.offsetWidth;
+  t.style.left=Math.max(4,Math.min(pw-tw-4,x-tw/2))+'px';t.style.top=Math.max(4,y-t.offsetHeight-12)+'px';
+}
+function tipOff(panel){panel.querySelector('.tip').classList.remove('on')}
+
+// 1. Form: poängskillnad per match
+function formChart(ms){
+  const W=340,H=170,L=30,R=6,T=14,B=30,n=ms.length;
+  const mx=Math.max(10,...ms.map(m=>Math.abs(m.for-m.emot)));
+  const hi=Math.ceil(mx/10)*10,lo=-hi;
+  const bw=(W-L-R)/n,X=i=>L+i*bw+bw/2,Y=v=>T+(hi-v)/(hi-lo)*(H-T-B);
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Poängskillnad match för match" font-size="10.5">`;
+  for(let v=lo;v<=hi;v+=hi/2){s+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="${v===0?'var(--axis)':'var(--grid)'}" stroke-width="${v===0?.8:.5}"/><text x="${L-4}" y="${Y(v)+3}" text-anchor="end" fill="var(--muted)">${v>0?'+':''}${v}</text>`}
+  const w=Math.min(22,bw-6);
+  ms.forEach((m,i)=>{
+    const d=m.for-m.emot,y0=Y(0),y1=Y(d),top=Math.min(y0,y1),h=Math.max(1.5,Math.abs(y1-y0)),c=d>0?'var(--pos)':'var(--neg)';
+    const rr=Math.min(4,h/2,w/2);
+    // rundad dataände, platt mot nollinjen
+    const path=d>0?`M${X(i)-w/2},${y0}V${top+rr}Q${X(i)-w/2},${top} ${X(i)-w/2+rr},${top}H${X(i)+w/2-rr}Q${X(i)+w/2},${top} ${X(i)+w/2},${top+rr}V${y0}Z`
+                  :`M${X(i)-w/2},${y0}V${top+h-rr}Q${X(i)-w/2},${top+h} ${X(i)-w/2+rr},${top+h}H${X(i)+w/2-rr}Q${X(i)+w/2},${top+h} ${X(i)+w/2},${top+h-rr}V${y0}Z`;
+    s+=`<path d="${path}" fill="${c}"/>`;
+    s+=`<text x="${X(i)}" y="${d>0?top-3:top+h+10}" text-anchor="middle" fill="var(--ink)" font-weight="600">${d>0?'+':'−'}${Math.abs(d)}</text>`;
+    s+=`<text x="${X(i)}" y="${H-B+13}" text-anchor="middle" fill="var(--muted)">${dm(m.datum)}</text><text x="${X(i)}" y="${H-B+25}" text-anchor="middle" fill="${c}" font-weight="700">${d>0?'V':'F'}</text>`;
+    s+=`<a href="${esc(m.url)}" aria-label="${esc(m.datum+' '+opp(m)+' '+resTxt(m))}"><rect class="hit" data-i="${i}" x="${L+i*bw}" y="${T}" width="${bw}" height="${H-T-B+28}" fill="transparent"/></a>`;
+  });
+  return s+'</svg>';
+}
+
+// 2. Trend för valt nyckeltal
+function trendChart(ms,M){
+  const W=340,H=200,L=34,R=8,T=14,B=26,n=ms.length;
+  const us=ms.map(m=>m[M.k]),them=M.o?ms.map(m=>m[M.o]):[];
+  const all=[...us,...them].filter(v=>v!=null);
+  let lo=Math.min(...all),hi=Math.max(...all);const pad=(hi-lo||Math.abs(hi)||1)*.15;lo-=pad;hi+=pad;
+  if(M.f==='p'){lo=Math.max(0,lo);hi=Math.min(1,hi)} else if(lo<0&&Math.min(...all)>=0)lo=0;
+  const X=i=>n===1?(L+W-R)/2:L+8+i*(W-L-R-16)/(n-1),Y=v=>T+(hi-v)/(hi-lo)*(H-T-B);
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${esc(M.n)} match för match" font-size="10.5">`;
+  for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4;s+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--grid)" stroke-width=".5"/><text x="${L-4}" y="${Y(v)+3}" text-anchor="end" fill="var(--muted)">${fmtv(v,M.f)}</text>`}
+  const avg=mean(us);
+  if(avg!=null&&n>1)s+=`<line x1="${L}" x2="${W-R}" y1="${Y(avg)}" y2="${Y(avg)}" stroke="var(--axis)" stroke-dasharray="1 3" stroke-width="1.2"/><text x="${W-R}" y="${Y(avg)-4}" text-anchor="end" fill="var(--muted)">snitt ${fmtv(avg,M.f)}</text>`;
+  const line=(vals,attr)=>{const p=vals.map((v,i)=>v==null?null:`${X(i).toFixed(1)},${Y(v).toFixed(1)}`).filter(Boolean).join(' ');return p?`<polyline points="${p}" fill="none" ${attr} stroke-linejoin="round"/>`:''};
+  if(M.o)s+=line(them,'stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="4 3"');
+  s+=line(us,'stroke="var(--accent)" stroke-width="2"');
+  ms.forEach((m,i)=>{const v=us[i];if(v==null)return;const x=X(i),y=Y(v);
+    s+=won(m)?`<circle cx="${x}" cy="${y}" r="5" fill="var(--pos)" stroke="var(--card)" stroke-width="2"/>`
+             :`<rect x="${x-4.5}" y="${y-4.5}" width="9" height="9" rx="1.5" fill="var(--neg)" stroke="var(--card)" stroke-width="2"/>`;
+    if(n<=12||i===n-1)s+=`<text x="${x}" y="${H-B+14}" text-anchor="middle" fill="var(--muted)">${dm(m.datum)}</text>`;});
+  s+=`<line class="cross" x1="0" x2="0" y1="${T}" y2="${H-B}" stroke="var(--axis)" stroke-width="1" opacity="0"/>`;
+  s+=`<rect class="hit" x="${L}" y="0" width="${W-L-R}" height="${H}" fill="transparent"/>`;
+  return {svg:s+'</svg>',X,W};
+}
+
+// 3. Segrar mot förluster
+function winLoss(ms,name){
+  const V=ms.filter(won),F=ms.filter(m=>!won(m));
+  if(!V.length||!F.length)return `<p class="hint">Jämförelsen kräver minst en vinst och en förlust (${V.length} V, ${F.length} F hittills).</p>`;
+  const rows=MET.filter(M=>M.b!==0).map(M=>{
+    const a=mean(V.map(m=>m[M.k])),b=mean(F.map(m=>m[M.k])),s_=sd(ms.map(m=>m[M.k]));
+    const vals=ms.map(m=>m[M.k]).filter(v=>v!=null);
+    return {M,a,b,eff:s_?(a-b)/s_:0,lo:Math.min(...vals),hi:Math.max(...vals)};
+  }).filter(r=>r.a!=null&&r.b!=null).sort((x,y)=>Math.abs(y.eff)-Math.abs(x.eff)).slice(0,10);
+  const bar=r=>{const W=120,H=16,span=r.hi-r.lo||1,X=v=>6+(v-r.lo)/span*(W-12);
+    const xa=X(r.a),xb=X(r.b);
+    return `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" aria-hidden="true"><line x1="6" x2="${W-6}" y1="8" y2="8" stroke="var(--grid)" stroke-width="2" stroke-linecap="round"/><line x1="${Math.min(xa,xb)}" x2="${Math.max(xa,xb)}" y1="8" y2="8" stroke="var(--axis)" stroke-width="2"/><rect x="${xb-4}" y="4" width="8" height="8" rx="1.5" fill="var(--neg)" stroke="var(--card)" stroke-width="1.5"/><circle cx="${xa}" cy="8" r="4.5" fill="var(--pos)" stroke="var(--card)" stroke-width="1.5"/></svg>`};
+  const top=rows.slice(0,3).map(r=>{const better=Math.sign(r.a-r.b)===r.M.b;
+    return `<li><b>${esc(r.M.n)}:</b> ${fmtv(r.a,r.M.f)} i segrarna mot ${fmtv(r.b,r.M.f)} i förlusterna${better?'':' – <i>bättre i förlusterna</i>'}.</li>`}).join('');
+  return `<div class="legend"><span><i class="sw v"></i>Snitt i segrar (${V.length})</span><span><i class="sw f"></i>Snitt i förluster (${F.length})</span></div>
+  <table class="vs"><thead><tr><th>Nyckeltal</th><th style="text-align:right">V</th><th style="text-align:right">F</th><th></th></tr></thead><tbody>${rows.map(r=>
+   `<tr><th scope="row">${esc(r.M.n)}</th><td class="n v">${fmtv(r.a,r.M.f)}</td><td class="n f">${fmtv(r.b,r.M.f)}</td><td class="bar">${bar(r)}</td></tr>`).join('')}</tbody></table>
+  <p class="hint" style="margin-top:10px">Sorterat efter hur stor skillnaden är jämfört med hur mycket värdet brukar variera. Strecket visar lagets spann från sämsta till bästa match.</p>
+  <h3 class="sub">Det som skiljer mest</h3><ul class="insight">${top}</ul>
+  ${ms.length<6?'<p class="caveat">Få matcher än – se skillnaderna som riktning, inte som säkra samband.</p>':''}`;
+}
+
+// 4. Matchtabell (värmekarta mot lagets eget snitt)
+function heat(ms){
+  const st=Object.fromEntries(HEAT.map(k=>[k,{m:mean(ms.map(x=>x[k])),s:sd(ms.map(x=>x[k]))}]));
+  const cell=(m,k)=>{const M=BYK[k],v=m[k],z=st[k].s&&v!=null?(v-st[k].m)/st[k].s*(M.b||0):0;
+    const a=Math.min(55,Math.round(Math.abs(z)*28));
+    const bg=a<8?'':`background:color-mix(in srgb,${z>0?'var(--accent)':'var(--warn)'} ${a}%,var(--card))`;
+    return `<td style="${bg}" title="${esc(M.n)}: ${fmtv(v,M.f)} (snitt ${fmtv(st[k].m,M.f)})">${fmtv(v,M.f)}</td>`};
+  const rows=[...ms].reverse().map(m=>`<tr><th scope="row"><a href="${esc(m.url)}"><span class="res ${won(m)?'v':'f'}">${won(m)?'V':'F'}</span>${esc(opp(m))}<small>${dm(m.datum)} · ${resTxt(m)}</small></a></th>${HEAT.map(k=>cell(m,k)).join('')}</tr>`).join('');
+  return `<div class="legend"><span><i class="sw up"></i>Bättre än lagets snitt</span><span><i class="sw dn"></i>Sämre än lagets snitt</span><span>Starkare färg = större avvikelse</span></div>
+  <div class="scroll"><table class="heat"><thead><tr><th style="text-align:left">Match</th>${HEAT.map(k=>`<th title="${esc(BYK[k].n)}">${SHORT[k]}</th>`).join('')}</tr></thead><tbody>${rows}</tbody>
+  <tfoot><tr><th scope="row">Snitt</th>${HEAT.map(k=>`<td>${fmtv(st[k].m,BYK[k].f)}</td>`).join('')}</tr></tfoot></table></div>
+  <p class="hint" style="margin-top:8px">Tempo (anfall) färgas inte – fler anfall är varken bra eller dåligt i sig. Matcher med förlängning har fler anfall.</p>`;
+}
+
+function render(){
+  const T=LAG.find(l=>l.namn===cur),ms=T.matcher,n=ms.length;
+  document.getElementById('rubrik').textContent=T.namn;
+  document.title=`${T.namn} – lag över tid`;
+  const V=ms.filter(won).length,F=n-V;
+  const ppa=mean(ms.map(m=>m.ppa)),ppe=mean(ms.map(m=>m.ppa_emot)),net=ppa-ppe;
+  const pf=mean(ms.map(m=>m.for)),pe=mean(ms.map(m=>m.emot));
+  const opts=[...new Set(MET.map(m=>m.g))].map(g=>`<optgroup label="${g}">${MET.filter(m=>m.g===g).map(m=>`<option value="${m.k}"${m.k===metric?' selected':''}>${esc(m.n)}</option>`).join('')}</optgroup>`).join('');
+  document.getElementById('app').innerHTML=`
+  <nav aria-label="Avsnitt"><div><a href="#form">Form</a><a href="#trend">Trend</a><a href="#vf">Vinst vs förlust</a><a href="#tabell">Matchtabell</a></div></nav>
+  <div class="kpi">
+   <div><b>${V}–${F}</b><span>Vinster–förluster<br>${n} matcher</span></div>
+   <div><b>${pf.toFixed(1).replace('.',',')}</b><span>Poäng för<br>${pe.toFixed(1).replace('.',',')} emot</span></div>
+   <div><b class="${net>0?'pos':'neg'}">${fmtd(net,'d2')}</b><span>Poäng per anfall<br>${fmtv(ppa,'d2')} mot ${fmtv(ppe,'d2')}</span></div>
+  </div>
+  ${n<3?'<p class="caveat">Bara '+n+' analyserad'+(n===1?'':'e')+' match för laget – panelen blir intressant från tre–fyra matcher.</p>':''}
+  <h2 id="form">Form match för match</h2>
+  <p class="hint">Poängskillnad per match. Grön stapel = vinst, röd = förlust. Tryck på en stapel för matchanalysen.</p>
+  <div class="panel" id="formp">${formChart(ms)}<div class="tip"></div></div>
+  <h2 id="trend">Trend</h2>
+  <label for="met" class="hint" style="display:block">Välj nyckeltal</label>
+  <select id="met">${opts}</select>
+  <div class="panel" id="trendp"></div>
+  <h2 id="vf">När ni vinner – och när ni förlorar</h2>
+  <div class="panel">${winLoss(ms,T.namn)}</div>
+  <h2 id="tabell">Matchtabell</h2>
+  <p class="hint">Varje ruta jämförs med lagets eget snitt. Tryck på en match för hela analysen.</p>
+  ${heat(ms)}`;
+  const fp=document.getElementById('formp');
+  fp.querySelectorAll('.hit').forEach(h=>{const m=ms[+h.dataset.i];
+    const show=e=>{const r=fp.getBoundingClientRect(),b=h.getBoundingClientRect();tipAt(fp,`<b>${esc(opp(m))}</b><br>${dm(m.datum)} · ${resTxt(m)} · ${won(m)?'vinst':'förlust'}`,b.left-r.left+b.width/2,b.top-r.top+10)};
+    h.addEventListener('pointerenter',show);h.addEventListener('focus',show);h.addEventListener('pointerleave',()=>tipOff(fp));});
+  document.getElementById('met').addEventListener('change',e=>{metric=e.target.value;try{sessionStorage.setItem('lagpanel_metric',metric)}catch(_){};drawTrend(ms)});
+  drawTrend(ms);
+}
+function drawTrend(ms){
+  const M=BYK[metric],p=document.getElementById('trendp'),c=trendChart(ms,M);
+  p.innerHTML=`<div class="legend"><span><i class="sw line"></i>${esc(cur)}</span>${M.o?'<span><i class="sw dash"></i>Motståndaren</span>':''}<span><i class="sw v"></i>Vinst</span><span><i class="sw f"></i>Förlust</span></div>${c.svg}<div class="tip"></div>
+  <p class="hint" style="margin:6px 0 0">${M.b===1?'Högre är bättre.':M.b===-1?'Lägre är bättre.':'Varken bra eller dåligt i sig – visar spelstil.'}</p>`;
+  const svg=p.querySelector('svg'),hit=p.querySelector('.hit'),cross=p.querySelector('.cross');
+  const move=e=>{const r=svg.getBoundingClientRect(),sx=(e.clientX-r.left)/r.width*c.W;
+    let bi=0,bd=1e9;ms.forEach((_,i)=>{const d=Math.abs(c.X(i)-sx);if(d<bd){bd=d;bi=i}});
+    const m=ms[bi];cross.setAttribute('x1',c.X(bi));cross.setAttribute('x2',c.X(bi));cross.setAttribute('opacity',1);
+    const pr=p.getBoundingClientRect();
+    tipAt(p,`<b>${esc(opp(m))}</b> · ${dm(m.datum)}<br>${resTxt(m)} · ${won(m)?'vinst':'förlust'}<br>${esc(M.n)}: <b>${fmtv(m[M.k],M.f)}</b>${M.o?` · motst. ${fmtv(m[M.o],M.f)}`:''}`,r.left-pr.left+c.X(bi)/c.W*r.width,r.top-pr.top+20)};
+  hit.addEventListener('pointermove',move);hit.addEventListener('pointerdown',move);
+  hit.addEventListener('pointerleave',()=>{tipOff(p);cross.setAttribute('opacity',0)});
+}
+function chips(){
+  const C=document.getElementById('lagchips');
+  C.innerHTML=LAG.map(l=>`<button data-l="${esc(l.namn)}" aria-pressed="${l.namn===cur}">${esc(l.namn)} <span style="opacity:.7">${l.matcher.length}</span></button>`).join('');
+  C.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{cur=b.dataset.l;try{sessionStorage.setItem('lagpanel_lag',cur)}catch(_){}
+    history.replaceState(null,'','?lag='+encodeURIComponent(cur));C.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));render()}));
+}
+fetch('lag.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{
+  LAG=d.lag||[];if(!LAG.length){document.getElementById('app').innerHTML='<p class="empty">Inga lag ännu.</p>';return}
+  let want=new URLSearchParams(location.search).get('lag');
+  if(!want)try{want=sessionStorage.getItem('lagpanel_lag')}catch(_){}
+  cur=LAG.some(l=>l.namn===want)?want:LAG[0].namn;chips();render();
+}).catch(()=>{document.getElementById('app').innerHTML='<p class="empty">Kunde inte läsa lag.json. Öppna sidan via webbadressen, inte som lokal fil.</p>'});
+</script></body></html>
