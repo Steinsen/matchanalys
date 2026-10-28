@@ -5,9 +5,11 @@ Statisk sajt med matchanalyser, publicerad via Cloudflare Workers (static assets
 ## Struktur
 - `index.html` – startsida med sök (läser `matcher.json`)
 - `matcher.json` – en post per analyserad match
+- `lag.html` + `lag.json` – lagpanel: nyckeltal match för match per lag (form, trender, vinst mot förlust, matchtabell)
 - `matcher/ÅÅÅÅ-MM-DD-lag-motstandare.html` – en fristående analyssida per match
 - `matcher/…-en.html` – engelsk version (valfri). Båda sidorna har språkväljaren `.lang` (Svenska/English) som länkar till varandra
 - `assets/matchanalys.css` – gemensam stil (kopieras inline i varje matchsida så att sidan även fungerar som lös fil)
+- `tools/lagpanel.py` – bygger `lag.json` ur `matcher.json` + `data/`
 - `tools/analys.py` – räknar fram statistik, femmor, on/off, poäng per anfall och ledningsdiagram ur Genius-JSON
 - `mallar/match-mall.html` – sektionsordning för en matchsida
 - `data/` – rå Genius-JSON per match (för att kunna räkna om)
@@ -15,7 +17,8 @@ Statisk sajt med matchanalyser, publicerad via Cloudflare Workers (static assets
 ## Ny match
 1. Spara Genius-JSON som `data/ÅÅÅÅ-MM-DD-lag-motstandare.json`.
 2. Be Claude göra en matchanalys (skillen "matchanalys").
-3. Commit + push → Cloudflare publicerar automatiskt.
+3. Kör `python3 tools/lagpanel.py` så att lagpanelen får med matchen.
+4. Commit + push → Cloudflare publicerar automatiskt.
 
 ## Cloudflare
 `wrangler.jsonc` publicerar repots filer som statiska assets (Worker `matcher`, `workers.dev`-URL påslagen).
