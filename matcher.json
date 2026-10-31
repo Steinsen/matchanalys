@@ -819,6 +819,47 @@
         "returer",
         "straffar"
       ]
+    },
+    {
+      "datum": "2026-10-31",
+      "lag": "BC Luleå Steelers",
+      "motstandare": "Hammarby",
+      "hemma": true,
+      "for": 114,
+      "emot": 91,
+      "url": "matcher/2026-10-31-bc-lulea-steelers-hammarby.html",
+      "sammanfattning": "Revansch sex dagar efter 85–97: Steelers vann alla fyra perioderna och ledde som mest med 26. 16 av 38 treor, 28 assist och 18 bollförluster mot förra mötets 24 avgjorde, medan Hammarby höll sig kvar på 36 straffförsök och 27 poäng på snabba anfall.",
+      "sammanfattning_en": "Revenge six days after 85–97: Steelers won all four quarters and led by as many as 26. 16 of 38 threes, 28 assists and 18 turnovers against 24 in the last meeting decided it, while Hammarby hung around on 36 free-throw attempts and 27 fast-break points.",
+      "spelare": [
+        "Ville Kero",
+        "Elliot Enbom",
+        "Leo Erlandsson",
+        "Kembo Nilsson",
+        "Erik Persson",
+        "Franck Mugisha",
+        "Calvin Jägare",
+        "James Aitomäki",
+        "Noah Olsson",
+        "Axel Curry",
+        "Melwin Kjällman",
+        "Oscar Jakobsson",
+        "Rinaldo Causevic",
+        "Hannes Kodu",
+        "Rio Mårtensson",
+        "Eddie Brokvist",
+        "Folke Sunnebo",
+        "Yafet Taher",
+        "Elliot Lidberg",
+        "Aleksandar Cigoja",
+        "Buster Wijkmark Birnick"
+      ],
+      "taggar": [
+        "seger",
+        "hemma",
+        "trepoängsskytte",
+        "assist",
+        "fouls"
+      ]
     }
   ]
 }
