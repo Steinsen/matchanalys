@@ -899,6 +899,48 @@
         "assist",
         "fouls"
       ]
+    },
+    {
+      "datum": "2026-11-07",
+      "lag": "BC Luleå Steelers",
+      "motstandare": "Umeå Basket",
+      "hemma": false,
+      "for": 75,
+      "emot": 80,
+      "url": "matcher/2026-11-07-bc-lulea-steelers-umea-basket.html",
+      "sammanfattning": "Umeå ledde 45–25 i halvtid efter 0 av 14 treor och 13 bollförluster för Steelers. Andra halvleken vanns 50–35 och Hjertstedts trea gav 70–70 med 3:20 kvar, men sedan blev det 0 av 4 skott och 2 bollförluster, och Umeå satte 27 straffförsök mot 15.",
+      "sammanfattning_en": "Umeå led 45–25 at half-time after Steelers went 0 of 14 from three with 13 turnovers. Steelers won the second half 50–35 and Hjertstedt's three tied it 70–70 with 3:20 left, but then came 0 of 4 shots and 2 turnovers, and Umeå had 27 free-throw attempts against 15.",
+      "spelare": [
+        "Calvin Jägare",
+        "Elliot Enbom",
+        "Leo Erlandsson",
+        "Franck Mugisha",
+        "Ville Kero",
+        "Erik Persson",
+        "David Hjertstedt",
+        "Erik Forsman",
+        "Axel Curry",
+        "Arvid Strömsten",
+        "Emil Drottman",
+        "Chiemeka Patrick Okeke - Nwakamma",
+        "Melvin Skogelid",
+        "Hadar Nordvik",
+        "Hugo Sjöberg",
+        "Ludvig Munthe",
+        "Olive Okogwu",
+        "Troy Fahlgren",
+        "Viktor Gustafsson",
+        "Emil Romano",
+        "Rance Manu"
+      ],
+      "taggar": [
+        "förlust",
+        "borta",
+        "bollförluster",
+        "straffar",
+        "trepoängsskytte",
+        "slutminuter"
+      ]
     }
   ]
 }

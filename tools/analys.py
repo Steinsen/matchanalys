@@ -110,7 +110,15 @@ def analyse(d, us):
     PL = {us: players(us), them: players(them)}
 
     # ---------- play-by-play: stints ----------
+    # Händelseordning: normalt actionNumber. Händelser som registrerats i efterhand (rättelser)
+    # får höga actionNumber men gammal matchtid; då är flödets omvända ordning korrekt.
+    # Välj den ordning som har minst bakåtsteg i matchtid.
+    def backsteps(seq):
+        ts = [elapsed(d, a) for a in seq if a.get("actionType") != "game"]
+        return sum(1 for x, y in zip(ts, ts[1:]) if y < x - 0.01)
     pbp = sorted(d["pbp"], key=lambda a: a["actionNumber"])
+    if backsteps(pbp) and backsteps(d["pbp"][::-1]) < backsteps(pbp):
+        pbp = d["pbp"][::-1]
     on = {t: {pno for pno, p in T[t]["pl"].items() if p.get("starter", 0) == 1} for t in ("1", "2")}
     warn = []
     stints = defaultdict(lambda: defaultdict(float))  # (t, frozenset) -> counters
