@@ -1,6 +1,44 @@
 {
   "matcher": [
     {
+      "datum": "2026-11-13",
+      "lag": "BC Luleå",
+      "motstandare": "Södertälje BBK",
+      "hemma": true,
+      "for": 82,
+      "emot": 71,
+      "url": "matcher/2026-11-13-bc-lulea-sodertalje-bbk.html",
+      "sammanfattning": "Luleå vände 36–38 i halvtid till 82–71 med 46–33 i andra halvlek. Södertälje satte 4 av 19 skott i period 3 och 5 av 28 treor totalt, och ett 15–0-ryck från 53–51 avgjorde. Luleå vann returerna i anfall (17 andrachanspoäng mot 7), och Leach gjorde 21 poäng på 10 skott.",
+      "sammanfattning_en": "Luleå turned a 36–38 halftime deficit into an 82–71 win with a 46–33 second half. Södertälje made 4 of 19 shots in the third quarter and 5 of 28 threes overall, and a 15–0 run from 53–51 decided it. Luleå won the offensive glass (17 second-chance points to 7), and Leach scored 21 points on 10 shots.",
+      "spelare": [
+        "Tuburu Naivalurua",
+        "Jalen Leach",
+        "Jonatan Arvidsson",
+        "Nicolas Galette",
+        "Robert Holmes",
+        "Daniel Hansson",
+        "Jonathan Ninkingira",
+        "Kembo Nilsson",
+        "Leo Steinsen",
+        "Ali Ali Youssouf",
+        "Brian Goracke",
+        "Nicholas Spires",
+        "Noel Karlsson Rask",
+        "Marco-Maximilian Reinhold Frank",
+        "Ebrima Dibba",
+        "Noah Kartal",
+        "Lucas Veller",
+        "Daniel Pokela"
+      ],
+      "taggar": [
+        "seger",
+        "hemma",
+        "trepoängsskytte",
+        "returer",
+        "ryck"
+      ]
+    },
+    {
       "datum": "2026-11-06",
       "lag": "BC Luleå",
       "motstandare": "Uppsala Basket",
