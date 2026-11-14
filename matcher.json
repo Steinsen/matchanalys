@@ -1,6 +1,46 @@
 {
   "matcher": [
     {
+      "datum": "2026-11-14",
+      "lag": "BC Luleå Steelers",
+      "motstandare": "Stockholm Nordväst",
+      "hemma": true,
+      "for": 102,
+      "emot": 109,
+      "url": "matcher/2026-11-14-bc-lulea-steelers-stockholm-nordvast.html",
+      "sammanfattning": "Nordväst satte 41 av 68 skott och 33 av 45 tvåpoängare, gjorde 60 poäng i 3-sekundersområdet och vann trots att Steelers tog 14 skott fler. Steelers ledde 24–16 men gjorde 3–18 på 5:22, satte 8 av 35 treor och kom som närmast 94–98 i period 4. Steinsen 24 och Mugisha 20 poäng, Nasradin 32 för Nordväst.",
+      "sammanfattning_en": "Nordväst made 41 of 68 shots and 33 of 45 twos, scored 60 points in the paint and won even though Steelers took 14 more shots. Steelers led 24–16 but went 3–18 over 5:22, made 8 of 35 threes and got as close as 94–98 in the fourth. Steinsen 24 and Mugisha 20 points, Nasradin 32 for Nordväst.",
+      "spelare": [
+        "Leo Steinsen",
+        "Ville Kero",
+        "Calvin Jägare",
+        "Elliot Enbom",
+        "Leo Erlandsson",
+        "Franck Mugisha",
+        "David Hjertstedt",
+        "Axel Curry",
+        "Erik Persson",
+        "Oscar Jakobsson",
+        "Jack Sundelin",
+        "Mir Nasradin",
+        "Kenan Barlov",
+        "Angelo David Deumaga Kovacic",
+        "Melker Myron",
+        "Simon Hagbert",
+        "David Netz",
+        "Alexander Rusom",
+        "Jonathan Saine",
+        "Baschir Sheikh Abdi"
+      ],
+      "taggar": [
+        "förlust",
+        "hemma",
+        "försvar",
+        "trepoängsskytte",
+        "returer"
+      ]
+    },
+    {
       "datum": "2026-11-13",
       "lag": "BC Luleå",
       "motstandare": "Södertälje BBK",
